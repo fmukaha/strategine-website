@@ -1279,3 +1279,32 @@ textarea {
     border-bottom: 0 !important;
   }
 }
+
+/* FOOTER SOCIAL ALIGNMENT FIX */
+.sg-socials.single-social {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 0 !important;
+}
+
+.sg-socials.single-social a {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(199, 220, 73, 0.28) !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: var(--lime) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+}
+
+@media (max-width: 900px) {
+  .sg-socials.single-social {
+    justify-content: center !important;
+  }
+}
