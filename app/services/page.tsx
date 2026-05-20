@@ -1,4 +1,4 @@
-﻿import Header from "../components/Header";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Link from "next/link";
 import {
@@ -74,7 +74,7 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          <div className="sg-services-stats">
+          <div className="sg-standard-stats sg-services-stats">
             {stats.map((item) => {
               const Icon = item.icon;
               return (

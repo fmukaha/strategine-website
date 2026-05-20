@@ -2505,3 +2505,214 @@ h3,
     font-weight: 600 !important;
   }
 }
+
+/* Reduce intro titles back to cleaner Services scale */
+.sg-services-intro h2,
+.sg-about-intro-section h2 {
+  font-size: clamp(2.25rem, 3.5vw, 3.45rem) !important;
+  line-height: 1.12 !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.05em !important;
+}
+
+@media (max-width: 720px) {
+  .sg-services-intro h2,
+  .sg-about-intro-section h2 {
+    font-size: clamp(2rem, 9vw, 2.65rem) !important;
+  }
+}
+
+/* Standard mobile headers: left aligned across site */
+@media (max-width: 720px) {
+  .sg-page-hero,
+  .sg-services-hero,
+  .sg-about-hero,
+  .sg-case-hero,
+  .sg-insights-hero,
+  .sg-contact-hero {
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+
+  .sg-page-hero h1,
+  .sg-services-hero h1,
+  .sg-about-hero h1,
+  .sg-case-hero h1,
+  .sg-insights-hero h1,
+  .sg-contact-hero h1 {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  .sg-page-kicker {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  .sg-services-stats,
+  .sg-about-stats {
+    padding-top: 0 !important;
+  }
+}
+
+/* Mobile hero standard: About + Services identical spacing */
+@media (max-width: 720px) {
+  .sg-about-hero,
+  .sg-services-hero {
+    padding-top: 28px !important;
+    gap: 20px !important;
+  }
+
+  .sg-about-hero .sg-page-kicker,
+  .sg-services-hero .sg-page-kicker {
+    margin-bottom: 0 !important;
+  }
+
+  .sg-about-hero h1,
+  .sg-services-hero h1 {
+    font-size: clamp(2.35rem, 10vw, 3rem) !important;
+    line-height: 1.08 !important;
+    margin: 0 !important;
+    max-width: 11ch !important;
+  }
+
+  .sg-about-hero-image,
+  .sg-services-hero-image {
+    margin-top: 8px !important;
+    width: 100% !important;
+    min-height: 225px !important;
+    border-radius: 18px !important;
+  }
+}
+
+/* Standard stats frame: Services + About identical */
+.sg-services-stats,
+.sg-about-stats {
+  margin-top: 52px !important;
+  padding: 40px 0 !important;
+  border-top: 1px solid var(--line) !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+
+@media (max-width: 720px) {
+  .sg-services-stats,
+  .sg-about-stats {
+    margin-top: 40px !important;
+    padding: 0 !important;
+    border-top: 1px solid var(--line) !important;
+    border-bottom: 0 !important;
+  }
+}
+
+/* =========================================================
+   STANDARD BLOCK: Stats band
+   Use this for any horizontal stats section across the site:
+   className="sg-standard-stats ..."
+   ========================================================= */
+
+.sg-standard-stats {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 0 !important;
+  margin: 52px 0 0 !important;
+  padding: 40px 0 !important;
+  border-top: 1px solid var(--line) !important;
+  border-bottom: 1px solid var(--line) !important;
+  background: transparent !important;
+}
+
+.sg-services-intro,
+.sg-about-intro-section {
+  border-bottom: 0 !important;
+}
+
+.sg-standard-stats::before,
+.sg-standard-stats::after {
+  display: none !important;
+  content: none !important;
+}
+
+.sg-standard-stats > div,
+.sg-standard-stats .sg-about-stat-item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 18px !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+  border-bottom: 0 !important;
+}
+
+.sg-standard-stats > div + div,
+.sg-standard-stats .sg-about-stat-item + .sg-about-stat-item {
+  border-left: 1px solid var(--line) !important;
+}
+
+.sg-standard-stats .sg-stat-icon {
+  width: 46px !important;
+  height: 46px !important;
+  flex: 0 0 46px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1px solid rgba(16, 85, 31, 0.18) !important;
+  border-radius: 14px !important;
+  background: var(--soft) !important;
+  color: var(--dark) !important;
+}
+
+.sg-standard-stats strong {
+  display: block !important;
+  font-size: clamp(2rem, 3vw, 2.75rem) !important;
+  line-height: 0.95 !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.045em !important;
+  color: var(--dark) !important;
+}
+
+.sg-standard-stats span,
+.sg-standard-stats .sg-stat-copy > span {
+  font-size: 0.76rem !important;
+  line-height: 1.15 !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em !important;
+  text-transform: uppercase !important;
+  color: var(--text) !important;
+}
+
+.sg-standard-stats .sg-stat-copy {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  align-items: flex-start !important;
+}
+
+@media (max-width: 720px) {
+  .sg-standard-stats {
+    grid-template-columns: 1fr !important;
+    margin-top: 40px !important;
+    padding: 0 !important;
+    border-top: 1px solid var(--line) !important;
+    border-bottom: 0 !important;
+  }
+
+  .sg-standard-stats > div,
+  .sg-standard-stats .sg-about-stat-item {
+    justify-content: flex-start !important;
+    padding: 22px 0 !important;
+    border-left: 0 !important;
+  }
+
+  .sg-standard-stats > div + div,
+  .sg-standard-stats .sg-about-stat-item + .sg-about-stat-item {
+    border-left: 0 !important;
+    border-top: 1px solid var(--line) !important;
+  }
+
+  .sg-standard-stats strong {
+    font-size: 2.25rem !important;
+  }
+}

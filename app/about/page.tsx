@@ -1,4 +1,4 @@
-﻿import Header from "../components/Header";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ContactCta from "../components/ContactCta";
 import {
@@ -101,7 +101,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="sg-services-stats sg-about-stats">
+        <section className="sg-standard-stats sg-services-stats sg-about-stats">
           {stats.map((item) => {
             const Icon = item.icon;
 
