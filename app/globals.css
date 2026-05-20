@@ -2231,3 +2231,38 @@ textarea {
     border-bottom: 0 !important;
   }
 }
+
+/* About stats icons fix */
+.sg-about-stats .sg-stat-icon,
+.sg-about-stats svg {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.sg-about-stats .sg-stat-icon {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(16, 85, 31, 0.18);
+  border-radius: 14px;
+  background: var(--soft);
+  color: var(--dark);
+}
+
+.sg-about-stats svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+}
+
+@media (max-width: 720px) {
+  .sg-about-stats div {
+    display: grid !important;
+    grid-template-columns: 46px auto;
+    column-gap: 16px;
+    align-items: center;
+  }
+}
