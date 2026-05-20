@@ -1,20 +1,30 @@
 ﻿import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ContactCta from "../components/ContactCta";
-import { BarChart3, FileSearch, GitBranch, ShieldCheck } from "lucide-react";
+import {
+  BarChart3,
+  FileSearch,
+  GitBranch,
+  Layers3,
+  Network,
+  ShieldCheck,
+} from "lucide-react";
 
 const stats = [
   {
-    value: "3",
-    label: "Core service offers",
+    value: "6+",
+    label: "Intelligence domains",
+    icon: Network,
   },
   {
-    value: "6+",
-    label: "Risk and reporting domains",
+    value: "3",
+    label: "Data maturity layers",
+    icon: Layers3,
   },
   {
     value: "1",
-    label: "Accountability layer",
+    label: "Accountability system",
+    icon: ShieldCheck,
   },
 ];
 
@@ -50,7 +60,9 @@ export default function AboutPage() {
         <section className="sg-about-hero">
           <span className="sg-page-kicker">About us</span>
 
-          <h1>Intelligence systems for responsible business operations.</h1>
+          <h1>
+            Intelligence systems for responsible business operations.
+          </h1>
 
           <div
             className="sg-about-hero-image"
@@ -75,26 +87,37 @@ export default function AboutPage() {
             </p>
 
             <p>
-              We work with organisations operating in complex, people-intensive
-              environments to turn operational signals into clear intelligence
-              for risk, accountability, sustainability, and management action.
+              We work with organisations operating in complex,
+              people-intensive environments to turn operational signals into
+              clear intelligence for risk, accountability, sustainability, and
+              management action.
             </p>
 
             <p>
               Our work sits between strategy, governance, data, reporting, and
-              implementation — helping leadership move from scattered records to
-              structured oversight.
+              implementation — helping leadership move from scattered records
+              to structured oversight.
             </p>
           </div>
         </section>
 
         <section className="sg-services-stats sg-about-stats">
-          {stats.map((item) => (
-            <div key={item.label}>
-              <strong>{item.value}</strong>
-              <span>{item.label}</span>
-            </div>
-          ))}
+          {stats.map((item) => {
+            const Icon = item.icon;
+
+            return (
+              <div key={item.label} className="sg-about-stat-item">
+                <span className="sg-stat-icon" aria-hidden="true">
+                  <Icon size={24} strokeWidth={1.7} />
+                </span>
+
+                <span className="sg-stat-copy">
+                  <strong>{item.value}</strong>
+                  <span>{item.label}</span>
+                </span>
+              </div>
+            );
+          })}
         </section>
 
         <section className="sg-about-capabilities">
@@ -117,7 +140,9 @@ export default function AboutPage() {
         <section className="sg-about-standard">
           <span className="sg-section-kicker">Our standard</span>
 
-          <h2>Clear evidence. Practical accountability. Better decisions.</h2>
+          <h2>
+            Clear evidence. Practical accountability. Better decisions.
+          </h2>
 
           <p>
             We design systems that help leadership identify what matters,
