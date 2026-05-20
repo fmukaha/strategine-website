@@ -3013,3 +3013,132 @@ h6,
 }
 
 /* ===== STRATEGINE PRISTINE TYPOGRAPHY STANDARD END ===== */
+
+/* ===== STRATEGINE SHORT HEADINGS AND LEGIBILITY START ===== */
+
+/* Short-heading visual standard */
+.sg-standard-hero h1,
+.sg-services-hero h1,
+.sg-about-hero h1,
+.sg-contact-hero h1,
+.sg-placeholder-page h1,
+.sg-standard-intro h2,
+.sg-services-intro h2,
+.sg-about-intro-section h2,
+.sg-impact-section h2,
+.sg-service-grid-section h2,
+.sg-why-copy h2,
+.sg-about-standard h2,
+.sg-about-mission h2 {
+  max-width: 12ch !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.052em !important;
+}
+
+/* Body copy stays readable and light */
+p,
+li,
+.sg-services-copy p,
+.sg-about-copy p,
+.sg-standard-intro p,
+.sg-services-intro p,
+.sg-about-intro-section p {
+  max-width: 640px !important;
+  font-size: 16px !important;
+  line-height: 1.65 !important;
+  font-weight: 400 !important;
+}
+
+/* Automatic legibility on dark sections */
+.sg-about-standard,
+.simple-footer,
+.sg-contact-canvas,
+.sg-contact-left,
+.sg-service-card:hover,
+.hero,
+[class*="dark"],
+[class*="green"] {
+  color: #ffffff !important;
+}
+
+.sg-about-standard h1,
+.sg-about-standard h2,
+.sg-about-standard h3,
+.sg-about-standard h4,
+.sg-about-standard h5,
+.sg-about-standard h6,
+.sg-about-standard p,
+.sg-about-standard .sg-section-kicker,
+.simple-footer h1,
+.simple-footer h2,
+.simple-footer h3,
+.simple-footer h4,
+.simple-footer h5,
+.simple-footer h6,
+.simple-footer p,
+.simple-footer a,
+.sg-contact-canvas h1,
+.sg-contact-canvas h2,
+.sg-contact-canvas h3,
+.sg-contact-canvas h4,
+.sg-contact-canvas h5,
+.sg-contact-canvas h6,
+.sg-contact-canvas p,
+.sg-contact-left h1,
+.sg-contact-left h2,
+.sg-contact-left h3,
+.sg-contact-left h4,
+.sg-contact-left h5,
+.sg-contact-left h6,
+.sg-contact-left p,
+.sg-service-card:hover h1,
+.sg-service-card:hover h2,
+.sg-service-card:hover h3,
+.sg-service-card:hover h4,
+.sg-service-card:hover h5,
+.sg-service-card:hover h6,
+.sg-service-card:hover p,
+.hero h1,
+.hero h2,
+.hero h3,
+.hero p {
+  color: #ffffff !important;
+}
+
+/* Dark-section muted text */
+.sg-about-standard p,
+.simple-footer p,
+.sg-contact-left p,
+.sg-service-card:hover p {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+/* Lime buttons remain readable */
+.sg-about-standard-button,
+.sg-impact-button small,
+.sg-contact-submit small,
+.hero-btn.lime,
+.sg-newsletter button {
+  color: var(--dark) !important;
+}
+
+/* Mobile heading standard */
+@media (max-width: 720px) {
+  .sg-standard-hero h1,
+  .sg-services-hero h1,
+  .sg-about-hero h1,
+  .sg-contact-hero h1,
+  .sg-placeholder-page h1,
+  .sg-standard-intro h2,
+  .sg-services-intro h2,
+  .sg-about-intro-section h2,
+  .sg-impact-section h2,
+  .sg-service-grid-section h2,
+  .sg-why-copy h2,
+  .sg-about-standard h2,
+  .sg-about-mission h2 {
+    max-width: 11ch !important;
+  }
+}
+
+/* ===== STRATEGINE SHORT HEADINGS AND LEGIBILITY END ===== */

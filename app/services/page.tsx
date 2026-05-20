@@ -46,14 +46,14 @@ export default function ServicesPage() {
         <section className="sg-services-hero">
           <span className="sg-page-kicker">Services</span>
 
-          <h1>Responsible Business Intelligence Systems</h1>
+          <h1>Responsible Intelligence Systems</h1>
 
           <div className="sg-services-image" aria-label="Strategine services placeholder" />
 
           <div className="sg-services-intro">
             <div>
               <span className="sg-section-kicker">What we do</span>
-              <h2>Make social, labour, and human rights risk visible to leadership.</h2>
+              <h2>Make risk visible.</h2>
             </div>
 
             <div className="sg-services-copy">

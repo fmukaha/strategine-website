@@ -61,7 +61,7 @@ export default function AboutPage() {
           <span className="sg-page-kicker">About us</span>
 
           <h1>
-            Intelligence systems for responsible business operations.
+            Responsible intelligence systems.
           </h1>
 
           <div
@@ -141,7 +141,7 @@ export default function AboutPage() {
           <span className="sg-section-kicker">Our standard</span>
 
           <h2>
-            Clear evidence. Practical accountability. Better decisions.
+            Evidence. Accountability. Decisions.
           </h2>
 
           <p>
@@ -160,7 +160,7 @@ export default function AboutPage() {
             <span className="sg-section-kicker">Our mission</span>
 
             <h2>
-              Make responsible business easier to manage, evidence, and improve.
+              Make accountability manageable.
             </h2>
 
             <p>
