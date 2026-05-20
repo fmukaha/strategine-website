@@ -2716,3 +2716,104 @@ h3,
     font-size: 2.25rem !important;
   }
 }
+
+/* =========================================================
+   STANDARD BLOCK: Typography system
+   Consistent lean type across core pages
+   ========================================================= */
+
+body,
+p,
+li,
+a,
+button,
+input,
+textarea,
+select,
+.sg-about-copy p,
+.sg-services-intro p,
+.sg-about-intro-section p,
+.sg-contact-copy p,
+.sg-case-copy p,
+.sg-insights-copy p {
+  font-size: 16px !important;
+  line-height: 1.65 !important;
+  font-weight: 400 !important;
+}
+
+h1,
+h2,
+h3,
+.sg-services-hero h1,
+.sg-about-hero h1,
+.sg-services-intro h2,
+.sg-about-intro-section h2,
+.sg-section-title,
+.sg-page-title {
+  font-weight: 400 !important;
+  letter-spacing: -0.045em !important;
+  color: var(--text) !important;
+}
+
+.sg-services-intro h2,
+.sg-about-intro-section h2 {
+  font-size: clamp(2.35rem, 3.2vw, 3.25rem) !important;
+  line-height: 1.12 !important;
+  max-width: 11.5ch !important;
+}
+
+.sg-services-intro > div:last-child p,
+.sg-about-intro-section > div:last-child p {
+  font-size: 16px !important;
+  line-height: 1.65 !important;
+}
+
+.sg-page-kicker,
+.sg-section-kicker {
+  font-size: 0.78rem !important;
+  line-height: 1.2 !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+.sg-standard-stats strong {
+  font-size: clamp(2rem, 2.7vw, 2.55rem) !important;
+  font-weight: 600 !important;
+  line-height: 0.95 !important;
+}
+
+.sg-standard-stats span,
+.sg-standard-stats .sg-stat-copy > span {
+  font-size: 0.72rem !important;
+  line-height: 1.15 !important;
+  font-weight: 500 !important;
+}
+
+@media (max-width: 720px) {
+  body,
+  p,
+  li,
+  a,
+  button,
+  input,
+  textarea,
+  select,
+  .sg-about-copy p,
+  .sg-services-intro p,
+  .sg-about-intro-section p {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+
+  .sg-services-intro h2,
+  .sg-about-intro-section h2 {
+    font-size: clamp(2rem, 8.5vw, 2.55rem) !important;
+    line-height: 1.1 !important;
+    max-width: 12ch !important;
+  }
+
+  .sg-standard-stats strong {
+    font-size: 2.15rem !important;
+  }
+}
