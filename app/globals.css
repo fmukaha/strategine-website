@@ -2211,3 +2211,23 @@ textarea {
     max-width: none;
   }
 }
+
+/* Stats row cleanup - About + Services */
+@media (max-width: 720px) {
+  .sg-services-stats,
+  .sg-about-stats {
+    border-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .sg-services-stats::after,
+  .sg-about-stats::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  .sg-services-stats > div:last-child,
+  .sg-about-stats > div:last-child {
+    border-bottom: 0 !important;
+  }
+}
