@@ -1267,3 +1267,15 @@ textarea {
 .sg-service-card:hover::before {
   border-color: rgba(199, 220, 73, 0.22);
 }
+
+/* REMOVE EXTRA MOBILE STATS BOTTOM LINE */
+@media (max-width: 900px) {
+  .sg-services-stats {
+    border-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .sg-services-stat:last-child {
+    border-bottom: 0 !important;
+  }
+}
