@@ -13,35 +13,30 @@ export default function Home() {
         <section className="hero">
           <div className="hero-content">
             <h1>
-              Responsible business intelligence for <span>risk, accountability, and action.</span>
+              Intelligence systems for responsible <span>leadership.</span>
             </h1>
 
             <div className="hero-actions">
-              <a href="/services" className="hero-btn lime">
-                Explore services
-              </a>
-
-              <a href="/contact" className="hero-btn dark">
-                Start a project
-              </a>
+              <a href="/services" className="hero-btn lime">Explore services</a>
+              <a href="/contact" className="hero-btn dark">Start a project</a>
             </div>
           </div>
         </section>
 
         <section className="trust-strip">
           <div className="trust-item">
-            <span className="trust-icon">✦</span>
-            <p>Decision intelligence for responsible operations</p>
+            <span className="trust-icon">1</span>
+            <p>Responsible business intelligence</p>
           </div>
 
           <div className="trust-item">
-            <span className="trust-icon">✦</span>
-            <p>Built around governance, evidence, and reporting</p>
+            <span className="trust-icon">2</span>
+            <p>Evidence-ready reporting</p>
           </div>
 
           <div className="trust-item">
-            <span className="trust-icon">✦</span>
-            <p>Designed for accountability and management action</p>
+            <span className="trust-icon">3</span>
+            <p>Leadership decision systems</p>
           </div>
         </section>
 
@@ -52,4 +47,3 @@ export default function Home() {
     </>
   );
 }
-

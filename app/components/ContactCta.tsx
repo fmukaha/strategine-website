@@ -11,12 +11,10 @@ export default function ContactCta() {
         <div className="sg-contact-left">
           <span className="sg-contact-corner" aria-hidden="true" />
 
-          <h2 id="sg-contact-title">
-            Start with a clear intelligence system.
-          </h2>
+          <h2 id="sg-contact-title">Start with a clear intelligence system.</h2>
 
           <p>
-            Tell us what you need to understand, track, or report. We’ll help
+            Tell us what you need to understand, track, or report. We will help
             you define the right next step.
           </p>
 
@@ -31,12 +29,10 @@ export default function ContactCta() {
         </div>
 
         <form className="sg-contact-form">
-          <h3>
-            How can we help?
-          </h3>
+          <h3>How can we help?</h3>
 
           <p className="sg-contact-form-intro">
-            Share a few details and we’ll respond with clear next steps.
+            Share a few details and we will respond with clear next steps.
           </p>
 
           <div className="sg-form-grid">

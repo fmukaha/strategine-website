@@ -5,7 +5,10 @@ export default function InsightsPage() {
   return (
     <>
       <Header />
-      <main className="blank-main" />
+      <main className="sg-placeholder-page">
+        <span className="sg-page-kicker">Insights</span>
+        <h1>Latest briefs are coming soon.</h1>
+      </main>
       <Footer />
     </>
   );

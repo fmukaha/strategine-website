@@ -20,19 +20,19 @@ const services = [
   {
     title: "Intelligence Landscape Diagnostic",
     text: "Map your data sources, workflows, risks, evidence gaps, and reporting readiness across responsible business operations.",
-    href: "/services/intelligence-landscape-diagnostic",
+    href: "/contact",
     icon: FileSearch,
   },
   {
     title: "Accountability & Reporting Architecture",
-    text: "Define the KPIs, ownership, escalation logic, action tracking, remediation evidence, and reporting requirements leadership needs.",
-    href: "/services/accountability-reporting-architecture",
+    text: "Define KPIs, ownership, escalation logic, action tracking, remediation evidence, and reporting requirements.",
+    href: "/contact",
     icon: ClipboardCheck,
   },
   {
     title: "Decision Intelligence System Build",
-    text: "Build the data models, workflows, dashboards, access rules, and review processes that turn operational signals into routine oversight.",
-    href: "/services/decision-intelligence-system-build",
+    text: "Build data models, workflows, dashboards, access rules, and review processes for routine oversight.",
+    href: "/contact",
     icon: Layers3,
   },
 ];
@@ -53,9 +53,7 @@ export default function ServicesPage() {
           <div className="sg-services-intro">
             <div>
               <span className="sg-section-kicker">What we do</span>
-              <h2>
-                Make social, labour, and human rights risk visible to leadership.
-              </h2>
+              <h2>Make social, labour, and human rights risk visible to leadership.</h2>
             </div>
 
             <div className="sg-services-copy">
@@ -66,15 +64,12 @@ export default function ServicesPage() {
 
               <p>
                 We work with organisations operating in complex, people-intensive
-                environments to turn operational signals — grievances, incidents,
-                audit findings, compliance data, workforce records, and community
-                feedback — into clear, governance-ready intelligence.
+                environments to turn operational signals into clear, governance-ready intelligence.
               </p>
 
               <p>
                 Our work helps leadership identify emerging risks early, assess
-                whether response mechanisms are working, and strengthen oversight
-                where social issues affect operations, reputation, and continuity.
+                whether response mechanisms are working, and strengthen oversight.
               </p>
             </div>
           </div>
@@ -82,13 +77,11 @@ export default function ServicesPage() {
           <div className="sg-services-stats">
             {stats.map((item) => {
               const Icon = item.icon;
-
               return (
                 <div className="sg-services-stat" key={item.label}>
                   <span className="sg-stat-icon" aria-hidden="true">
-                    <Icon size={34} strokeWidth={1.6} />
+                    <Icon size={24} strokeWidth={1.6} />
                   </span>
-
                   <strong>{item.value}</strong>
                   <small>{item.label}</small>
                 </div>
@@ -100,76 +93,53 @@ export default function ServicesPage() {
         <section className="sg-why-section">
           <div className="sg-why-copy">
             <span className="sg-section-kicker">Why choose us</span>
-
-            <h2>
-              More than reporting. We build the logic behind better oversight.
-            </h2>
+            <h2>More than reporting. We build the logic behind better oversight.</h2>
           </div>
 
           <div className="sg-why-media">
             <div className="sg-why-image" aria-label="Strategine advisory placeholder" />
-
-            <a href="/contact" className="sg-why-button">
-              Start a consultation
-            </a>
+            <a href="/contact" className="sg-why-button">Start a consultation</a>
           </div>
 
           <div className="sg-why-list">
-            <div>
-              <span>→</span>
-              <p>Clear intelligence from fragmented operational records.</p>
-            </div>
-
-            <div>
-              <span>→</span>
-              <p>Practical KPI frameworks leadership can actually use.</p>
-            </div>
-
-            <div>
-              <span>→</span>
-              <p>Accountability loops that show ownership and follow-up.</p>
-            </div>
-
-            <div>
-              <span>→</span>
-              <p>Governance-ready outputs for decisions, reviews, and audits.</p>
-            </div>
+            {[
+              "Clear intelligence from fragmented operational records.",
+              "Practical KPI frameworks leadership can actually use.",
+              "Accountability loops that show ownership and follow-up.",
+              "Governance-ready outputs for decisions, reviews, and audits.",
+            ].map((item) => (
+              <div key={item}>
+                <span>→</span>
+                <p>{item}</p>
+              </div>
+            ))}
           </div>
         </section>
 
         <section className="sg-service-grid-section">
           <span className="sg-section-kicker">Our services</span>
-
-          <h2>
-            Responsible business intelligence systems
-          </h2>
+          <h2>Responsible business intelligence systems</h2>
 
           <div className="sg-service-grid">
             {services.map((service) => {
               const Icon = service.icon;
-
               return (
                 <Link href={service.href} className="sg-service-card" key={service.title}>
                   <span className="sg-card-symbol" aria-hidden="true">
                     <Icon size={24} strokeWidth={1.6} />
                   </span>
-
                   <h3>{service.title}</h3>
-
                   <p>{service.text}</p>
-
                   <span className="sg-card-arrow" aria-hidden="true">→</span>
                 </Link>
               );
             })}
           </div>
         </section>
-              <section className="sg-impact-section">
-          <span className="sg-section-kicker">Get an estimate</span>
 
-          <h2>
-            Intelligence systems that make responsible business visible
-          </h2>
+        <section className="sg-impact-section">
+          <span className="sg-section-kicker">Get an estimate</span>
+          <h2>Intelligence systems that make responsible business visible</h2>
 
           <div className="sg-impact-points">
             <p>Clear signals for leadership, risk, and sustainability decisions.</p>
@@ -178,8 +148,8 @@ export default function ServicesPage() {
 
           <div className="sg-impact-image">
             <a href="/contact" className="sg-impact-button">
-              <span>Start a<br />project</span>
-              <small>↓</small>
+              <span>Start a project</span>
+              <small>→</small>
             </a>
           </div>
         </section>
@@ -189,5 +159,3 @@ export default function ServicesPage() {
     </>
   );
 }
-
-

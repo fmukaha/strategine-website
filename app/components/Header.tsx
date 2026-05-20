@@ -1,9 +1,9 @@
 ﻿"use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, Phone, X } from "lucide-react";
+import { useState } from "react";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -24,8 +24,8 @@ export default function Header() {
         </Link>
 
         <nav className="sg-nav" aria-label="Main navigation">
-          {navItems.map((item, index) => (
-            <Link key={item.href} href={item.href} className={index === 0 ? "active" : ""}>
+          {navItems.map((item) => (
+            <Link key={item.href} href={item.href}>
               {item.label}
             </Link>
           ))}
@@ -33,7 +33,7 @@ export default function Header() {
 
         <div className="sg-actions">
           <Link href="/contact" className="sg-phone" aria-label="Talk to us">
-            <Phone size={16} strokeWidth={2.4} />
+            <Phone size={16} strokeWidth={2.2} />
             <span>Talk to us</span>
           </Link>
 
@@ -42,7 +42,7 @@ export default function Header() {
           </Link>
 
           <button type="button" className="sg-menu" onClick={() => setOpen(!open)} aria-label="Open menu">
-            {open ? <X size={22} strokeWidth={2.5} /> : <Menu size={22} strokeWidth={2.5} />}
+            {open ? <X size={21} strokeWidth={2.3} /> : <Menu size={21} strokeWidth={2.3} />}
           </button>
         </div>
       </div>

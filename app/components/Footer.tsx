@@ -44,11 +44,7 @@ export default function Footer() {
         <div className="sg-footer-bottom">
           <p>© {new Date().getFullYear()} Strategine. All rights reserved.</p>
 
-          <button
-            type="button"
-            aria-label="Back to top"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          >
+          <button type="button" aria-label="Back to top" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
             <span className="scroll-arrow">↑</span>
           </button>
         </div>
@@ -56,4 +52,3 @@ export default function Footer() {
     </footer>
   );
 }
-
