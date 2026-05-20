@@ -1268,43 +1268,890 @@ textarea {
   border-color: rgba(199, 220, 73, 0.22);
 }
 
-/* REMOVE EXTRA MOBILE STATS BOTTOM LINE */
+/* ABOUT PAGE */
+.sg-about-page {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 56px 24px 0;
+}
+
+.sg-about-hero {
+  display: grid;
+  gap: 52px;
+}
+
+.sg-about-hero .sg-page-kicker {
+  text-align: left;
+}
+
+.sg-about-hero h1 {
+  max-width: 820px;
+  color: var(--text);
+  font-size: clamp(40px, 4.6vw, 56px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.sg-about-hero-grid {
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: clamp(34px, 6vw, 86px);
+  align-items: stretch;
+}
+
+.sg-about-image {
+  min-height: 520px;
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(20, 49, 38, 0.12), rgba(20, 49, 38, 0.18)),
+    url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.sg-about-intro {
+  display: grid;
+  align-content: center;
+}
+
+.sg-about-intro h2,
+.sg-about-principles h2 {
+  max-width: 620px;
+  margin-top: 18px;
+  color: var(--text);
+  font-size: clamp(32px, 3.4vw, 40px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
+
+.sg-about-copy {
+  max-width: 640px;
+  margin-top: 30px;
+  display: grid;
+  gap: 18px;
+}
+
+.sg-about-copy p {
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.68;
+}
+
+.sg-about-principles {
+  margin-top: 86px;
+  padding-top: 42px;
+  border-top: 1px solid var(--line);
+}
+
+.sg-about-principle-grid {
+  margin-top: 42px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.sg-about-principle-card {
+  min-height: 260px;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 86% 12%, rgba(199, 220, 73, 0.2), transparent 28%),
+    #f4f5ec;
+  padding: 30px 28px;
+}
+
+.sg-about-principle-card span {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  border: 1px solid rgba(21, 89, 31, 0.16);
+  background: #ffffff;
+  color: var(--dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sg-about-principle-card h3 {
+  margin-top: 34px;
+  color: var(--text);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.sg-about-principle-card p {
+  margin-top: 16px;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.sg-about-page .sg-contact-scene {
+  max-width: 100%;
+  margin: 86px 0 72px;
+  padding: 0;
+}
+
 @media (max-width: 900px) {
-  .sg-services-stats {
-    border-bottom: 0 !important;
-    padding-bottom: 0 !important;
+  .sg-about-page {
+    padding: 38px 16px 0;
   }
 
-  .sg-services-stat:last-child {
-    border-bottom: 0 !important;
+  .sg-about-hero {
+    gap: 34px;
+  }
+
+  .sg-about-hero h1 {
+    font-size: clamp(34px, 10vw, 48px);
+  }
+
+  .sg-about-hero-grid,
+  .sg-about-principle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sg-about-image {
+    min-height: 320px;
+    border-radius: 22px;
+  }
+
+  .sg-about-intro h2,
+  .sg-about-principles h2 {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .sg-about-copy p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .sg-about-principles {
+    margin-top: 56px;
+  }
+
+  .sg-about-principle-card {
+    min-height: 220px;
+    border-radius: 20px;
+  }
+
+  .sg-about-page .sg-contact-scene {
+    margin: 56px 0 48px;
   }
 }
 
-/* FOOTER SOCIAL ALIGNMENT FIX */
-.sg-socials.single-social {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: flex-end !important;
-  gap: 0 !important;
+/* ABOUT PAGE - EVERGREEN INSPIRED */
+.sg-about-page {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 56px 24px 0;
 }
 
-.sg-socials.single-social a {
-  width: 42px !important;
-  height: 42px !important;
-  border-radius: 999px !important;
-  border: 1px solid rgba(199, 220, 73, 0.28) !important;
-  background: rgba(255, 255, 255, 0.06) !important;
-  color: var(--lime) !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  font-size: 18px !important;
-  font-weight: 600 !important;
-  line-height: 1 !important;
+.sg-about-hero {
+  display: grid;
+  gap: 42px;
+}
+
+.sg-about-hero .sg-page-kicker {
+  text-align: center;
+}
+
+.sg-about-hero h1 {
+  max-width: 760px;
+  margin: -18px auto 0;
+  color: var(--text);
+  text-align: center;
+  font-size: clamp(40px, 4.6vw, 56px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.sg-about-hero-image {
+  min-height: 430px;
+  border-radius: 24px;
+  background:
+    linear-gradient(90deg, rgba(20, 49, 38, 0.26), rgba(20, 49, 38, 0.04)),
+    url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.sg-about-proof {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px;
+  padding: 8px 0 36px;
+  border-bottom: 1px solid var(--line);
+}
+
+.sg-about-proof div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.sg-about-proof span {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: var(--lime);
+  color: var(--dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.sg-about-proof p {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.sg-about-intro-section {
+  margin-top: 72px;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: clamp(40px, 8vw, 120px);
+  align-items: center;
+}
+
+.sg-about-intro-section h2,
+.sg-about-standard h2,
+.sg-about-mission h2 {
+  max-width: 620px;
+  margin-top: 18px;
+  color: var(--text);
+  font-size: clamp(32px, 3.4vw, 40px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
+
+.sg-about-copy {
+  max-width: 640px;
+  margin-top: 30px;
+  display: grid;
+  gap: 18px;
+}
+
+.sg-about-copy p,
+.sg-about-standard p,
+.sg-about-mission p {
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.68;
+}
+
+.sg-about-side-image {
+  min-height: 360px;
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(20, 49, 38, 0.08), rgba(20, 49, 38, 0.16)),
+    url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.sg-about-capabilities {
+  margin-top: 86px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.sg-about-cap-card {
+  min-height: 250px;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 84% 12%, rgba(199, 220, 73, 0.18), transparent 28%),
+    #f4f5ec;
+  padding: 30px 24px;
+  text-align: center;
+}
+
+.sg-about-cap-card > span {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 16px;
+  border: 1px solid rgba(21, 89, 31, 0.16);
+  background: #ffffff;
+  color: var(--dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sg-about-cap-card h3 {
+  margin-top: 28px;
+  color: var(--text);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.sg-about-cap-card p {
+  margin-top: 14px;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.sg-about-standard {
+  margin-top: 86px;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 92% 8%, rgba(199, 220, 73, 0.18), transparent 24%),
+    radial-gradient(circle at 12% 90%, rgba(255, 255, 255, 0.08), transparent 24%),
+    linear-gradient(135deg, #15591f 0%, #10551f 54%, #143126 100%);
+  color: #ffffff;
+  padding: clamp(48px, 7vw, 86px);
+  text-align: center;
+}
+
+.sg-about-standard .sg-section-kicker,
+.sg-about-standard h2,
+.sg-about-standard p {
+  color: #ffffff;
+}
+
+.sg-about-standard h2 {
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sg-about-standard p {
+  max-width: 760px;
+  margin: 26px auto 0;
+}
+
+.sg-about-standard-button {
+  width: fit-content;
+  height: 48px;
+  margin: 34px auto 0;
+  border-radius: 7px;
+  background: var(--lime);
+  color: var(--dark);
+  padding: 0 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sg-about-mission {
+  margin-top: 86px;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.sg-about-mission > div:first-child {
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(199, 220, 73, 0.18), transparent 28%),
+    #f4f5ec;
+  padding: clamp(34px, 5vw, 56px);
+}
+
+.sg-about-mission p {
+  max-width: 620px;
+  margin-top: 20px;
+}
+
+.sg-about-mission-image {
+  min-height: 460px;
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(20, 49, 38, 0.06), rgba(20, 49, 38, 0.14)),
+    url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.sg-about-page .sg-contact-scene {
+  max-width: 100%;
+  margin: 86px 0 72px;
+  padding: 0;
 }
 
 @media (max-width: 900px) {
-  .sg-socials.single-social {
-    justify-content: center !important;
+  .sg-about-page {
+    padding: 38px 16px 0;
+  }
+
+  .sg-about-hero {
+    gap: 30px;
+  }
+
+  .sg-about-hero .sg-page-kicker,
+  .sg-about-hero h1 {
+    text-align: left;
+  }
+
+  .sg-about-hero h1 {
+    margin: -10px 0 0;
+    font-size: clamp(34px, 10vw, 48px);
+  }
+
+  .sg-about-hero-image {
+    min-height: 280px;
+    border-radius: 22px;
+  }
+
+  .sg-about-proof,
+  .sg-about-intro-section,
+  .sg-about-capabilities,
+  .sg-about-mission {
+    grid-template-columns: 1fr;
+  }
+
+  .sg-about-proof {
+    gap: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .sg-about-proof div {
+    justify-content: flex-start;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .sg-about-intro-section {
+    margin-top: 48px;
+    gap: 28px;
+  }
+
+  .sg-about-intro-section h2,
+  .sg-about-standard h2,
+  .sg-about-mission h2 {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .sg-about-copy p,
+  .sg-about-standard p,
+  .sg-about-mission p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .sg-about-side-image {
+    min-height: 280px;
+    border-radius: 22px;
+  }
+
+  .sg-about-capabilities,
+  .sg-about-standard,
+  .sg-about-mission {
+    margin-top: 56px;
+  }
+
+  .sg-about-cap-card {
+    min-height: 220px;
+    border-radius: 20px;
+    text-align: left;
+  }
+
+  .sg-about-cap-card > span {
+    margin: 0;
+  }
+
+  .sg-about-standard {
+    border-radius: 20px;
+    text-align: left;
+    padding: 34px 22px;
+  }
+
+  .sg-about-standard h2,
+  .sg-about-standard p,
+  .sg-about-standard-button {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .sg-about-mission > div:first-child,
+  .sg-about-mission-image {
+    border-radius: 20px;
+  }
+
+  .sg-about-mission-image {
+    min-height: 300px;
+  }
+
+  .sg-about-page .sg-contact-scene {
+    margin: 56px 0 48px;
+  }
+}
+
+/* ABOUT PAGE - EVERGREEN INSPIRED */
+.sg-about-page {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 56px 24px 0;
+}
+
+.sg-about-hero {
+  display: grid;
+  gap: 42px;
+}
+
+.sg-about-hero .sg-page-kicker {
+  text-align: center;
+}
+
+.sg-about-hero h1 {
+  max-width: 760px;
+  margin: -18px auto 0;
+  color: var(--text);
+  text-align: center;
+  font-size: clamp(40px, 4.6vw, 56px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.sg-about-hero-image {
+  min-height: 430px;
+  border-radius: 24px;
+  background:
+    linear-gradient(90deg, rgba(20, 49, 38, 0.26), rgba(20, 49, 38, 0.04)),
+    url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.sg-about-proof {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px;
+  padding: 8px 0 36px;
+  border-bottom: 1px solid var(--line);
+}
+
+.sg-about-proof div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.sg-about-proof span {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: var(--lime);
+  color: var(--dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.sg-about-proof p {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.sg-about-intro-section {
+  margin-top: 72px;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: clamp(40px, 8vw, 120px);
+  align-items: center;
+}
+
+.sg-about-intro-section h2,
+.sg-about-standard h2,
+.sg-about-mission h2 {
+  max-width: 620px;
+  margin-top: 18px;
+  color: var(--text);
+  font-size: clamp(32px, 3.4vw, 40px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
+
+.sg-about-copy {
+  max-width: 640px;
+  margin-top: 30px;
+  display: grid;
+  gap: 18px;
+}
+
+.sg-about-copy p,
+.sg-about-standard p,
+.sg-about-mission p {
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.68;
+}
+
+.sg-about-side-image {
+  min-height: 360px;
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(20, 49, 38, 0.08), rgba(20, 49, 38, 0.16)),
+    url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.sg-about-capabilities {
+  margin-top: 86px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.sg-about-cap-card {
+  min-height: 250px;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 84% 12%, rgba(199, 220, 73, 0.18), transparent 28%),
+    #f4f5ec;
+  padding: 30px 24px;
+  text-align: center;
+}
+
+.sg-about-cap-card > span {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 16px;
+  border: 1px solid rgba(21, 89, 31, 0.16);
+  background: #ffffff;
+  color: var(--dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sg-about-cap-card h3 {
+  margin-top: 28px;
+  color: var(--text);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.sg-about-cap-card p {
+  margin-top: 14px;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.sg-about-standard {
+  margin-top: 86px;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 92% 8%, rgba(199, 220, 73, 0.18), transparent 24%),
+    radial-gradient(circle at 12% 90%, rgba(255, 255, 255, 0.08), transparent 24%),
+    linear-gradient(135deg, #15591f 0%, #10551f 54%, #143126 100%);
+  color: #ffffff;
+  padding: clamp(48px, 7vw, 86px);
+  text-align: center;
+}
+
+.sg-about-standard .sg-section-kicker,
+.sg-about-standard h2,
+.sg-about-standard p {
+  color: #ffffff;
+}
+
+.sg-about-standard h2 {
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sg-about-standard p {
+  max-width: 760px;
+  margin: 26px auto 0;
+}
+
+.sg-about-standard-button {
+  width: fit-content;
+  height: 48px;
+  margin: 34px auto 0;
+  border-radius: 7px;
+  background: var(--lime);
+  color: var(--dark);
+  padding: 0 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sg-about-mission {
+  margin-top: 86px;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.sg-about-mission > div:first-child {
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(199, 220, 73, 0.18), transparent 28%),
+    #f4f5ec;
+  padding: clamp(34px, 5vw, 56px);
+}
+
+.sg-about-mission p {
+  max-width: 620px;
+  margin-top: 20px;
+}
+
+.sg-about-mission-image {
+  min-height: 460px;
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(20, 49, 38, 0.06), rgba(20, 49, 38, 0.14)),
+    url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.sg-about-page .sg-contact-scene {
+  max-width: 100%;
+  margin: 86px 0 72px;
+  padding: 0;
+}
+
+@media (max-width: 900px) {
+  .sg-about-page {
+    padding: 38px 16px 0;
+  }
+
+  .sg-about-hero {
+    gap: 30px;
+  }
+
+  .sg-about-hero .sg-page-kicker,
+  .sg-about-hero h1 {
+    text-align: left;
+  }
+
+  .sg-about-hero h1 {
+    margin: -10px 0 0;
+    font-size: clamp(34px, 10vw, 48px);
+  }
+
+  .sg-about-hero-image {
+    min-height: 280px;
+    border-radius: 22px;
+  }
+
+  .sg-about-proof,
+  .sg-about-intro-section,
+  .sg-about-capabilities,
+  .sg-about-mission {
+    grid-template-columns: 1fr;
+  }
+
+  .sg-about-proof {
+    gap: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .sg-about-proof div {
+    justify-content: flex-start;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .sg-about-intro-section {
+    margin-top: 48px;
+    gap: 28px;
+  }
+
+  .sg-about-intro-section h2,
+  .sg-about-standard h2,
+  .sg-about-mission h2 {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .sg-about-copy p,
+  .sg-about-standard p,
+  .sg-about-mission p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .sg-about-side-image {
+    min-height: 280px;
+    border-radius: 22px;
+  }
+
+  .sg-about-capabilities,
+  .sg-about-standard,
+  .sg-about-mission {
+    margin-top: 56px;
+  }
+
+  .sg-about-cap-card {
+    min-height: 220px;
+    border-radius: 20px;
+    text-align: left;
+  }
+
+  .sg-about-cap-card > span {
+    margin: 0;
+  }
+
+  .sg-about-standard {
+    border-radius: 20px;
+    text-align: left;
+    padding: 34px 22px;
+  }
+
+  .sg-about-standard h2,
+  .sg-about-standard p,
+  .sg-about-standard-button {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .sg-about-mission > div:first-child,
+  .sg-about-mission-image {
+    border-radius: 20px;
+  }
+
+  .sg-about-mission-image {
+    min-height: 300px;
+  }
+
+  .sg-about-page .sg-contact-scene {
+    margin: 56px 0 48px;
   }
 }

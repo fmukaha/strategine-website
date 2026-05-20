@@ -33,10 +33,11 @@ export default function Footer() {
             ))}
           </nav>
 
-          <div className="sg-socials single-social">
-            <a href="https://www.linkedin.com/company/strategine" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-              in
-            </a>
+          <div className="sg-socials">
+            <a href="#" aria-label="Instagram">◎</a>
+            <a href="#" aria-label="Social">✣</a>
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="LinkedIn">in</a>
           </div>
         </div>
 
@@ -51,4 +52,3 @@ export default function Footer() {
     </footer>
   );
 }
-
