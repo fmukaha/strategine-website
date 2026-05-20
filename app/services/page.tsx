@@ -1,10 +1,11 @@
-import Header from "../components/Header";
+﻿import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Link from "next/link";
+import ContactCta from "../components/ContactCta";
 import {
+  ArrowRight,
   BarChart3,
-  ClipboardCheck,
   FileSearch,
+  GitBranch,
   Layers3,
   Network,
   ShieldCheck,
@@ -18,22 +19,19 @@ const stats = [
 
 const services = [
   {
-    title: "Intelligence Landscape Diagnostic",
-    text: "Map your data sources, workflows, risks, evidence gaps, and reporting readiness across responsible business operations.",
-    href: "/contact",
+    title: "Landscape diagnostic",
+    text: "Map data sources, workflows, risks, evidence gaps, and reporting readiness.",
     icon: FileSearch,
   },
   {
-    title: "Accountability & Reporting Architecture",
-    text: "Define KPIs, ownership, escalation logic, action tracking, remediation evidence, and reporting requirements.",
-    href: "/contact",
-    icon: ClipboardCheck,
+    title: "Reporting architecture",
+    text: "Define KPIs, ownership, escalation, action tracking, and reporting logic.",
+    icon: BarChart3,
   },
   {
-    title: "Decision Intelligence System Build",
-    text: "Build data models, workflows, dashboards, access rules, and review processes for routine oversight.",
-    href: "/contact",
-    icon: Layers3,
+    title: "System build",
+    text: "Build data models, dashboards, workflows, access rules, and review routines.",
+    icon: GitBranch,
   },
 ];
 
@@ -43,116 +41,91 @@ export default function ServicesPage() {
       <Header />
 
       <main className="sg-services-page">
-        <section className="sg-services-hero">
+        <section className="sg-standard-hero sg-services-hero">
           <span className="sg-page-kicker">Services</span>
+          <h1>Responsible intelligence systems.</h1>
+          <div className="sg-services-image" aria-label="Strategine services" />
+        </section>
 
-          <h1>Responsible Intelligence Systems</h1>
-
-          <div className="sg-services-image" aria-label="Strategine services placeholder" />
-
-          <div className="sg-services-intro">
-            <div>
-              <span className="sg-section-kicker">What we do</span>
-              <h2>Make risk visible.</h2>
-            </div>
-
-            <div className="sg-services-copy">
-              <p>
-                Strategine is a consulting firm focused on decision intelligence
-                for social and human rights risk.
-              </p>
-
-              <p>
-                We work with organisations operating in complex, people-intensive
-                environments to turn operational signals into clear, governance-ready intelligence.
-              </p>
-
-              <p>
-                Our work helps leadership identify emerging risks early, assess
-                whether response mechanisms are working, and strengthen oversight.
-              </p>
-            </div>
+        <section className="sg-standard-intro sg-services-intro">
+          <div>
+            <span className="sg-section-kicker">What we do</span>
+            <h2>Make risk visible.</h2>
           </div>
 
-          <div className="sg-standard-stats sg-services-stats">
-            {stats.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div className="sg-services-stat" key={item.label}>
-                  <span className="sg-stat-icon" aria-hidden="true">
-                    <Icon size={24} strokeWidth={1.6} />
-                  </span>
-                  <strong>{item.value}</strong>
-                  <small>{item.label}</small>
-                </div>
-              );
-            })}
+          <div className="sg-services-copy">
+            <p>
+              Strategine helps organisations turn complex operational data into
+              clear intelligence for responsible business oversight.
+            </p>
+            <p>
+              We structure the logic behind reporting, escalation, ownership,
+              evidence, and action.
+            </p>
+            <p>
+              The result is a practical system leadership can use routinely.
+            </p>
           </div>
         </section>
 
-        <section className="sg-why-section">
-          <div className="sg-why-copy">
-            <span className="sg-section-kicker">Why choose us</span>
-            <h2>More than reporting. We build the logic behind better oversight.</h2>
-          </div>
+        <section className="sg-standard-stats sg-services-stats">
+          {stats.map((item) => {
+            const Icon = item.icon;
 
-          <div className="sg-why-media">
-            <div className="sg-why-image" aria-label="Strategine advisory placeholder" />
-            <a href="/contact" className="sg-why-button">Start a consultation</a>
-          </div>
-
-          <div className="sg-why-list">
-            {[
-              "Clear intelligence from fragmented operational records.",
-              "Practical KPI frameworks leadership can actually use.",
-              "Accountability loops that show ownership and follow-up.",
-              "Governance-ready outputs for decisions, reviews, and audits.",
-            ].map((item) => (
-              <div key={item}>
-                <span>→</span>
-                <p>{item}</p>
+            return (
+              <div key={item.label} className="sg-services-stat">
+                <span className="sg-stat-icon" aria-hidden="true">
+                  <Icon size={24} strokeWidth={1.7} />
+                </span>
+                <strong>{item.value}</strong>
+                <small>{item.label}</small>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </section>
 
         <section className="sg-service-grid-section">
-          <span className="sg-section-kicker">Our services</span>
-          <h2>Responsible business intelligence systems</h2>
+          <span className="sg-section-kicker">How we help</span>
+          <h2>Three practical entry points.</h2>
 
           <div className="sg-service-grid">
-            {services.map((service) => {
-              const Icon = service.icon;
+            {services.map((item) => {
+              const Icon = item.icon;
+
               return (
-                <Link href={service.href} className="sg-service-card" key={service.title}>
+                <article className="sg-service-card" key={item.title}>
                   <span className="sg-card-symbol" aria-hidden="true">
                     <Icon size={24} strokeWidth={1.6} />
                   </span>
-                  <h3>{service.title}</h3>
-                  <p>{service.text}</p>
-                  <span className="sg-card-arrow" aria-hidden="true">→</span>
-                </Link>
+
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+
+                  <a href="/contact" className="sg-card-arrow" aria-label={item.title}>
+                    <ArrowRight size={18} />
+                  </a>
+                </article>
               );
             })}
           </div>
         </section>
 
         <section className="sg-impact-section">
-          <span className="sg-section-kicker">Get an estimate</span>
-          <h2>Intelligence systems that make responsible business visible</h2>
+          <span className="sg-section-kicker">Outcome</span>
+          <h2>Clearer oversight. Faster action.</h2>
 
           <div className="sg-impact-points">
-            <p>Clear signals for leadership, risk, and sustainability decisions.</p>
-            <p>Practical systems for accountability, follow-up, and evidence.</p>
+            <p>Leadership sees the signal.</p>
+            <p>Teams understand ownership.</p>
+            <p>Reports connect to evidence.</p>
           </div>
 
-          <div className="sg-impact-image">
-            <a href="/contact" className="sg-impact-button">
-              <span>Start a project</span>
-              <small>→</small>
-            </a>
-          </div>
+          <a href="/contact" className="sg-impact-button">
+            Start with a diagnostic <small>→</small>
+          </a>
         </section>
+
+        <ContactCta />
       </main>
 
       <Footer />

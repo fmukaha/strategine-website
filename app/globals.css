@@ -3142,3 +3142,76 @@ li,
 }
 
 /* ===== STRATEGINE SHORT HEADINGS AND LEGIBILITY END ===== */
+
+/* ===== STRATEGINE BRIGHT BACKGROUND LEGIBILITY START ===== */
+
+/* Bright/lime surfaces must use dark green text */
+.sg-contact-form,
+.sg-contact-form *,
+[class*="lime"],
+[class*="soft"] {
+  color: var(--dark) !important;
+}
+
+.sg-contact-form h1,
+.sg-contact-form h2,
+.sg-contact-form h3,
+.sg-contact-form h4,
+.sg-contact-form h5,
+.sg-contact-form h6,
+.sg-contact-form p,
+.sg-contact-form label,
+.sg-contact-form label span,
+.sg-contact-form .sg-contact-form-intro {
+  color: var(--dark) !important;
+}
+
+/* Inputs stay readable */
+.sg-contact-form input,
+.sg-contact-form select,
+.sg-contact-form textarea {
+  color: var(--text) !important;
+  background: #ffffff !important;
+}
+
+/* Dark buttons on bright surfaces */
+.sg-contact-form button,
+.sg-contact-form .sg-contact-submit {
+  background: var(--dark) !important;
+  color: #ffffff !important;
+}
+
+.sg-contact-form button *,
+.sg-contact-form .sg-contact-submit * {
+  color: inherit !important;
+}
+
+/* ===== STRATEGINE BRIGHT BACKGROUND LEGIBILITY END ===== */
+/* Page completion polish */
+.sg-home-intro,
+.sg-case-intro,
+.sg-insights-intro {
+  margin-top: 72px;
+}
+
+.sg-case-page .sg-service-grid-section,
+.sg-insights-page .sg-service-grid-section {
+  margin-top: 72px;
+}
+
+.sg-service-card small {
+  color: var(--dark);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+  .sg-home-intro,
+  .sg-case-intro,
+  .sg-insights-intro {
+    margin-top: 48px;
+  }
+}
