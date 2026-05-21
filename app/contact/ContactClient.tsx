@@ -290,16 +290,22 @@ export default function ContactClient() {
 
             <div>
               <p>
-                We collect this information only to understand your inquiry,
-                assess whether Strategine is the right fit, and respond with
-                relevant next steps.
+                We collect only the information needed to understand your
+                inquiry, assess fit, and respond with relevant next steps.
               </p>
 
               <p>
-                Your details help us understand the organisation, decision
-                context, HREDD or responsible business challenge, and the level
-                of urgency. We do not use this form for spam, mailing lists, or
-                unrelated outreach.
+                We handle inquiry data in line with recognised data protection
+                principles: lawful, fair and transparent processing; purpose
+                limitation; data minimisation; accuracy; storage limitation; and
+                appropriate security.
+              </p>
+
+              <p>
+                This reflects the responsible business discipline behind the UN
+                Guiding Principles: clear purpose, credible evidence,
+                accountability, and respect for people affected by business
+                activity.
               </p>
             </div>
           </div>
