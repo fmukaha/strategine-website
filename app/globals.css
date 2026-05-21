@@ -5070,3 +5070,135 @@ li,
 }
 
 /* ===== MOBILE INSIGHTS SEARCH CARD END ===== */
+
+/* ===== INSIGHTS CARD HOVER EXPERIENCE START ===== */
+
+.sg-insights-grid {
+  gap: 28px !important;
+}
+
+.sg-insight-card {
+  min-height: 520px !important;
+  border-radius: 28px !important;
+  background: #f7f8f0 !important;
+  overflow: hidden !important;
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.sg-insight-card a {
+  height: 100% !important;
+  display: grid !important;
+  grid-template-rows: auto auto 1fr auto !important;
+  gap: 14px !important;
+  padding: 22px !important;
+}
+
+.sg-insight-image {
+  min-height: 280px !important;
+  border-radius: 20px !important;
+  background-size: cover !important;
+  background-position: center !important;
+  transition:
+    transform 0.22s ease,
+    filter 0.22s ease;
+}
+
+.sg-insight-meta {
+  margin-top: 2px !important;
+}
+
+.sg-insight-title-row {
+  display: block !important;
+}
+
+.sg-insight-title-row svg {
+  display: none !important;
+}
+
+.sg-insight-title-row h2 {
+  max-width: 92% !important;
+  font-size: clamp(1.35rem, 1.6vw, 1.65rem) !important;
+  line-height: 1.16 !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.04em !important;
+}
+
+.sg-insight-link {
+  width: 52px !important;
+  height: 52px !important;
+  justify-self: end !important;
+  align-self: end !important;
+  border-radius: 999px !important;
+  background: #ffffff !important;
+  color: var(--dark) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0 !important;
+  text-decoration: none !important;
+  font-size: 0 !important;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.sg-insight-link svg {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.sg-insight-card:hover {
+  transform: translateY(-5px) !important;
+  background:
+    radial-gradient(circle at 92% 10%, rgba(255, 255, 255, 0.25), transparent 26%),
+    linear-gradient(135deg, #d6ea4c, #bdf000 58%, #dff55f) !important;
+  box-shadow: 0 26px 70px rgba(20, 49, 38, 0.16) !important;
+}
+
+.sg-insight-card:hover .sg-insight-image {
+  filter: saturate(1.04) contrast(1.02) !important;
+  transform: scale(1.015) !important;
+}
+
+.sg-insight-card:hover .sg-insight-link {
+  background: var(--dark) !important;
+  color: var(--lime) !important;
+  transform: translate(2px, -2px) !important;
+}
+
+.sg-insight-card:hover .sg-insight-meta span,
+.sg-insight-card:hover .sg-insight-meta small,
+.sg-insight-card:hover .sg-insight-title-row h2 {
+  color: var(--dark) !important;
+}
+
+@media (max-width: 720px) {
+  .sg-insights-grid {
+    gap: 24px !important;
+  }
+
+  .sg-insight-card {
+    min-height: 460px !important;
+    border-radius: 24px !important;
+  }
+
+  .sg-insight-card a {
+    padding: 18px !important;
+  }
+
+  .sg-insight-image {
+    min-height: 245px !important;
+    border-radius: 18px !important;
+  }
+
+  .sg-insight-link {
+    width: 48px !important;
+    height: 48px !important;
+  }
+}
+
+/* ===== INSIGHTS CARD HOVER EXPERIENCE END ===== */
