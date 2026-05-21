@@ -244,34 +244,59 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="sg-framework-section">
-          <span className="sg-section-kicker">Built around recognised frameworks</span>
+                <section className="sg-framework-section">
+          <span className="sg-section-kicker">Frameworks we work with</span>
 
-          <div className="sg-framework-row">
-            <div className="sg-framework-card">
-              <strong>UNGP</strong>
-              <span>UN Guiding Principles</span>
-            </div>
+          <div className="sg-framework-logos">
+            <article className="sg-framework-logo">
+              <div className="sg-framework-logo-mark sg-framework-mark--orbit" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+              <div className="sg-framework-logo-copy">
+                <strong>UNGP</strong>
+                <small>Guiding Principles</small>
+              </div>
+            </article>
 
-            <div className="sg-framework-card">
-              <strong>OECD</strong>
-              <span>Due Diligence Guidance</span>
-            </div>
+            <article className="sg-framework-logo">
+              <div className="sg-framework-logo-mark sg-framework-mark--stem" aria-hidden="true">
+                <span></span><span></span>
+              </div>
+              <div className="sg-framework-logo-copy">
+                <strong>OECD</strong>
+                <small>Due Diligence</small>
+              </div>
+            </article>
 
-            <div className="sg-framework-card">
-              <strong>CSDDD</strong>
-              <span>Corporate Sustainability Due Diligence</span>
-            </div>
+            <article className="sg-framework-logo">
+              <div className="sg-framework-logo-mark sg-framework-mark--cluster" aria-hidden="true">
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <div className="sg-framework-logo-copy">
+                <strong>CSDDD</strong>
+                <small>Corporate Due Diligence</small>
+              </div>
+            </article>
 
-            <div className="sg-framework-card">
-              <strong>ESG</strong>
-              <span>Sustainability Reporting</span>
-            </div>
+            <article className="sg-framework-logo">
+              <div className="sg-framework-logo-mark sg-framework-mark--horizon" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+              <div className="sg-framework-logo-copy">
+                <strong>ESG</strong>
+                <small>Sustainability Reporting</small>
+              </div>
+            </article>
 
-            <div className="sg-framework-card">
-              <strong>RBC</strong>
-              <span>Responsible Business Conduct</span>
-            </div>
+            <article className="sg-framework-logo">
+              <div className="sg-framework-logo-mark sg-framework-mark--shield" aria-hidden="true">
+                <span></span>
+              </div>
+              <div className="sg-framework-logo-copy">
+                <strong>RBC</strong>
+                <small>Responsible Business Conduct</small>
+              </div>
+            </article>
           </div>
         </section>
       </main>
