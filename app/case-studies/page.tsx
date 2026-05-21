@@ -1,6 +1,5 @@
-﻿import Header from "../components/Header";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ContactCta from "../components/ContactCta";
 import { ArrowRight, BarChart3, FileSearch, ShieldCheck } from "lucide-react";
 
 const caseStudies = [
@@ -70,18 +69,12 @@ export default function CaseStudiesPage() {
                   <small>{item.sector}</small>
                   <h3>{item.title}</h3>
                   <p>{item.text}</p>
-
-                  <a href="/contact" className="sg-card-arrow" aria-label={item.title}>
-                    <ArrowRight size={18} />
-                  </a>
-                </article>
+</article>
               );
             })}
           </div>
         </section>
-
-        <ContactCta />
-      </main>
+</main>
 
       <Footer />
     </>

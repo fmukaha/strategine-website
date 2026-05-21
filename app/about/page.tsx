@@ -1,19 +1,44 @@
 ﻿import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ContactCta from "../components/ContactCta";
 import {
   BarChart3,
   FileSearch,
   GitBranch,
+  Handshake,
   Layers3,
+  Leaf,
   Network,
   ShieldCheck,
+  Sprout,
 } from "lucide-react";
 
 const stats = [
   { value: "6+", label: "Intelligence domains", icon: Network },
   { value: "3", label: "Data maturity layers", icon: Layers3 },
   { value: "1", label: "Accountability system", icon: ShieldCheck },
+];
+
+const storyCards = [
+  {
+    title: "Practical care",
+    text: "We focus on systems people can understand, maintain, and use routinely.",
+    icon: Handshake,
+  },
+  {
+    title: "Sustainable logic",
+    text: "We design reporting foundations that remain useful as requirements evolve.",
+    icon: Leaf,
+  },
+  {
+    title: "Tailored systems",
+    text: "We shape each solution around real workflows, risks, ownership, and evidence.",
+    icon: Sprout,
+  },
+  {
+    title: "Reliable structure",
+    text: "We help teams move from scattered records to clear operating rhythm.",
+    icon: ShieldCheck,
+  },
 ];
 
 const capabilities = [
@@ -77,6 +102,39 @@ export default function AboutPage() {
           </div>
         </section>
 
+        <section className="sg-about-story">
+          <div className="sg-about-story-copy">
+            <span className="sg-section-kicker">How we work</span>
+            <h2>Clear systems. Real use.</h2>
+            <p>
+              We build with the people who will use the system, not around them.
+              The goal is simple: make responsible operations easier to see,
+              manage, evidence, and improve.
+            </p>
+          </div>
+
+          <div
+            className="sg-about-story-image"
+            aria-label="Strategine advisory collaboration"
+          />
+        </section>
+
+        <section className="sg-about-story-cards">
+          {storyCards.map((item) => {
+            const Icon = item.icon;
+
+            return (
+              <article className="sg-about-story-card" key={item.title}>
+                <span aria-hidden="true">
+                  <Icon size={42} strokeWidth={1.45} />
+                </span>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            );
+          })}
+        </section>
+
         <section className="sg-standard-stats sg-about-stats">
           {stats.map((item) => {
             const Icon = item.icon;
@@ -119,9 +177,6 @@ export default function AboutPage() {
             We design systems that help leadership identify what matters,
             assign ownership, track response, and communicate progress clearly.
           </p>
-          <a href="/services" className="sg-about-standard-button">
-            Explore services
-          </a>
         </section>
 
         <section className="sg-about-mission">
@@ -144,8 +199,6 @@ export default function AboutPage() {
             aria-label="Strategine mission placeholder"
           />
         </section>
-
-        <ContactCta />
       </main>
 
       <Footer />

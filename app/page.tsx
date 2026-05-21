@@ -1,8 +1,6 @@
-﻿import Header from "./components/Header";
+import Header from "./components/Header";
 import Footer from "./components/Footer";
-import ContactCta from "./components/ContactCta";
 import {
-  ArrowRight,
   BarChart3,
   FileSearch,
   GitBranch,
@@ -46,16 +44,7 @@ export default function HomePage() {
             <h1>
               Responsible intelligence for better decisions.
             </h1>
-
-            <div className="hero-actions">
-              <a href="/services" className="hero-btn lime">
-                Explore services
-              </a>
-              <a href="/contact" className="hero-btn dark">
-                Start a conversation
-              </a>
-            </div>
-          </div>
+</div>
         </section>
 
         <section className="sg-standard-intro sg-home-intro">
@@ -112,11 +101,7 @@ export default function HomePage() {
 
                   <h3>{item.title}</h3>
                   <p>{item.text}</p>
-
-                  <a href="/services" className="sg-card-arrow" aria-label={item.title}>
-                    <ArrowRight size={18} />
-                  </a>
-                </article>
+</article>
               );
             })}
           </div>
@@ -131,14 +116,8 @@ export default function HomePage() {
             <p>Better evidence for reporting.</p>
             <p>Stronger accountability for action.</p>
           </div>
-
-          <a href="/about" className="sg-impact-button">
-            Learn about Strategine <small>→</small>
-          </a>
-        </section>
-
-        <ContactCta />
-      </main>
+</section>
+</main>
 
       <Footer />
     </>

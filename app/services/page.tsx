@@ -1,8 +1,6 @@
-﻿import Header from "../components/Header";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ContactCta from "../components/ContactCta";
 import {
-  ArrowRight,
   BarChart3,
   FileSearch,
   GitBranch,
@@ -100,11 +98,7 @@ export default function ServicesPage() {
 
                   <h3>{item.title}</h3>
                   <p>{item.text}</p>
-
-                  <a href="/contact" className="sg-card-arrow" aria-label={item.title}>
-                    <ArrowRight size={18} />
-                  </a>
-                </article>
+</article>
               );
             })}
           </div>
@@ -119,14 +113,8 @@ export default function ServicesPage() {
             <p>Teams understand ownership.</p>
             <p>Reports connect to evidence.</p>
           </div>
-
-          <a href="/contact" className="sg-impact-button">
-            Start with a diagnostic <small>→</small>
-          </a>
-        </section>
-
-        <ContactCta />
-      </main>
+</section>
+</main>
 
       <Footer />
     </>
