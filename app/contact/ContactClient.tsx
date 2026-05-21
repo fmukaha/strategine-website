@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -7,10 +7,10 @@ import {
   ArrowRight,
   CheckCircle2,
   ChevronDown,
-  Globe2,
   Mail,
   MessageCircle,
   Phone,
+  Search,
   ShieldCheck,
   User,
 } from "lucide-react";
@@ -67,20 +67,21 @@ const countries: { code: CountryCode; label: string }[] = [
   { code: "US", label: "United States" },
 ];
 
-function countryFlag(code: CountryCode) {
-  return code
-    .toUpperCase()
-    .replace(/./g, (char) =>
-      String.fromCodePoint(127397 + char.charCodeAt(0))
-    );
-}
-
-function countryDisplay(code: CountryCode) {
-  const country = countries.find((item) => item.code === code);
-  return country
-    ? `${countryFlag(country.code)} +${getCountryCallingCode(country.code)} ${country.label}`
-    : "";
-}
+const phoneExamples: Partial<Record<CountryCode, string>> = {
+  KE: "e.g. 712 345 678",
+  UG: "e.g. 712 345 678",
+  TZ: "e.g. 712 345 678",
+  RW: "e.g. 788 123 456",
+  ET: "e.g. 911 123 456",
+  ZA: "e.g. 82 123 4567",
+  CI: "e.g. 07 12 34 56 78",
+  GH: "e.g. 24 123 4567",
+  NG: "e.g. 803 123 4567",
+  GB: "e.g. 7700 900123",
+  DE: "e.g. 1512 3456789",
+  NL: "e.g. 6 12345678",
+  US: "e.g. 202 555 0143",
+};
 
 const roles = [
   "CEO / Managing Director",
@@ -128,6 +129,15 @@ function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.trim());
 }
 
+function countryFlagUrl(code: CountryCode) {
+  return `https://flagcdn.com/w40/${code.toLowerCase()}.png`;
+}
+
+function countryDisplay(code: CountryCode) {
+  const country = countries.find((item) => item.code === code);
+  return country ? country.label : "";
+}
+
 function normalisedPhone(form: FormState) {
   return parsePhoneNumberFromString(form.phone, form.country);
 }
@@ -137,8 +147,10 @@ export default function ContactClient() {
   const [step, setStep] = useState(0);
   const [submitted, setSubmitted] = useState(false);
   const [countryDetected, setCountryDetected] = useState(false);
-  const [countryInput, setCountryInput] = useState(countryDisplay(initialForm.country));
   const [countryOpen, setCountryOpen] = useState(false);
+  const [countrySearch, setCountrySearch] = useState("");
+
+  const selectedCountry = countries.find((country) => country.code === form.country) || countries[0];
 
   useEffect(() => {
     async function detectCountry() {
@@ -149,7 +161,6 @@ export default function ContactClient() {
 
         if (countries.some((country) => country.code === detected)) {
           setForm((current) => ({ ...current, country: detected }));
-          setCountryInput(countryDisplay(detected));
           setCountryDetected(true);
         }
       } catch {
@@ -161,6 +172,15 @@ export default function ContactClient() {
   }, []);
 
   const phoneNumber = useMemo(() => normalisedPhone(form), [form]);
+
+  const filteredCountries = useMemo(() => {
+    const search = countrySearch.trim().toLowerCase();
+
+    return countries.filter((country) => {
+      const text = `${country.label} ${country.code} +${getCountryCallingCode(country.code)}`.toLowerCase();
+      return !search || text.includes(search);
+    });
+  }, [countrySearch]);
 
   const errors = useMemo(() => {
     const next: Partial<Record<keyof FormState, string>> = {};
@@ -199,33 +219,15 @@ export default function ContactClient() {
 
   const canContinue = stepErrors.every((key) => !errors[key]);
 
-  function updateCountryInput(value: string) {
-    setCountryInput(value);
-    setCountryOpen(true);
-
-    const match = countries.find((country) => {
-      const display = countryDisplay(country.code).toLowerCase();
-      return display === value.toLowerCase();
-    });
-
-    if (match) {
-      updateField("country", match.code);
-    }
-  }
-
-  const filteredCountries = countries.filter((country) =>
-    countryDisplay(country.code).toLowerCase().includes(countryInput.toLowerCase())
-  );
-
-  function selectCountry(code: CountryCode) {
-    updateField("country", code);
-    setCountryInput(countryDisplay(code));
-    setCountryOpen(false);
-  }
-
   function updateField<K extends keyof FormState>(field: K, value: FormState[K]) {
     setForm((current) => ({ ...current, [field]: value }));
     setSubmitted(false);
+  }
+
+  function selectCountry(code: CountryCode) {
+    updateField("country", code);
+    setCountrySearch("");
+    setCountryOpen(false);
   }
 
   function nextStep() {
@@ -299,51 +301,60 @@ export default function ContactClient() {
 
                 <label className={submitted && errors.phone ? "has-error" : ""}>
                   <span>Phone number</span>
+
                   <div className="sg-phone-grid">
-                    <div className="sg-country-combobox">
-                      <div className="sg-select-shell sg-country-search-shell">
-                        <Globe2 size={17} strokeWidth={1.7} />
-                        <input
-                          value={countryInput}
-                          onChange={(event) => updateCountryInput(event.target.value)}
-                          onFocus={() => setCountryOpen(true)}
-                          onBlur={() => {
-                            window.setTimeout(() => {
-                              setCountryOpen(false);
-                              setCountryInput(countryDisplay(form.country));
-                            }, 140);
-                          }}
-                          placeholder="Search country code"
-                          aria-label="Search country code"
-                        />
+                    <div className="sg-country-premium">
+                      <button
+                        type="button"
+                        className="sg-country-selected"
+                        onClick={() => setCountryOpen((current) => !current)}
+                      >
+                        <img src={countryFlagUrl(selectedCountry.code)} alt="" />
+                        <span>+{getCountryCallingCode(selectedCountry.code)}</span>
+                        <strong>{countryDisplay(selectedCountry.code)}</strong>
                         <ChevronDown size={16} strokeWidth={1.8} />
-                      </div>
+                      </button>
 
                       {countryOpen && (
-                        <div className="sg-country-options">
-                          {filteredCountries.length > 0 ? (
-                            filteredCountries.map((country) => (
+                        <div className="sg-country-menu">
+                          <div className="sg-country-search">
+                            <Search size={16} strokeWidth={1.8} />
+                            <input
+                              value={countrySearch}
+                              onChange={(event) => setCountrySearch(event.target.value)}
+                              placeholder="Search country"
+                              autoFocus
+                            />
+                          </div>
+
+                          <div className="sg-country-list">
+                            {filteredCountries.map((country) => (
                               <button
                                 key={country.code}
                                 type="button"
-                                onMouseDown={(event) => event.preventDefault()}
                                 onClick={() => selectCountry(country.code)}
                               >
-                                <span className="sg-country-flag">{countryFlag(country.code)}</span><span className="sg-country-code">+{getCountryCallingCode(country.code)}</span><span className="sg-country-name">{country.label}</span>
+                                <img src={countryFlagUrl(country.code)} alt="" />
+                                <span>+{getCountryCallingCode(country.code)}</span>
+                                <strong>{country.label}</strong>
                               </button>
-                            ))
-                          ) : (
-                            <p>No matching country</p>
-                          )}
+                            ))}
+                          </div>
                         </div>
                       )}
                     </div>
 
                     <div className="sg-input-shell">
                       <Phone size={18} strokeWidth={1.7} />
-                      <input value={form.phone} onChange={(event) => updateField("phone", event.target.value)} placeholder="e.g. 712 345 678" autoComplete="tel" />
+                      <input
+                        value={form.phone}
+                        onChange={(event) => updateField("phone", event.target.value)}
+                        placeholder={phoneExamples[form.country] || "Enter phone number"}
+                        autoComplete="tel"
+                      />
                     </div>
                   </div>
+
                   {countryDetected && <small>Country code detected automatically. You can change it.</small>}
                   {submitted && errors.phone && <small>{errors.phone}</small>}
                 </label>

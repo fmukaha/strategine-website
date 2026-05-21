@@ -6515,3 +6515,127 @@ li,
 }
 
 /* ===== CONTACT COUNTRY FLAGS END ===== */
+
+/* ===== PREMIUM COUNTRY SELECTOR START ===== */
+
+.sg-country-premium {
+  position: relative;
+  min-width: 0;
+}
+
+.sg-country-selected {
+  width: 100%;
+  min-height: 58px;
+  border: 1px solid rgba(31, 31, 28, 0.08);
+  border-radius: 17px;
+  background: #ffffff;
+  color: var(--text);
+  display: grid;
+  grid-template-columns: 28px auto 1fr 18px;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px;
+  box-shadow: 0 14px 34px rgba(20, 49, 38, 0.045);
+  cursor: pointer;
+}
+
+.sg-country-selected img,
+.sg-country-list img {
+  width: 24px;
+  height: 18px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px rgba(31, 31, 28, 0.08);
+}
+
+.sg-country-selected span,
+.sg-country-list span {
+  color: var(--dark);
+  font-size: 13px !important;
+  line-height: 1 !important;
+  font-weight: 500 !important;
+}
+
+.sg-country-selected strong,
+.sg-country-list strong {
+  min-width: 0;
+  color: var(--text);
+  font-size: 15px !important;
+  line-height: 1.1 !important;
+  font-weight: 400 !important;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sg-country-menu {
+  position: absolute;
+  z-index: 100;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  padding: 10px;
+  border: 1px solid rgba(31, 31, 28, 0.1);
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 26px 70px rgba(20, 49, 38, 0.2);
+}
+
+.sg-country-search {
+  height: 44px;
+  border-radius: 14px;
+  background: var(--soft);
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  color: var(--dark);
+}
+
+.sg-country-search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 14px !important;
+}
+
+.sg-country-list {
+  max-height: 250px;
+  overflow-y: auto;
+  margin-top: 8px;
+  display: grid;
+  gap: 4px;
+}
+
+.sg-country-list button {
+  width: 100%;
+  min-height: 44px;
+  border: 0;
+  border-radius: 13px;
+  background: transparent;
+  display: grid;
+  grid-template-columns: 28px 58px 1fr;
+  align-items: center;
+  gap: 9px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.sg-country-list button:hover {
+  background: var(--lime);
+}
+
+@media (max-width: 900px) {
+  .sg-country-menu {
+    position: relative;
+    top: auto;
+    margin-top: 10px;
+  }
+}
+
+/* ===== PREMIUM COUNTRY SELECTOR END ===== */
