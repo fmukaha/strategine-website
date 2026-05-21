@@ -3786,3 +3786,145 @@ li,
 }
 
 /* ===== ABOUT DIFFERENCE MODERN OPEN LAYOUT END ===== */
+
+/* ===== ABOUT METHOD SECTION START ===== */
+
+.sg-about-method {
+  margin-top: 86px;
+  padding-top: 42px;
+  border-top: 1px solid var(--line);
+}
+
+.sg-about-method-intro {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  gap: clamp(40px, 8vw, 120px);
+  align-items: start;
+}
+
+.sg-about-method-intro h2 {
+  max-width: 12ch;
+  margin-top: 18px;
+  font-size: clamp(2rem, 2.65vw, 2.75rem);
+  line-height: 1.12;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+}
+
+.sg-about-method-intro p {
+  max-width: 650px;
+  padding-top: 34px;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.sg-about-method-tabs {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.sg-about-method-tabs div {
+  min-height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 20px 18px;
+}
+
+.sg-about-method-tabs div + div {
+  border-left: 1px solid var(--line);
+}
+
+.sg-about-method-tabs span {
+  color: var(--lime);
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.sg-about-method-tabs p {
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.sg-about-method-detail {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  gap: clamp(40px, 8vw, 120px);
+  margin-top: 38px;
+  align-items: start;
+}
+
+.sg-about-method-detail > div:first-child p {
+  max-width: 570px;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.sg-about-method-list {
+  display: grid;
+  gap: 16px;
+}
+
+.sg-about-method-list p {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 14px;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.sg-about-method-list span {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: var(--lime);
+  color: var(--dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .sg-about-method {
+    margin-top: 56px;
+    padding-top: 32px;
+  }
+
+  .sg-about-method-intro,
+  .sg-about-method-detail {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .sg-about-method-intro p {
+    padding-top: 0;
+  }
+
+  .sg-about-method-tabs {
+    grid-template-columns: 1fr;
+    margin-top: 34px;
+  }
+
+  .sg-about-method-tabs div {
+    justify-content: flex-start;
+    min-height: 64px;
+    padding: 18px 0;
+  }
+
+  .sg-about-method-tabs div + div {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .sg-about-method-detail {
+    margin-top: 30px;
+  }
+}
+
+/* ===== ABOUT METHOD SECTION END ===== */

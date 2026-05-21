@@ -142,20 +142,56 @@ export default function AboutPage() {
           />
         </section>
 
-        <section className="sg-about-capabilities">
-          {capabilities.map((item) => {
-            const Icon = item.icon;
+        <section className="sg-about-method">
+          <div className="sg-about-method-intro">
+            <div>
+              <span className="sg-section-kicker">How we support accountability</span>
+              <h2>From risk signals to structured action.</h2>
+            </div>
 
-            return (
-              <article className="sg-about-cap-card" key={item.title}>
-                <span aria-hidden="true">
-                  <Icon size={26} strokeWidth={1.6} />
-                </span>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </article>
-            );
-          })}
+            <p>
+              We help organisations turn responsible business expectations into
+              practical operating structures. The work connects risk visibility,
+              evidence, ownership, escalation, and follow-up so teams can manage
+              human rights and sustainability risks with greater discipline.
+            </p>
+          </div>
+
+          <div className="sg-about-method-tabs" aria-label="Strategine accountability method">
+            <div>
+              <span>✳</span>
+              <p>Risk identification</p>
+            </div>
+            <div>
+              <span>✳</span>
+              <p>Evidence pathways</p>
+            </div>
+            <div>
+              <span>✳</span>
+              <p>Ownership logic</p>
+            </div>
+            <div>
+              <span>✳</span>
+              <p>Response tracking</p>
+            </div>
+          </div>
+
+          <div className="sg-about-method-detail">
+            <div>
+              <p>
+                We start by clarifying what needs to be seen, evidenced, and
+                acted on. This includes where risks emerge, who owns response,
+                what information is required, and how progress should be reviewed.
+              </p>
+            </div>
+
+            <div className="sg-about-method-list">
+              <p><span>✳</span> Map human rights and responsible business risk signals</p>
+              <p><span>✳</span> Define evidence needed for oversight and assurance</p>
+              <p><span>✳</span> Clarify ownership, escalation, and response duties</p>
+              <p><span>✳</span> Structure follow-up, remediation, and review routines</p>
+            </div>
+          </div>
         </section>
 
         <section className="sg-about-difference">
