@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -67,6 +67,11 @@ const countries: { code: CountryCode; label: string }[] = [
   { code: "US", label: "United States" },
 ];
 
+function countryDisplay(code: CountryCode) {
+  const country = countries.find((item) => item.code === code);
+  return country ? `+${getCountryCallingCode(country.code)} ${country.label}` : "";
+}
+
 const roles = [
   "CEO / Managing Director",
   "Board / Governance Lead",
@@ -122,6 +127,7 @@ export default function ContactClient() {
   const [step, setStep] = useState(0);
   const [submitted, setSubmitted] = useState(false);
   const [countryDetected, setCountryDetected] = useState(false);
+  const [countryInput, setCountryInput] = useState(countryDisplay(initialForm.country));
 
   useEffect(() => {
     async function detectCountry() {
@@ -132,6 +138,7 @@ export default function ContactClient() {
 
         if (countries.some((country) => country.code === detected)) {
           setForm((current) => ({ ...current, country: detected }));
+          setCountryInput(countryDisplay(detected));
           setCountryDetected(true);
         }
       } catch {
@@ -180,6 +187,19 @@ export default function ContactClient() {
   }, [step]);
 
   const canContinue = stepErrors.every((key) => !errors[key]);
+
+  function updateCountryInput(value: string) {
+    setCountryInput(value);
+
+    const match = countries.find((country) => {
+      const display = countryDisplay(country.code).toLowerCase();
+      return display === value.toLowerCase();
+    });
+
+    if (match) {
+      updateField("country", match.code);
+    }
+  }
 
   function updateField<K extends keyof FormState>(field: K, value: FormState[K]) {
     setForm((current) => ({ ...current, [field]: value }));
@@ -258,16 +278,23 @@ export default function ContactClient() {
                 <label className={submitted && errors.phone ? "has-error" : ""}>
                   <span>Phone number</span>
                   <div className="sg-phone-grid">
-                    <div className="sg-select-shell">
+                    <div className="sg-select-shell sg-country-search-shell">
                       <Globe2 size={17} strokeWidth={1.7} />
-                      <select value={form.country} onChange={(event) => updateField("country", event.target.value as CountryCode)}>
-                        {countries.map((country) => (
-                          <option key={country.code} value={country.code}>
-                            +{getCountryCallingCode(country.code)} {country.label}
-                          </option>
-                        ))}
-                      </select>
+                      <input
+                        list="country-code-options"
+                        value={countryInput}
+                        onChange={(event) => updateCountryInput(event.target.value)}
+                        onBlur={() => setCountryInput(countryDisplay(form.country))}
+                        placeholder="Search country code"
+                        aria-label="Search country code"
+                      />
                       <ChevronDown size={16} strokeWidth={1.8} />
+
+                      <datalist id="country-code-options">
+                        {countries.map((country) => (
+                          <option key={country.code} value={countryDisplay(country.code)} />
+                        ))}
+                      </datalist>
                     </div>
 
                     <div className="sg-input-shell">
