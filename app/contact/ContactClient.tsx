@@ -248,6 +248,7 @@ export default function ContactClient() {
   }
 
   function nextStep() {
+    setCountryOpen(false);
     setSubmitted(true);
     if (!canContinue) return;
     setSubmitted(false);
@@ -255,6 +256,7 @@ export default function ContactClient() {
   }
 
   function previousStep() {
+    setCountryOpen(false);
     setSubmitted(false);
     setStep((current) => Math.max(current - 1, 0));
   }

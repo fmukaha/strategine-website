@@ -6828,3 +6828,147 @@ li,
 }
 
 /* ===== CONTACT PURPOSE LINK CLEANUP END ===== */
+
+/* ===== GLOBAL LAYOUT STABILITY START ===== */
+
+/* Global canvas stability */
+html,
+body {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box !important;
+}
+
+main,
+section,
+div,
+form,
+article,
+header,
+footer,
+nav {
+  min-width: 0 !important;
+}
+
+img,
+video,
+svg {
+  max-width: 100% !important;
+}
+
+/* Prevent long text, links, inputs and tags from forcing horizontal resize */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+strong,
+small,
+button,
+label,
+input,
+select,
+textarea {
+  overflow-wrap: anywhere;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100% !important;
+}
+
+/* Contact form width lock */
+.sg-contact-clean-form,
+.sg-contact-clean-form * {
+  min-width: 0 !important;
+}
+
+.sg-contact-clean-form {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+/* Country dropdown should overlay, not resize the page */
+.sg-country-premium {
+  position: relative !important;
+  min-width: 0 !important;
+}
+
+.sg-country-menu {
+  position: absolute !important;
+  z-index: 999 !important;
+  top: calc(100% + 10px) !important;
+  left: 0 !important;
+  right: 0 !important;
+  max-height: 320px !important;
+  overflow: hidden !important;
+}
+
+.sg-country-list {
+  max-height: 250px !important;
+  overflow-y: auto !important;
+  overscroll-behavior: contain !important;
+}
+
+.sg-country-selected {
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+
+.sg-country-selected strong,
+.sg-country-list strong {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Stabilise phone grid */
+.sg-phone-grid {
+  width: 100% !important;
+  min-width: 0 !important;
+  align-items: start !important;
+}
+
+/* Mobile: dropdown still overlays, never pushes form height */
+@media (max-width: 900px) {
+  .sg-country-menu {
+    position: absolute !important;
+    top: calc(100% + 8px) !important;
+    left: 0 !important;
+    right: 0 !important;
+    max-height: 280px !important;
+  }
+
+  .sg-country-list {
+    max-height: 210px !important;
+  }
+
+  .sg-contact-clean-shell,
+  .sg-contact-clean-form,
+  .sg-intake-step,
+  .sg-input-shell,
+  .sg-select-shell,
+  .sg-country-selected {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .sg-intake-progress {
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+}
+
+/* ===== GLOBAL LAYOUT STABILITY END ===== */
