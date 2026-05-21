@@ -2,16 +2,19 @@
 import ContactClient from "./ContactClient";
 
 export const metadata: Metadata = {
-  title: "Contact Strategine | Start a Responsible Business Accountability Project",
+  title: "Contact Strategine | HREDD & Responsible Business Accountability Intake",
   description:
-    "Contact Strategine for HREDD, human rights due diligence, responsible business conduct, sustainability oversight, evidence systems, and accountability support.",
+    "Start a Strategine inquiry for HREDD, human rights due diligence, environmental due diligence, responsible business conduct, accountability systems, grievance mechanisms, remediation tracking, and sustainability oversight.",
   keywords: [
-    "contact HREDD consultant",
-    "human rights due diligence support",
-    "responsible business conduct consultant",
+    "HREDD inquiry",
+    "human rights due diligence consultant",
+    "environmental due diligence support",
+    "responsible business conduct advisory",
+    "UNGP implementation support",
+    "grievance mechanism support",
+    "remediation tracking",
     "corporate responsibility advisory",
-    "sustainability oversight support",
-    "accountability systems",
+    "sustainability accountability",
   ],
   alternates: {
     canonical: "/contact",
