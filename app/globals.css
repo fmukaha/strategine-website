@@ -5865,3 +5865,100 @@ li,
 }
 
 /* ===== STEPPED CONTACT INTAKE END ===== */
+
+/* ===== CONTACT CLEAN HEADER FORM START ===== */
+
+.sg-contact-intake-page,
+.sg-contact-clean-page {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 56px 24px 0;
+}
+
+.sg-contact-hero {
+  margin-bottom: 46px !important;
+}
+
+.sg-contact-clean-shell {
+  min-height: 680px;
+  border-radius: 34px;
+  padding: clamp(28px, 6vw, 72px);
+  background:
+    radial-gradient(circle at 88% 10%, rgba(199, 220, 73, 0.18), transparent 24%),
+    radial-gradient(circle at 12% 90%, rgba(255, 255, 255, 0.08), transparent 26%),
+    linear-gradient(135deg, #15591f, #10551f 54%, #143126);
+  display: grid;
+  place-items: center;
+}
+
+.sg-contact-clean-form {
+  width: min(100%, 760px);
+  color: #ffffff;
+}
+
+.sg-contact-clean-form .sg-intake-progress button {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+.sg-contact-clean-form .sg-intake-progress button.is-active,
+.sg-contact-clean-form .sg-intake-progress button.is-complete {
+  background: var(--lime) !important;
+  color: var(--dark) !important;
+  border-color: transparent !important;
+}
+
+.sg-contact-clean-form .sg-intake-step label > span,
+.sg-contact-clean-form .sg-intake-step small,
+.sg-contact-clean-form .sg-intake-note {
+  color: rgba(255, 255, 255, 0.86) !important;
+}
+
+.sg-contact-clean-form .sg-input-shell,
+.sg-contact-clean-form .sg-select-shell,
+.sg-contact-clean-form .sg-intake-step textarea,
+.sg-contact-clean-form .sg-whatsapp-check,
+.sg-contact-clean-form .sg-intake-review,
+.sg-contact-clean-form .sg-intake-back {
+  background: #ffffff !important;
+  color: var(--dark) !important;
+}
+
+.sg-contact-clean-form .sg-intake-next {
+  background: var(--lime) !important;
+  color: var(--dark) !important;
+}
+
+.sg-contact-clean-form .sg-whatsapp-check span,
+.sg-contact-clean-form .sg-whatsapp-check svg {
+  color: var(--dark) !important;
+}
+
+.sg-contact-clean-form .has-error small {
+  color: #ffdad6 !important;
+}
+
+@media (max-width: 900px) {
+  .sg-contact-intake-page,
+  .sg-contact-clean-page {
+    padding: 38px 16px 0;
+  }
+
+  .sg-contact-hero {
+    margin-bottom: 32px !important;
+  }
+
+  .sg-contact-clean-shell {
+    min-height: 0;
+    border-radius: 24px;
+    padding: 20px;
+    place-items: stretch;
+  }
+
+  .sg-contact-clean-form {
+    width: 100%;
+  }
+}
+
+/* ===== CONTACT CLEAN HEADER FORM END ===== */

@@ -107,12 +107,7 @@ const departmentBands = [
   "Not sure",
 ];
 
-const steps = [
-  "Contact",
-  "Organisation",
-  "Support",
-  "Review",
-];
+const steps = ["Contact", "Organisation", "Support", "Review"];
 
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.trim());
@@ -172,9 +167,7 @@ export default function ContactClient() {
     if (!form.departments) next.departments = "Select department range";
     if (!form.supportArea) next.supportArea = "Select support area";
     if (!form.urgency) next.urgency = "Select urgency";
-    if (form.challenge.trim().length < 40) {
-      next.challenge = "Write at least 40 characters";
-    }
+    if (form.challenge.trim().length < 40) next.challenge = "Write at least 40 characters";
 
     return next;
   }, [form, phoneNumber]);
@@ -208,24 +201,26 @@ export default function ContactClient() {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setSubmitted(true);
-
     if (Object.keys(errors).length > 0) return;
 
-    const payload = {
+    console.log("Strategine inquiry placeholder:", {
       ...form,
       internationalPhone: phoneNumber?.formatInternational() || form.phone,
-    };
-
-    console.log("Strategine inquiry placeholder:", payload);
+    });
   }
 
   return (
     <>
       <Header />
 
-      <main className="sg-contact-intake-page">
-        <section className="sg-contact-intake-shell">
-          <form className="sg-contact-intake-card" onSubmit={handleSubmit} noValidate>
+      <main className="sg-contact-clean-page">
+        <section className="sg-standard-hero sg-contact-hero">
+          <span className="sg-page-kicker">Contact us</span>
+          <h1>Start a project inquiry.</h1>
+        </section>
+
+        <section className="sg-contact-clean-shell">
+          <form className="sg-contact-clean-form" onSubmit={handleSubmit} noValidate>
             <div className="sg-intake-progress" aria-label="Inquiry progress">
               {steps.map((item, index) => (
                 <button
@@ -246,12 +241,7 @@ export default function ContactClient() {
                   <span>Your name</span>
                   <div className="sg-input-shell">
                     <User size={18} strokeWidth={1.7} />
-                    <input
-                      value={form.name}
-                      onChange={(event) => updateField("name", event.target.value)}
-                      placeholder="e.g. Jane Mwangi"
-                      autoComplete="name"
-                    />
+                    <input value={form.name} onChange={(event) => updateField("name", event.target.value)} placeholder="e.g. Jane Mwangi" autoComplete="name" />
                   </div>
                   {submitted && errors.name && <small>{errors.name}</small>}
                 </label>
@@ -260,13 +250,7 @@ export default function ContactClient() {
                   <span>Work email</span>
                   <div className="sg-input-shell">
                     <Mail size={18} strokeWidth={1.7} />
-                    <input
-                      type="email"
-                      value={form.email}
-                      onChange={(event) => updateField("email", event.target.value)}
-                      placeholder="e.g. jane@organisation.com"
-                      autoComplete="email"
-                    />
+                    <input type="email" value={form.email} onChange={(event) => updateField("email", event.target.value)} placeholder="e.g. jane@organisation.com" autoComplete="email" />
                   </div>
                   {submitted && errors.email && <small>{errors.email}</small>}
                 </label>
@@ -276,12 +260,7 @@ export default function ContactClient() {
                   <div className="sg-phone-grid">
                     <div className="sg-select-shell">
                       <Globe2 size={17} strokeWidth={1.7} />
-                      <select
-                        value={form.country}
-                        onChange={(event) =>
-                          updateField("country", event.target.value as CountryCode)
-                        }
-                      >
+                      <select value={form.country} onChange={(event) => updateField("country", event.target.value as CountryCode)}>
                         {countries.map((country) => (
                           <option key={country.code} value={country.code}>
                             +{getCountryCallingCode(country.code)} {country.label}
@@ -293,12 +272,7 @@ export default function ContactClient() {
 
                     <div className="sg-input-shell">
                       <Phone size={18} strokeWidth={1.7} />
-                      <input
-                        value={form.phone}
-                        onChange={(event) => updateField("phone", event.target.value)}
-                        placeholder="e.g. 712 345 678"
-                        autoComplete="tel"
-                      />
+                      <input value={form.phone} onChange={(event) => updateField("phone", event.target.value)} placeholder="e.g. 712 345 678" autoComplete="tel" />
                     </div>
                   </div>
                   {countryDetected && <small>Country code detected automatically. You can change it.</small>}
@@ -306,11 +280,7 @@ export default function ContactClient() {
                 </label>
 
                 <label className="sg-whatsapp-check">
-                  <input
-                    type="checkbox"
-                    checked={form.isWhatsapp}
-                    onChange={(event) => updateField("isWhatsapp", event.target.checked)}
-                  />
+                  <input type="checkbox" checked={form.isWhatsapp} onChange={(event) => updateField("isWhatsapp", event.target.checked)} />
                   <span>
                     <MessageCircle size={18} strokeWidth={1.7} />
                     This number is available on WhatsApp
@@ -325,12 +295,7 @@ export default function ContactClient() {
                   <span>Organisation</span>
                   <div className="sg-input-shell">
                     <ShieldCheck size={18} strokeWidth={1.7} />
-                    <input
-                      value={form.organisation}
-                      onChange={(event) => updateField("organisation", event.target.value)}
-                      placeholder="e.g. Export Producer Ltd"
-                      autoComplete="organization"
-                    />
+                    <input value={form.organisation} onChange={(event) => updateField("organisation", event.target.value)} placeholder="e.g. Export Producer Ltd" autoComplete="organization" />
                   </div>
                   {submitted && errors.organisation && <small>{errors.organisation}</small>}
                 </label>
@@ -339,16 +304,9 @@ export default function ContactClient() {
                   <span>Your role</span>
                   <div className="sg-select-shell">
                     <User size={18} strokeWidth={1.7} />
-                    <select
-                      value={form.role}
-                      onChange={(event) => updateField("role", event.target.value)}
-                    >
+                    <select value={form.role} onChange={(event) => updateField("role", event.target.value)}>
                       <option value="">Select your role</option>
-                      {roles.map((role) => (
-                        <option key={role} value={role}>
-                          {role}
-                        </option>
-                      ))}
+                      {roles.map((role) => <option key={role} value={role}>{role}</option>)}
                     </select>
                     <ChevronDown size={16} strokeWidth={1.8} />
                   </div>
@@ -360,11 +318,7 @@ export default function ContactClient() {
                     <span>Type your role</span>
                     <div className="sg-input-shell">
                       <User size={18} strokeWidth={1.7} />
-                      <input
-                        value={form.otherRole}
-                        onChange={(event) => updateField("otherRole", event.target.value)}
-                        placeholder="e.g. Founder, Programme Lead"
-                      />
+                      <input value={form.otherRole} onChange={(event) => updateField("otherRole", event.target.value)} placeholder="e.g. Founder, Programme Lead" />
                     </div>
                     {submitted && errors.otherRole && <small>{errors.otherRole}</small>}
                   </label>
@@ -374,16 +328,9 @@ export default function ContactClient() {
                   <span>Departments involved</span>
                   <div className="sg-select-shell">
                     <ShieldCheck size={18} strokeWidth={1.7} />
-                    <select
-                      value={form.departments}
-                      onChange={(event) => updateField("departments", event.target.value)}
-                    >
+                    <select value={form.departments} onChange={(event) => updateField("departments", event.target.value)}>
                       <option value="">Select range</option>
-                      {departmentBands.map((band) => (
-                        <option key={band} value={band}>
-                          {band}
-                        </option>
-                      ))}
+                      {departmentBands.map((band) => <option key={band} value={band}>{band}</option>)}
                     </select>
                     <ChevronDown size={16} strokeWidth={1.8} />
                   </div>
@@ -398,16 +345,9 @@ export default function ContactClient() {
                   <span>What do you need help with?</span>
                   <div className="sg-select-shell">
                     <ShieldCheck size={18} strokeWidth={1.7} />
-                    <select
-                      value={form.supportArea}
-                      onChange={(event) => updateField("supportArea", event.target.value)}
-                    >
+                    <select value={form.supportArea} onChange={(event) => updateField("supportArea", event.target.value)}>
                       <option value="">Select support area</option>
-                      {supportAreas.map((area) => (
-                        <option key={area} value={area}>
-                          {area}
-                        </option>
-                      ))}
+                      {supportAreas.map((area) => <option key={area} value={area}>{area}</option>)}
                     </select>
                     <ChevronDown size={16} strokeWidth={1.8} />
                   </div>
@@ -418,16 +358,9 @@ export default function ContactClient() {
                   <span>What is driving the timing?</span>
                   <div className="sg-select-shell">
                     <ShieldCheck size={18} strokeWidth={1.7} />
-                    <select
-                      value={form.urgency}
-                      onChange={(event) => updateField("urgency", event.target.value)}
-                    >
+                    <select value={form.urgency} onChange={(event) => updateField("urgency", event.target.value)}>
                       <option value="">Select timing driver</option>
-                      {urgencies.map((urgency) => (
-                        <option key={urgency} value={urgency}>
-                          {urgency}
-                        </option>
-                      ))}
+                      {urgencies.map((urgency) => <option key={urgency} value={urgency}>{urgency}</option>)}
                     </select>
                     <ChevronDown size={16} strokeWidth={1.8} />
                   </div>
@@ -436,16 +369,8 @@ export default function ContactClient() {
 
                 <label className={submitted && errors.challenge ? "has-error" : ""}>
                   <span>Describe the accountability challenge</span>
-                  <textarea
-                    value={form.challenge}
-                    onChange={(event) => updateField("challenge", event.target.value)}
-                    placeholder="Example: We need to understand human rights risks across suppliers, track follow-up actions, and prepare credible evidence for leadership and buyer review."
-                  />
-                  <small>
-                    {submitted && errors.challenge
-                      ? errors.challenge
-                      : `${form.challenge.trim().length}/40 minimum characters`}
-                  </small>
+                  <textarea value={form.challenge} onChange={(event) => updateField("challenge", event.target.value)} placeholder="Briefly describe the risk, accountability, evidence, or due diligence challenge." />
+                  <small>{submitted && errors.challenge ? errors.challenge : `${form.challenge.trim().length}/40 minimum characters`}</small>
                 </label>
               </div>
             )}
@@ -457,10 +382,7 @@ export default function ContactClient() {
                   <span>Review</span>
                   <p>{form.name || "Name not entered"}</p>
                   <p>{form.email || "Email not entered"}</p>
-                  <p>
-                    {phoneNumber?.formatInternational() || form.phone || "Phone not entered"}
-                    {form.isWhatsapp ? " - WhatsApp available" : ""}
-                  </p>
+                  <p>{phoneNumber?.formatInternational() || form.phone || "Phone not entered"}{form.isWhatsapp ? " - WhatsApp available" : ""}</p>
                   <p>{form.organisation || "Organisation not entered"}</p>
                   <p>{form.role === "Other" ? form.otherRole : form.role}</p>
                   <p>{form.supportArea || "Support area not selected"}</p>
@@ -490,9 +412,7 @@ export default function ContactClient() {
             </div>
 
             {submitted && step === 3 && Object.keys(errors).length === 0 && (
-              <p className="sg-intake-note">
-                Form structure is ready. Database or email routing can be connected later.
-              </p>
+              <p className="sg-intake-note">Form structure is ready. Routing can be connected later.</p>
             )}
           </form>
         </section>
