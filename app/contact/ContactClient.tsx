@@ -6,7 +6,8 @@ import {
   ArrowLeft,
   ArrowRight,
   CheckCircle2,
-  ChevronDown,
+  ExternalLink,
+ChevronDown,
   Mail,
   MessageCircle,
   Phone,
@@ -302,10 +303,18 @@ export default function ContactClient() {
               </p>
 
               <p>
-                This reflects the responsible business discipline behind the UN
-                Guiding Principles: clear purpose, credible evidence,
-                accountability, and respect for people affected by business
-                activity.
+                This approach is aligned with the responsible business discipline
+                behind the{" "}
+                <a
+                  href="https://www.ohchr.org/sites/default/files/documents/publications/guidingprinciplesbusinesshr_en.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="sg-inline-link"
+                >
+                  UN Guiding Principles on Business and Human Rights
+                  <ExternalLink size={14} strokeWidth={1.8} aria-hidden="true" />
+                </a>
+                .
               </p>
             </div>
           </div>

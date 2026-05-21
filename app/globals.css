@@ -6804,3 +6804,27 @@ li,
 }
 
 /* ===== CONTACT DATA PURPOSE SECTION END ===== */
+
+/* ===== CONTACT PURPOSE LINK CLEANUP START ===== */
+
+.sg-contact-data-purpose {
+  border-bottom: 0 !important;
+  padding-bottom: 24px !important;
+  margin-bottom: 24px !important;
+}
+
+.sg-contact-data-purpose .sg-inline-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  color: var(--dark) !important;
+  text-decoration: underline !important;
+  text-underline-offset: 4px !important;
+  text-decoration-thickness: 1px !important;
+}
+
+.sg-contact-data-purpose .sg-inline-link:hover {
+  opacity: 0.75 !important;
+}
+
+/* ===== CONTACT PURPOSE LINK CLEANUP END ===== */
