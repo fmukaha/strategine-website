@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -226,7 +226,6 @@ export default function InsightsClient() {
 
                   <div className="sg-insight-meta">
                     <span>{item.tag}</span>
-                    <small>{item.theme}</small>
                   </div>
 
                   <div className="sg-insight-title-row">
