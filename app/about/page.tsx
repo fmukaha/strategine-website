@@ -1,4 +1,4 @@
-﻿import Header from "../components/Header";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 import {
   BarChart3,
@@ -102,39 +102,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="sg-about-story">
-          <div className="sg-about-story-copy">
-            <span className="sg-section-kicker">How we work</span>
-            <h2>Clear systems. Real use.</h2>
-            <p>
-              We build with the people who will use the system, not around them.
-              The goal is simple: make responsible operations easier to see,
-              manage, evidence, and improve.
-            </p>
-          </div>
-
-          <div
-            className="sg-about-story-image"
-            aria-label="Strategine advisory collaboration"
-          />
-        </section>
-
-        <section className="sg-about-story-cards">
-          {storyCards.map((item) => {
-            const Icon = item.icon;
-
-            return (
-              <article className="sg-about-story-card" key={item.title}>
-                <span aria-hidden="true">
-                  <Icon size={42} strokeWidth={1.45} />
-                </span>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </article>
-            );
-          })}
-        </section>
-
         <section className="sg-standard-stats sg-about-stats">
           {stats.map((item) => {
             const Icon = item.icon;
@@ -152,6 +119,27 @@ export default function AboutPage() {
               </div>
             );
           })}
+        </section>
+
+<section className="sg-about-mission">
+          <div>
+            <span className="sg-section-kicker">Our mission</span>
+            <h2>Make accountability manageable.</h2>
+            <p>
+              Organisations should not rely on scattered spreadsheets, isolated
+              evidence systems, or informal follow-ups to manage issues that affect
+              people, operations, reputation, and continuity.
+            </p>
+            <p>
+              Strategine helps teams build the intelligence layer behind
+              responsible operations.
+            </p>
+          </div>
+
+          <div
+            className="sg-about-mission-image"
+            aria-label="Strategine mission placeholder"
+          />
         </section>
 
         <section className="sg-about-capabilities">
@@ -178,26 +166,85 @@ export default function AboutPage() {
             assign ownership, track response, and communicate progress clearly.
           </p>
         </section>
+        <section className="sg-framework-section">
+          <span className="sg-section-kicker">Built around recognised frameworks</span>
 
-        <section className="sg-about-mission">
-          <div>
-            <span className="sg-section-kicker">Our mission</span>
-            <h2>Make accountability manageable.</h2>
-            <p>
-              Organisations should not rely on scattered spreadsheets, isolated
-              dashboards, or informal follow-ups to manage issues that affect
-              people, operations, reputation, and continuity.
-            </p>
-            <p>
-              Strategine helps teams build the intelligence layer behind
-              responsible operations.
-            </p>
+          <div className="sg-framework-row">
+            <div className="sg-framework-card">
+              <strong>UNGP</strong>
+              <span>UN Guiding Principles</span>
+            </div>
+
+            <div className="sg-framework-card">
+              <strong>OECD</strong>
+              <span>Due Diligence Guidance</span>
+            </div>
+
+            <div className="sg-framework-card">
+              <strong>CSDDD</strong>
+              <span>Corporate Sustainability Due Diligence</span>
+            </div>
+
+            <div className="sg-framework-card">
+              <strong>ESG</strong>
+              <span>Sustainability Reporting</span>
+            </div>
+
+            <div className="sg-framework-card">
+              <strong>RBC</strong>
+              <span>Responsible Business Conduct</span>
+            </div>
           </div>
+        </section>
 
-          <div
-            className="sg-about-mission-image"
-            aria-label="Strategine mission placeholder"
-          />
+        <section className="sg-about-difference">
+          <span className="sg-section-kicker">What makes us different</span>
+
+          <h2>Built for responsible business accountability.</h2>
+
+          <p className="sg-about-difference-intro">
+            Strategine helps organisations move from policy commitments to
+            practical systems for identifying risk, assigning ownership,
+            tracking action, and evidencing progress.
+          </p>
+
+          <div className="sg-about-difference-grid">
+            <article>
+              <span>01</span>
+              <h3>Due diligence logic</h3>
+              <p>
+                We align work with responsible business conduct, HREDD, UNGP,
+                OECD due diligence, and emerging sustainability expectations.
+              </p>
+            </article>
+
+            <article>
+              <span>02</span>
+              <h3>Evidence before reporting</h3>
+              <p>
+                We focus on what can be evidenced, reviewed, escalated, and
+                improved — not just what can be presented.
+              </p>
+            </article>
+
+            <article>
+              <span>03</span>
+              <h3>Actionable oversight</h3>
+              <p>
+                We connect risk signals to ownership, response mechanisms,
+                remediation tracking, and leadership review.
+              </p>
+            </article>
+
+            <article>
+              <span>04</span>
+              <h3>Designed for continuity</h3>
+              <p>
+                We build structures that teams can maintain beyond one project,
+                one report, or one compliance cycle.
+              </p>
+            </article>
+          </div>
         </section>
       </main>
 

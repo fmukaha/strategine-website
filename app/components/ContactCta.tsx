@@ -1,4 +1,4 @@
-﻿const focusAreas = [
+const focusAreas = [
   "Responsible business intelligence",
   "Accountability reporting",
   "Operational risk visibility",

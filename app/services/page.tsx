@@ -28,7 +28,7 @@ const services = [
   },
   {
     title: "System build",
-    text: "Build data models, dashboards, workflows, access rules, and review routines.",
+    text: "Build evidence structures, evidence systems, workflows, access rules, and review routines.",
     icon: GitBranch,
   },
 ];

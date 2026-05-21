@@ -4,8 +4,8 @@ import { ArrowRight, BarChart3, FileSearch, GitBranch } from "lucide-react";
 
 const insights = [
   {
-    title: "Why dashboards fail",
-    text: "Dashboards fail when they show numbers without ownership, context, or action logic.",
+    title: "Why evidence systems fail",
+    text: "Evidence systems fail when they show numbers without ownership, context, or action logic.",
     icon: BarChart3,
   },
   {

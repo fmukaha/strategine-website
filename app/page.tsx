@@ -28,7 +28,7 @@ const offers = [
   },
   {
     title: "System build",
-    text: "Build dashboards, data models, workflows, access rules, and review routines.",
+    text: "Build evidence systems, evidence structures, workflows, access rules, and review routines.",
     icon: GitBranch,
   },
 ];

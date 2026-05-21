@@ -1,4 +1,4 @@
-﻿import Header from "../components/Header";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ContactCta from "../components/ContactCta";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
