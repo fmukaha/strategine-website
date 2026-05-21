@@ -1,10 +1,14 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import {
   ExternalLink,
-  Layers3,
+  SearchCheck,
+  FileCheck2,
+  UsersRound,
+  ListChecks,
+Layers3,
   Network,
   ShieldCheck,
 } from "lucide-react";
@@ -169,36 +173,16 @@ export default function AboutPage() {
 
           <div className="sg-about-accountability-tabs">
             <div>
-              <span>*</span>
-              <p>Risk identification</p>
+              <span><SearchCheck size={18} strokeWidth={1.8} /></span><p>Risk identification</p>
             </div>
             <div>
-              <span>*</span>
-              <p>Evidence pathways</p>
+              <span><FileCheck2 size={18} strokeWidth={1.8} /></span><p>Evidence pathways</p>
             </div>
             <div>
-              <span>*</span>
-              <p>Ownership logic</p>
+              <span><UsersRound size={18} strokeWidth={1.8} /></span><p>Ownership logic</p>
             </div>
             <div>
-              <span>*</span>
-              <p>Response tracking</p>
-            </div>
-          </div>
-
-          <div className="sg-about-accountability-detail">
-            <p>
-              We start by clarifying what leadership needs to see, what teams
-              need to own, what evidence is required, and how response should be
-              followed through. This creates a practical bridge between policy
-              commitments and day-to-day accountability.
-            </p>
-
-            <div>
-              <p><span>*</span> Map human rights and responsible business risk signals</p>
-              <p><span>*</span> Define evidence needed for oversight and assurance</p>
-              <p><span>*</span> Clarify ownership, escalation, and response duties</p>
-              <p><span>*</span> Structure follow-up, remediation, and review routines</p>
+              <span><ListChecks size={18} strokeWidth={1.8} /></span><p>Response tracking</p>
             </div>
           </div>
         </section>
