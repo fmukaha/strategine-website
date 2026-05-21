@@ -6639,3 +6639,59 @@ li,
 }
 
 /* ===== PREMIUM COUNTRY SELECTOR END ===== */
+
+/* ===== CONTACT SECURITY CONSENT START ===== */
+
+.sg-bot-field {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.sg-consent-panel {
+  width: min(100%, 620px);
+  margin: 26px auto 0;
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(31, 31, 28, 0.08);
+}
+
+.sg-consent-panel label {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.sg-consent-panel input {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--dark);
+}
+
+.sg-consent-panel span {
+  color: var(--text);
+  font-size: 14px !important;
+  line-height: 1.45 !important;
+  font-weight: 400 !important;
+}
+
+.sg-consent-panel small {
+  color: #9b2424 !important;
+  font-size: 0.78rem !important;
+  line-height: 1.25 !important;
+}
+
+.sg-consent-panel .has-error span {
+  color: #7f1d1d !important;
+}
+
+/* ===== CONTACT SECURITY CONSENT END ===== */
