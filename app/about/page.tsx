@@ -1,67 +1,38 @@
+﻿import type { Metadata } from "next";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import {
-  BarChart3,
-  FileSearch,
-  GitBranch,
-  Handshake,
+  ExternalLink,
   Layers3,
-  Leaf,
   Network,
   ShieldCheck,
-  Sprout,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "About Strategine | HREDD & Responsible Business Intelligence",
+  description:
+    "Strategine helps organisations build responsible business intelligence systems for HREDD, human rights due diligence, UNGP alignment, accountability, evidence, and sustainability oversight.",
+  keywords: [
+    "HREDD",
+    "human rights due diligence",
+    "UNGP",
+    "responsible business conduct",
+    "corporate responsibility",
+    "sustainability reporting",
+    "ESG accountability",
+    "supply chain accountability",
+    "remediation tracking",
+    "responsible business intelligence",
+  ],
+  alternates: {
+    canonical: "/about",
+  },
+};
 
 const stats = [
   { value: "6+", label: "Intelligence domains", icon: Network },
   { value: "3", label: "Data maturity layers", icon: Layers3 },
   { value: "1", label: "Accountability system", icon: ShieldCheck },
-];
-
-const storyCards = [
-  {
-    title: "Practical care",
-    text: "We focus on systems people can understand, maintain, and use routinely.",
-    icon: Handshake,
-  },
-  {
-    title: "Sustainable logic",
-    text: "We design reporting foundations that remain useful as requirements evolve.",
-    icon: Leaf,
-  },
-  {
-    title: "Tailored systems",
-    text: "We shape each solution around real workflows, risks, ownership, and evidence.",
-    icon: Sprout,
-  },
-  {
-    title: "Reliable structure",
-    text: "We help teams move from scattered records to clear operating rhythm.",
-    icon: ShieldCheck,
-  },
-];
-
-const capabilities = [
-  {
-    title: "Risk visibility",
-    text: "Turn scattered records into clear signals for leadership and action.",
-    icon: FileSearch,
-  },
-  {
-    title: "Reporting logic",
-    text: "Define KPIs, ownership, evidence, escalation, and follow-up rhythm.",
-    icon: BarChart3,
-  },
-  {
-    title: "Governance structure",
-    text: "Create systems that support decisions, reviews, audits, and accountability.",
-    icon: ShieldCheck,
-  },
-  {
-    title: "Continuity",
-    text: "Build foundations that remain useful as risks and requirements evolve.",
-    icon: GitBranch,
-  },
 ];
 
 export default function AboutPage() {
@@ -72,7 +43,7 @@ export default function AboutPage() {
       <main className="sg-about-page">
         <section className="sg-standard-hero sg-about-hero">
           <span className="sg-page-kicker">About us</span>
-          <h1>Responsible intelligence systems.</h1>
+          <h1>Responsible business intelligence.</h1>
           <div
             className="sg-about-hero-image"
             aria-label="Strategine responsible business intelligence advisory"
@@ -82,22 +53,27 @@ export default function AboutPage() {
         <section className="sg-standard-intro sg-about-intro-section">
           <div>
             <span className="sg-section-kicker">Who we are</span>
-            <h2>Govern fragmented operations.</h2>
+            <h2>Govern responsible operations.</h2>
           </div>
 
           <div className="sg-about-copy">
             <p>
-              Strategine is a consulting firm focused on responsible business
-              intelligence systems.
+              Strategine helps organisations build responsible business
+              intelligence systems for human rights due diligence, sustainability
+              oversight, accountability, and management action.
             </p>
+
             <p>
-              We help organisations operating in complex, people-intensive
-              environments turn operational signals into clear intelligence for
-              risk, accountability, sustainability, and management action.
+              We work with teams operating in complex, people-intensive
+              environments where risk signals are often scattered across
+              records, reports, complaints, audits, field activity, and
+              operational follow-up.
             </p>
+
             <p>
-              Our work sits between strategy, governance, data, reporting, and
-              implementation.
+              Our role is to help leadership see what matters, assign ownership,
+              track response, and evidence progress in a way that supports
+              responsible business conduct.
             </p>
           </div>
         </section>
@@ -121,24 +97,37 @@ export default function AboutPage() {
           })}
         </section>
 
-<section className="sg-about-mission">
+        <section className="sg-about-mission">
           <div>
             <span className="sg-section-kicker">Our mission</span>
             <h2>Make accountability manageable.</h2>
+
             <p>
-              Organisations should not rely on scattered spreadsheets, isolated
-              evidence systems, or informal follow-ups to manage issues that affect
-              people, operations, reputation, and continuity.
+              Responsible business should not depend on scattered spreadsheets,
+              isolated evidence systems, or informal follow-ups. Organisations
+              need clear structures for seeing risk, acting early, and proving
+              that action was taken.
             </p>
+
             <p>
-              Strategine helps teams build the intelligence layer behind
-              responsible operations.
+              Our work is grounded in the logic of the{" "}
+              <a
+                href="https://www.ohchr.org/en/business-and-human-rights"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="sg-inline-link"
+              >
+                UN Guiding Principles on Business and Human Rights
+                <ExternalLink size={14} strokeWidth={1.8} aria-hidden="true" />
+              </a>
+              : identify impacts, prevent harm, respond appropriately, and
+              communicate progress with credible evidence.
             </p>
           </div>
 
           <div
             className="sg-about-mission-image"
-            aria-label="Strategine mission placeholder"
+            aria-label="Strategine responsible business advisory"
           />
         </section>
 
@@ -146,32 +135,32 @@ export default function AboutPage() {
           <div className="sg-about-method-intro">
             <div>
               <span className="sg-section-kicker">How we support accountability</span>
-              <h2>From risk signals to structured action.</h2>
+              <h2>From risk signals to action.</h2>
             </div>
 
             <p>
-              We help organisations turn responsible business expectations into
-              practical operating structures. The work connects risk visibility,
-              evidence, ownership, escalation, and follow-up so teams can manage
-              human rights and sustainability risks with greater discipline.
+              We help organisations turn HREDD, corporate responsibility, and
+              sustainability expectations into practical operating structures.
+              The work connects risk visibility, evidence, ownership,
+              escalation, response, and review.
             </p>
           </div>
 
           <div className="sg-about-method-tabs" aria-label="Strategine accountability method">
             <div>
-              <span>✳</span>
+              <span>*</span>
               <p>Risk identification</p>
             </div>
             <div>
-              <span>✳</span>
+              <span>*</span>
               <p>Evidence pathways</p>
             </div>
             <div>
-              <span>✳</span>
+              <span>*</span>
               <p>Ownership logic</p>
             </div>
             <div>
-              <span>✳</span>
+              <span>*</span>
               <p>Response tracking</p>
             </div>
           </div>
@@ -179,17 +168,17 @@ export default function AboutPage() {
           <div className="sg-about-method-detail">
             <div>
               <p>
-                We start by clarifying what needs to be seen, evidenced, and
-                acted on. This includes where risks emerge, who owns response,
-                what information is required, and how progress should be reviewed.
+                We start by clarifying what must be seen, evidenced, assigned,
+                escalated, and reviewed. This creates a practical bridge between
+                policy commitments and day-to-day management action.
               </p>
             </div>
 
             <div className="sg-about-method-list">
-              <p><span>✳</span> Map human rights and responsible business risk signals</p>
-              <p><span>✳</span> Define evidence needed for oversight and assurance</p>
-              <p><span>✳</span> Clarify ownership, escalation, and response duties</p>
-              <p><span>✳</span> Structure follow-up, remediation, and review routines</p>
+              <p><span>*</span> Map human rights and responsible business risk signals</p>
+              <p><span>*</span> Define evidence needed for oversight and assurance</p>
+              <p><span>*</span> Clarify ownership, escalation, and response duties</p>
+              <p><span>*</span> Structure follow-up, remediation, and review routines</p>
             </div>
           </div>
         </section>
@@ -197,12 +186,12 @@ export default function AboutPage() {
         <section className="sg-about-difference">
           <span className="sg-section-kicker">What makes us different</span>
 
-          <h2>Built for responsible business accountability.</h2>
+          <h2>Built for accountable action.</h2>
 
           <p className="sg-about-difference-intro">
-            Strategine helps organisations move from policy commitments to
-            practical systems for identifying risk, assigning ownership,
-            tracking action, and evidencing progress.
+            Strategine focuses on the operating layer behind responsible
+            business: how risks are identified, owned, acted on, evidenced, and
+            reviewed over time.
           </p>
 
           <div className="sg-about-difference-grid">
@@ -210,8 +199,8 @@ export default function AboutPage() {
               <span>01</span>
               <h3>Due diligence logic</h3>
               <p>
-                We align work with responsible business conduct, HREDD, UNGP,
-                OECD due diligence, and emerging sustainability expectations.
+                We align work with HREDD, UNGP, OECD due diligence, responsible
+                business conduct, and emerging corporate sustainability duties.
               </p>
             </article>
 
@@ -237,14 +226,14 @@ export default function AboutPage() {
               <span>04</span>
               <h3>Designed for continuity</h3>
               <p>
-                We build structures that teams can maintain beyond one project,
-                one report, or one compliance cycle.
+                We build structures teams can maintain beyond one project, one
+                report, or one compliance cycle.
               </p>
             </article>
           </div>
         </section>
 
-                <section className="sg-framework-section">
+        <section className="sg-framework-section">
           <span className="sg-section-kicker">Frameworks we work with</span>
 
           <div className="sg-framework-logos">

@@ -4129,3 +4129,21 @@ li,
 }
 
 /* ===== FRAMEWORK LOGO STRIP END ===== */
+/* Inline text links with external-link icon */
+.sg-inline-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--dark);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+.sg-inline-link:hover {
+  opacity: 0.78;
+}
+
+.sg-about-mission .sg-inline-link {
+  color: var(--dark) !important;
+}
