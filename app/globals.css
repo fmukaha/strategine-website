@@ -4842,3 +4842,161 @@ li,
 }
 
 /* ===== INSIGHTS LAZY FILTER POLISH END ===== */
+/* Insights filter count alignment */
+.sg-insights-tags button {
+  min-width: 0 !important;
+  justify-content: space-between !important;
+}
+
+.sg-insights-tags button span {
+  margin-left: 8px !important;
+  flex: 0 0 24px !important;
+}
+
+@media (min-width: 721px) {
+  .sg-insights-tags button {
+    min-width: 185px !important;
+  }
+}
+
+/* ===== INSIGHTS COMBO SEARCH BAR START ===== */
+
+.sg-insights-search {
+  width: min(100%, 980px) !important;
+  margin: 0 auto 62px !important;
+  display: grid !important;
+  gap: 0 !important;
+  justify-items: stretch !important;
+  border: 1px solid rgba(31, 31, 28, 0.1) !important;
+  border-radius: 32px !important;
+  background:
+    radial-gradient(circle at 92% 16%, rgba(199, 220, 73, 0.22), transparent 26%),
+    #f7f8f0 !important;
+  box-shadow: 0 20px 60px rgba(20, 49, 38, 0.08) !important;
+  overflow: hidden !important;
+}
+
+.sg-insights-search-box {
+  width: 100% !important;
+  min-height: 68px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  display: grid !important;
+  grid-template-columns: 26px 1fr auto !important;
+  align-items: center !important;
+  gap: 14px !important;
+  padding: 8px 14px 8px 26px !important;
+}
+
+.sg-insights-search-box::after {
+  content: "Search";
+  height: 48px;
+  padding: 0 24px;
+  border-radius: 999px;
+  background: var(--dark);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sg-insights-tags {
+  width: 100% !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 0 !important;
+  padding: 0 !important;
+  border-top: 1px solid rgba(31, 31, 28, 0.08) !important;
+}
+
+.sg-insights-tags button {
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 52px !important;
+  border: 0 !important;
+  border-right: 1px solid rgba(31, 31, 28, 0.08) !important;
+  border-bottom: 1px solid rgba(31, 31, 28, 0.08) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: var(--text) !important;
+  padding: 0 16px !important;
+  display: grid !important;
+  grid-template-columns: 1fr 28px !important;
+  align-items: center !important;
+  gap: 12px !important;
+  text-align: left !important;
+  font-size: 14px !important;
+  line-height: 1.2 !important;
+}
+
+.sg-insights-tags button:nth-child(3n) {
+  border-right: 0 !important;
+}
+
+.sg-insights-tags button span {
+  margin-left: 0 !important;
+  width: 28px !important;
+  height: 28px !important;
+  flex: none !important;
+  justify-self: end !important;
+  border-radius: 999px !important;
+  background: rgba(244, 245, 236, 0.95) !important;
+  color: var(--dark) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 0.72rem !important;
+  line-height: 1 !important;
+}
+
+.sg-insights-tags button:hover,
+.sg-insights-tags button.is-active {
+  background: var(--lime) !important;
+  color: var(--dark) !important;
+}
+
+.sg-insights-tags button:hover span,
+.sg-insights-tags button.is-active span {
+  background: var(--dark) !important;
+  color: #ffffff !important;
+}
+
+@media (max-width: 720px) {
+  .sg-insights-search {
+    border-radius: 22px !important;
+    margin-bottom: 44px !important;
+    overflow: visible !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    gap: 12px !important;
+  }
+
+  .sg-insights-search-box {
+    min-height: 58px !important;
+    grid-template-columns: 24px 1fr !important;
+    padding: 0 18px !important;
+    border: 1px solid rgba(31, 31, 28, 0.1) !important;
+    border-radius: 20px !important;
+    background: #f7f8f0 !important;
+    box-shadow: 0 14px 34px rgba(20, 49, 38, 0.06) !important;
+  }
+
+  .sg-insights-search-box::after {
+    display: none !important;
+  }
+
+  .sg-insights-theme-select {
+    display: grid !important;
+  }
+
+  .sg-insights-tags {
+    display: none !important;
+  }
+}
+
+/* ===== INSIGHTS COMBO SEARCH BAR END ===== */
