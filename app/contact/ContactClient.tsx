@@ -20,7 +20,7 @@ import {
   getCountryCallingCode,
   parsePhoneNumberFromString,
 } from "libphonenumber-js";
-import { FormEvent, useEffect, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 
 type FormState = {
   name: string;
@@ -158,8 +158,23 @@ export default function ContactClient() {
   const [countryDetected, setCountryDetected] = useState(false);
   const [countryOpen, setCountryOpen] = useState(false);
   const [countrySearch, setCountrySearch] = useState("");
+  const countryRef = useRef<HTMLDivElement | null>(null);
 
   const selectedCountry = countries.find((country) => country.code === form.country) || countries[0];
+
+  useEffect(() => {
+    function handleClickAway(event: MouseEvent) {
+      if (!countryRef.current) return;
+
+      if (!countryRef.current.contains(event.target as Node)) {
+        setCountryOpen(false);
+        setCountrySearch("");
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickAway);
+    return () => document.removeEventListener("mousedown", handleClickAway);
+  }, []);
 
   useEffect(() => {
     async function detectCountry() {
@@ -362,7 +377,7 @@ export default function ContactClient() {
                   <span>Phone number</span>
 
                   <div className="sg-phone-grid">
-                    <div className="sg-country-premium">
+                    <div className="sg-country-premium" ref={countryRef}>
                       <button
                         type="button"
                         className="sg-country-selected"
