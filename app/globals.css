@@ -4212,3 +4212,202 @@ li,
     font-size: clamp(1.9rem, 8vw, 2.5rem);
   }
 }
+
+/* ===== ABOUT STRUCTURE COPY CLEANUP START ===== */
+
+/* Hero title: more natural desktop reading, still compact on mobile */
+.sg-standard-hero h1,
+.sg-services-hero h1,
+.sg-about-hero h1 {
+  max-width: 920px !important;
+  font-size: clamp(2.6rem, 4vw, 4rem) !important;
+  line-height: 1.08 !important;
+}
+
+@media (min-width: 901px) {
+  .sg-about-hero h1,
+  .sg-services-hero h1 {
+    max-width: 860px !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .sg-standard-hero h1,
+  .sg-services-hero h1,
+  .sg-about-hero h1 {
+    max-width: 11ch !important;
+    font-size: clamp(2.25rem, 10vw, 3rem) !important;
+  }
+}
+
+/* Remove old separate method/CEO spacing if remnants exist */
+.sg-about-ceo,
+.sg-about-method {
+  display: none !important;
+}
+
+/* Merged accountability section */
+.sg-about-accountability {
+  margin-top: 86px;
+  padding-top: 42px;
+  border-top: 1px solid var(--line);
+}
+
+.sg-about-accountability-intro {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  gap: clamp(40px, 8vw, 120px);
+  align-items: start;
+}
+
+.sg-about-accountability-intro h2 {
+  max-width: 12ch;
+  margin-top: 18px;
+  font-size: clamp(2rem, 2.65vw, 2.75rem);
+  line-height: 1.12;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+}
+
+.sg-about-accountability-intro > div:last-child {
+  display: grid;
+  gap: 18px;
+  max-width: 680px;
+  padding-top: 34px;
+}
+
+.sg-about-accountability-intro p,
+.sg-about-accountability-detail p {
+  font-size: 16px;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+.sg-about-accountability-tabs {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.sg-about-accountability-tabs div {
+  min-height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 20px 18px;
+}
+
+.sg-about-accountability-tabs div + div {
+  border-left: 1px solid var(--line);
+}
+
+.sg-about-accountability-tabs span {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: var(--lime);
+  color: var(--dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.sg-about-accountability-tabs p {
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.sg-about-accountability-detail {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  gap: clamp(40px, 8vw, 120px);
+  margin-top: 38px;
+  align-items: start;
+}
+
+.sg-about-accountability-detail > p {
+  max-width: 570px;
+}
+
+.sg-about-accountability-detail > div {
+  display: grid;
+  gap: 16px;
+}
+
+.sg-about-accountability-detail > div p {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 14px;
+  align-items: center;
+  line-height: 1.45;
+}
+
+.sg-about-accountability-detail > div span {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: var(--lime);
+  color: var(--dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* Inline links */
+.sg-inline-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--dark);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+.sg-inline-link:hover {
+  opacity: 0.78;
+}
+
+@media (max-width: 900px) {
+  .sg-about-accountability {
+    margin-top: 56px;
+    padding-top: 32px;
+  }
+
+  .sg-about-accountability-intro,
+  .sg-about-accountability-detail {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .sg-about-accountability-intro > div:last-child {
+    padding-top: 0;
+  }
+
+  .sg-about-accountability-tabs {
+    grid-template-columns: 1fr;
+    margin-top: 34px;
+  }
+
+  .sg-about-accountability-tabs div {
+    justify-content: flex-start;
+    min-height: 64px;
+    padding: 18px 0;
+  }
+
+  .sg-about-accountability-tabs div + div {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .sg-about-accountability-detail {
+    margin-top: 30px;
+  }
+}
+
+/* ===== ABOUT STRUCTURE COPY CLEANUP END ===== */

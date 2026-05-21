@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import {
@@ -11,15 +12,15 @@ import {
 export const metadata: Metadata = {
   title: "About Strategine | HREDD & Responsible Business Accountability",
   description:
-    "Strategine helps organisations build accountability systems for HREDD, human rights due diligence, responsible business conduct, sustainability oversight, and credible evidence of action.",
+    "Strategine helps organisations build accountability systems for HREDD, human rights due diligence, environmental due diligence, responsible business conduct, sustainability oversight, and credible evidence of action.",
   keywords: [
     "HREDD",
     "human rights due diligence",
+    "environmental due diligence",
     "UNGP",
     "UN Guiding Principles",
     "responsible business conduct",
     "corporate responsibility",
-    "environmental due diligence",
     "sustainability oversight",
     "ESG accountability",
     "supply chain accountability",
@@ -65,10 +66,9 @@ export default function AboutPage() {
             </p>
 
             <p>
-              We work with organisations operating in complex, people-intensive
-              environments where risk signals are often spread across grievance
-              channels, audit findings, supplier records, worker feedback, field
-              activity, and management follow-up.
+              We work where risk signals are spread across grievance channels,
+              audit findings, supplier records, worker feedback, field activity,
+              and management follow-up.
             </p>
 
             <p>
@@ -99,36 +99,6 @@ export default function AboutPage() {
           })}
         </section>
 
-        <section className="sg-about-ceo">
-          <div>
-            <span className="sg-section-kicker">Why this work matters</span>
-            <h2>From policy to proof.</h2>
-          </div>
-
-          <div className="sg-about-ceo-copy">
-            <p>
-              Responsible business is no longer judged only by commitments,
-              policies, or annual reports. Leadership is increasingly expected
-              to show how human rights and environmental risks are identified,
-              prioritised, acted on, tracked, and communicated.
-            </p>
-
-            <p>
-              For CEOs, the challenge is not simply knowing that risks exist. It
-              is knowing whether the organisation has a reliable way to see them
-              early, assign responsibility, follow up action, and evidence
-              progress before issues become reputational, operational, legal, or
-              buyer-facing problems.
-            </p>
-
-            <p>
-              Strategine helps organisations build that accountability layer:
-              the practical structure between policy commitments and management
-              action.
-            </p>
-          </div>
-        </section>
-
         <section className="sg-about-mission">
           <div>
             <span className="sg-section-kicker">Our mission</span>
@@ -152,9 +122,8 @@ export default function AboutPage() {
                 UN Guiding Principles on Business and Human Rights
                 <ExternalLink size={14} strokeWidth={1.8} aria-hidden="true" />
               </a>
-              : identify impacts, prevent and mitigate harm, track
-              effectiveness, enable remedy, and communicate progress with
-              credible evidence.
+              : identify impacts, prevent and mitigate harm, track effectiveness,
+              enable remedy, and communicate progress with credible evidence.
             </p>
           </div>
 
@@ -164,22 +133,41 @@ export default function AboutPage() {
           />
         </section>
 
-        <section className="sg-about-method">
-          <div className="sg-about-method-intro">
+        <section className="sg-about-accountability">
+          <div className="sg-about-accountability-intro">
             <div>
-              <span className="sg-section-kicker">How we support accountability</span>
-              <h2>From signals to action.</h2>
+              <span className="sg-section-kicker">Why this work matters</span>
+              <h2>From policy to proof.</h2>
             </div>
 
-            <p>
-              We help organisations translate HREDD, responsible business
-              conduct, and sustainability expectations into practical management
-              structures. The work connects risk visibility, evidence,
-              ownership, escalation, response, remediation, and review.
-            </p>
+            <div>
+              <p>
+                Responsible business is no longer judged only by commitments,
+                policies, or annual reports. Leaders are increasingly expected
+                to show how risks are identified, prioritised, acted on, tracked,
+                and communicated.
+              </p>
+
+              <p>
+                Strategine helps organisations translate HREDD, responsible
+                business conduct, and sustainability expectations into practical
+                management structures. The work connects risk visibility,
+                evidence, ownership, escalation, response, remediation, and
+                review.
+              </p>
+
+              <p>
+                For more detail on how we structure this work, see our{" "}
+                <Link href="/services" className="sg-inline-link">
+                  services
+                  <ExternalLink size={14} strokeWidth={1.8} aria-hidden="true" />
+                </Link>
+                .
+              </p>
+            </div>
           </div>
 
-          <div className="sg-about-method-tabs" aria-label="Strategine accountability method">
+          <div className="sg-about-accountability-tabs">
             <div>
               <span>*</span>
               <p>Risk identification</p>
@@ -198,17 +186,15 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="sg-about-method-detail">
-            <div>
-              <p>
-                We start by clarifying what leadership needs to see, what teams
-                need to own, what evidence is required, and how response should
-                be followed through. This creates a practical bridge between
-                policy commitments and day-to-day accountability.
-              </p>
-            </div>
+          <div className="sg-about-accountability-detail">
+            <p>
+              We start by clarifying what leadership needs to see, what teams
+              need to own, what evidence is required, and how response should be
+              followed through. This creates a practical bridge between policy
+              commitments and day-to-day accountability.
+            </p>
 
-            <div className="sg-about-method-list">
+            <div>
               <p><span>*</span> Map human rights and responsible business risk signals</p>
               <p><span>*</span> Define evidence needed for oversight and assurance</p>
               <p><span>*</span> Clarify ownership, escalation, and response duties</p>
@@ -244,7 +230,7 @@ export default function AboutPage() {
               <h3>Evidence before reporting</h3>
               <p>
                 We focus on what can be evidenced, reviewed, escalated, and
-                improved — not just what can be reported.
+                improved - not just what can be reported.
               </p>
             </article>
 
