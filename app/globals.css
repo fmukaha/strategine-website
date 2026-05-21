@@ -6240,3 +6240,141 @@ li,
 }
 
 /* ===== CONTACT INSPO FORM LAYOUT END ===== */
+
+/* ===== CONTACT CLEAN POLISH START ===== */
+
+/* Remove decorative shape that looked odd */
+.sg-contact-clean-shell::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Cleaner section background */
+.sg-contact-clean-shell {
+  min-height: 650px !important;
+  border-radius: 0 !important;
+  padding: clamp(48px, 6vw, 84px) 24px clamp(68px, 8vw, 100px) !important;
+  background:
+    radial-gradient(circle at 12% 22%, rgba(199, 220, 73, 0.12), transparent 22%),
+    radial-gradient(circle at 88% 10%, rgba(199, 220, 73, 0.10), transparent 24%),
+    linear-gradient(180deg, #f7f8f0 0%, #f1f4e7 100%) !important;
+}
+
+.sg-contact-clean-shell::before {
+  opacity: 0.22 !important;
+}
+
+/* Form width and alignment */
+.sg-contact-clean-form {
+  width: min(100%, 690px) !important;
+}
+
+/* Cleaner stepper */
+.sg-contact-clean-form .sg-intake-progress {
+  max-width: 560px !important;
+  margin-bottom: 40px !important;
+}
+
+.sg-contact-clean-form .sg-intake-progress::before {
+  left: 13% !important;
+  right: 13% !important;
+  top: 20px !important;
+  background: rgba(16, 85, 31, 0.16) !important;
+}
+
+.sg-contact-clean-form .sg-intake-progress button {
+  background: transparent !important;
+  color: var(--dark) !important;
+  border: 0 !important;
+  min-height: 54px !important;
+  font-size: 0.68rem !important;
+}
+
+.sg-contact-clean-form .sg-intake-progress button span {
+  width: 40px !important;
+  height: 40px !important;
+  background: #d5ea39 !important;
+  color: var(--dark) !important;
+  box-shadow: none !important;
+  border: 1px solid rgba(16, 85, 31, 0.12) !important;
+}
+
+.sg-contact-clean-form .sg-intake-progress button.is-active span,
+.sg-contact-clean-form .sg-intake-progress button.is-complete span {
+  background: var(--dark) !important;
+  color: var(--lime) !important;
+}
+
+.sg-contact-clean-form .sg-intake-progress button.is-active {
+  background: transparent !important;
+}
+
+/* Inputs: cleaner, softer */
+.sg-contact-clean-form .sg-input-shell,
+.sg-contact-clean-form .sg-select-shell,
+.sg-contact-clean-form .sg-intake-step textarea {
+  min-height: 58px !important;
+  border-radius: 17px !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(31, 31, 28, 0.08) !important;
+  box-shadow: 0 14px 34px rgba(20, 49, 38, 0.045) !important;
+}
+
+.sg-contact-clean-form .sg-intake-step {
+  gap: 18px !important;
+}
+
+.sg-contact-clean-form .sg-phone-grid {
+  grid-template-columns: 0.75fr 1fr !important;
+  gap: 12px !important;
+}
+
+/* WhatsApp chip: less noisy */
+.sg-contact-clean-form .sg-whatsapp-check {
+  padding: 11px 14px !important;
+  border-radius: 16px !important;
+  background: #ffffff !important;
+  box-shadow: 0 14px 34px rgba(20, 49, 38, 0.04) !important;
+}
+
+.sg-contact-clean-form .sg-whatsapp-check input {
+  accent-color: var(--dark) !important;
+}
+
+/* Button positioning */
+.sg-contact-clean-form .sg-intake-actions {
+  width: min(100%, 620px) !important;
+  margin-top: 28px !important;
+}
+
+.sg-contact-clean-form .sg-intake-next {
+  background: var(--dark) !important;
+  color: #ffffff !important;
+}
+
+/* Mobile clean */
+@media (max-width: 900px) {
+  .sg-contact-clean-shell {
+    padding: 34px 16px 56px !important;
+    border-radius: 0 !important;
+  }
+
+  .sg-contact-clean-form .sg-intake-progress {
+    margin-bottom: 30px !important;
+  }
+
+  .sg-contact-clean-form .sg-intake-progress::before {
+    top: 18px !important;
+  }
+
+  .sg-contact-clean-form .sg-intake-progress button span {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .sg-contact-clean-form .sg-phone-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ===== CONTACT CLEAN POLISH END ===== */
