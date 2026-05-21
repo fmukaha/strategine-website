@@ -4147,3 +4147,68 @@ li,
 .sg-about-mission .sg-inline-link {
   color: var(--dark) !important;
 }
+
+/* About CEO positioning section */
+.sg-about-ceo {
+  margin-top: 86px;
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  gap: clamp(40px, 8vw, 120px);
+  align-items: start;
+  padding-top: 42px;
+  border-top: 1px solid var(--line);
+}
+
+.sg-about-ceo h2 {
+  max-width: 11ch;
+  margin-top: 18px;
+  font-size: clamp(2rem, 2.65vw, 2.75rem);
+  line-height: 1.12;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+}
+
+.sg-about-ceo-copy {
+  display: grid;
+  gap: 18px;
+  max-width: 680px;
+  padding-top: 34px;
+}
+
+.sg-about-ceo-copy p {
+  font-size: 16px;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+.sg-inline-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--dark);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+.sg-inline-link:hover {
+  opacity: 0.78;
+}
+
+@media (max-width: 900px) {
+  .sg-about-ceo {
+    margin-top: 56px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-top: 32px;
+  }
+
+  .sg-about-ceo-copy {
+    padding-top: 0;
+  }
+
+  .sg-about-ceo h2 {
+    max-width: 12ch;
+    font-size: clamp(1.9rem, 8vw, 2.5rem);
+  }
+}
