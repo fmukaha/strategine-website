@@ -3634,3 +3634,155 @@ li,
 }
 
 /* ===== STRATEGINE INNER TITLE AND HREDD POLISH END ===== */
+
+/* ===== ABOUT DIFFERENCE MODERN OPEN LAYOUT START ===== */
+
+.sg-about-difference {
+  margin-top: 86px !important;
+  border-radius: 28px !important;
+  padding: clamp(44px, 6vw, 76px) clamp(24px, 7vw, 88px) !important;
+  background:
+    radial-gradient(circle at 92% 8%, rgba(199, 220, 73, 0.16), transparent 20%),
+    radial-gradient(circle at 8% 10%, rgba(199, 220, 73, 0.1), transparent 18%),
+    linear-gradient(135deg, #15591f, #10551f 52%, #143126) !important;
+  color: #ffffff !important;
+  text-align: center !important;
+}
+
+.sg-about-difference .sg-section-kicker {
+  display: block !important;
+  text-align: center !important;
+  margin-bottom: 18px !important;
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+.sg-about-difference h2 {
+  max-width: 620px !important;
+  margin: 0 auto !important;
+  color: #ffffff !important;
+  font-size: clamp(2rem, 2.8vw, 3rem) !important;
+  line-height: 1.12 !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.052em !important;
+}
+
+.sg-about-difference-intro {
+  max-width: 680px !important;
+  margin: 24px auto 0 !important;
+  color: rgba(255, 255, 255, 0.84) !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  text-align: center !important;
+}
+
+.sg-about-difference-grid {
+  max-width: 1100px !important;
+  margin: 48px auto 0 !important;
+  padding-top: 42px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.22) !important;
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 0 !important;
+  text-align: left !important;
+}
+
+.sg-about-difference-grid article {
+  min-height: 0 !important;
+  display: grid !important;
+  align-content: start !important;
+  justify-items: start !important;
+  gap: 14px !important;
+  padding: 0 clamp(20px, 3vw, 34px) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+.sg-about-difference-grid article + article {
+  border-left: 1px solid rgba(255, 255, 255, 0.18) !important;
+}
+
+.sg-about-difference-grid article > span {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 999px !important;
+  background: var(--lime) !important;
+  color: var(--dark) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 0.78rem !important;
+  font-weight: 500 !important;
+}
+
+.sg-about-difference-grid h3 {
+  max-width: 13ch !important;
+  margin: 8px 0 0 !important;
+  color: #ffffff !important;
+  font-size: 1.25rem !important;
+  line-height: 1.16 !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.035em !important;
+}
+
+.sg-about-difference-grid p {
+  max-width: 230px !important;
+  margin: 0 !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 15px !important;
+  line-height: 1.55 !important;
+  font-weight: 400 !important;
+}
+
+.sg-framework-section {
+  margin-top: 86px !important;
+}
+
+@media (max-width: 900px) {
+  .sg-about-difference {
+    margin-top: 56px !important;
+    border-radius: 20px !important;
+    padding: 34px 22px !important;
+    text-align: left !important;
+  }
+
+  .sg-about-difference .sg-section-kicker,
+  .sg-about-difference h2,
+  .sg-about-difference-intro {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .sg-about-difference h2 {
+    max-width: 12ch !important;
+    font-size: clamp(1.9rem, 8vw, 2.5rem) !important;
+  }
+
+  .sg-about-difference-grid {
+    grid-template-columns: 1fr !important;
+    margin-top: 34px !important;
+    padding-top: 30px !important;
+    gap: 0 !important;
+  }
+
+  .sg-about-difference-grid article {
+    padding: 24px 0 !important;
+  }
+
+  .sg-about-difference-grid article + article {
+    border-left: 0 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.18) !important;
+  }
+
+  .sg-about-difference-grid h3,
+  .sg-about-difference-grid p {
+    max-width: none !important;
+  }
+
+  .sg-framework-section {
+    margin-top: 56px !important;
+  }
+}
+
+/* ===== ABOUT DIFFERENCE MODERN OPEN LAYOUT END ===== */

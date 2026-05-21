@@ -158,45 +158,6 @@ export default function AboutPage() {
           })}
         </section>
 
-        <section className="sg-about-standard">
-          <span className="sg-section-kicker">Our standard</span>
-          <h2>Evidence. Accountability. Decisions.</h2>
-          <p>
-            We design systems that help leadership identify what matters,
-            assign ownership, track response, and communicate progress clearly.
-          </p>
-        </section>
-        <section className="sg-framework-section">
-          <span className="sg-section-kicker">Built around recognised frameworks</span>
-
-          <div className="sg-framework-row">
-            <div className="sg-framework-card">
-              <strong>UNGP</strong>
-              <span>UN Guiding Principles</span>
-            </div>
-
-            <div className="sg-framework-card">
-              <strong>OECD</strong>
-              <span>Due Diligence Guidance</span>
-            </div>
-
-            <div className="sg-framework-card">
-              <strong>CSDDD</strong>
-              <span>Corporate Sustainability Due Diligence</span>
-            </div>
-
-            <div className="sg-framework-card">
-              <strong>ESG</strong>
-              <span>Sustainability Reporting</span>
-            </div>
-
-            <div className="sg-framework-card">
-              <strong>RBC</strong>
-              <span>Responsible Business Conduct</span>
-            </div>
-          </div>
-        </section>
-
         <section className="sg-about-difference">
           <span className="sg-section-kicker">What makes us different</span>
 
@@ -244,6 +205,37 @@ export default function AboutPage() {
                 one report, or one compliance cycle.
               </p>
             </article>
+          </div>
+        </section>
+
+        <section className="sg-framework-section">
+          <span className="sg-section-kicker">Built around recognised frameworks</span>
+
+          <div className="sg-framework-row">
+            <div className="sg-framework-card">
+              <strong>UNGP</strong>
+              <span>UN Guiding Principles</span>
+            </div>
+
+            <div className="sg-framework-card">
+              <strong>OECD</strong>
+              <span>Due Diligence Guidance</span>
+            </div>
+
+            <div className="sg-framework-card">
+              <strong>CSDDD</strong>
+              <span>Corporate Sustainability Due Diligence</span>
+            </div>
+
+            <div className="sg-framework-card">
+              <strong>ESG</strong>
+              <span>Sustainability Reporting</span>
+            </div>
+
+            <div className="sg-framework-card">
+              <strong>RBC</strong>
+              <span>Responsible Business Conduct</span>
+            </div>
           </div>
         </section>
       </main>
