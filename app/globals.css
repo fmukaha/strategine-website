@@ -5962,3 +5962,281 @@ li,
 }
 
 /* ===== CONTACT CLEAN HEADER FORM END ===== */
+
+/* ===== CONTACT INSPO FORM LAYOUT START ===== */
+
+/* Clean header area like other pages */
+.sg-contact-clean-page {
+  max-width: none !important;
+  padding: 56px 0 0 !important;
+}
+
+.sg-contact-clean-page .sg-contact-hero {
+  max-width: var(--max) !important;
+  margin: 0 auto 72px !important;
+  padding: 0 24px !important;
+}
+
+/* Contact form stage inspired by reference */
+.sg-contact-clean-shell {
+  width: 100% !important;
+  min-height: 680px !important;
+  border-radius: 28px 28px 0 0 !important;
+  padding: clamp(56px, 7vw, 92px) 24px clamp(72px, 8vw, 110px) !important;
+  background:
+    radial-gradient(circle at 18% 24%, rgba(199, 220, 73, 0.18), transparent 14%),
+    radial-gradient(circle at 82% 18%, rgba(199, 220, 73, 0.14), transparent 16%),
+    radial-gradient(circle at 50% 100%, rgba(16, 85, 31, 0.12), transparent 30%),
+    linear-gradient(180deg, #f7f8f0 0%, #eef2df 100%) !important;
+  display: grid !important;
+  place-items: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* subtle contour-like background without another box */
+.sg-contact-clean-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-radial-gradient(
+      circle at 18% 35%,
+      rgba(16, 85, 31, 0.055) 0,
+      rgba(16, 85, 31, 0.055) 1px,
+      transparent 1px,
+      transparent 18px
+    ),
+    repeating-radial-gradient(
+      circle at 80% 45%,
+      rgba(16, 85, 31, 0.04) 0,
+      rgba(16, 85, 31, 0.04) 1px,
+      transparent 1px,
+      transparent 22px
+    );
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.sg-contact-clean-shell::after {
+  content: "";
+  position: absolute;
+  top: -38px;
+  left: 50%;
+  width: 150px;
+  height: 92px;
+  transform: translateX(-50%);
+  background: var(--dark);
+  clip-path: polygon(50% 0%, 66% 36%, 98% 25%, 90% 70%, 62% 72%, 50% 100%, 38% 72%, 10% 70%, 2% 25%, 34% 36%);
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+/* No inner card background; form floats on the stage */
+.sg-contact-clean-form {
+  width: min(100%, 720px) !important;
+  position: relative !important;
+  z-index: 1 !important;
+  color: var(--text) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Progress line like booking flow */
+.sg-contact-clean-form .sg-intake-progress {
+  max-width: 620px !important;
+  margin: 0 auto 38px !important;
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 0 !important;
+  position: relative !important;
+}
+
+.sg-contact-clean-form .sg-intake-progress::before {
+  content: "";
+  position: absolute;
+  left: 11%;
+  right: 11%;
+  top: 22px;
+  height: 1px;
+  background: rgba(16, 85, 31, 0.22);
+  z-index: 0;
+}
+
+.sg-contact-clean-form .sg-intake-progress button {
+  height: auto !important;
+  min-height: 52px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: var(--dark) !important;
+  display: grid !important;
+  justify-items: center !important;
+  gap: 8px !important;
+  font-size: 0.7rem !important;
+  line-height: 1.1 !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  position: relative !important;
+  z-index: 1 !important;
+  cursor: pointer !important;
+}
+
+.sg-contact-clean-form .sg-intake-progress button span {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 999px !important;
+  background: var(--lime) !important;
+  color: var(--dark) !important;
+  border: 1px solid rgba(16, 85, 31, 0.14) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 0.82rem !important;
+  line-height: 1 !important;
+  box-shadow: 0 10px 24px rgba(16, 85, 31, 0.08) !important;
+}
+
+.sg-contact-clean-form .sg-intake-progress button.is-active span,
+.sg-contact-clean-form .sg-intake-progress button.is-complete span {
+  background: var(--dark) !important;
+  color: var(--lime) !important;
+}
+
+/* Inputs section */
+.sg-contact-clean-form .sg-intake-step {
+  width: min(100%, 620px) !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  gap: 18px !important;
+}
+
+.sg-contact-clean-form .sg-intake-step label > span {
+  color: var(--dark) !important;
+  font-size: 0.72rem !important;
+  line-height: 1.2 !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.04em !important;
+}
+
+.sg-contact-clean-form .sg-input-shell,
+.sg-contact-clean-form .sg-select-shell,
+.sg-contact-clean-form .sg-intake-step textarea {
+  background: #ffffff !important;
+  color: var(--dark) !important;
+  border: 1px solid rgba(31, 31, 28, 0.08) !important;
+  box-shadow: 0 14px 34px rgba(20, 49, 38, 0.06) !important;
+}
+
+.sg-contact-clean-form .sg-phone-grid {
+  grid-template-columns: 0.78fr 1fr !important;
+}
+
+.sg-contact-clean-form .sg-whatsapp-check {
+  width: fit-content !important;
+  background: #ffffff !important;
+  color: var(--dark) !important;
+  border: 1px solid rgba(31, 31, 28, 0.08) !important;
+  box-shadow: 0 14px 34px rgba(20, 49, 38, 0.06) !important;
+}
+
+.sg-contact-clean-form .sg-whatsapp-check span,
+.sg-contact-clean-form .sg-whatsapp-check svg {
+  color: var(--dark) !important;
+}
+
+/* Review */
+.sg-contact-clean-form .sg-intake-review {
+  width: min(100%, 620px) !important;
+  margin: 0 auto !important;
+  background: #ffffff !important;
+  color: var(--dark) !important;
+  border: 1px solid rgba(31, 31, 28, 0.08) !important;
+  box-shadow: 0 14px 34px rgba(20, 49, 38, 0.06) !important;
+}
+
+/* Actions */
+.sg-contact-clean-form .sg-intake-actions {
+  width: min(100%, 620px) !important;
+  margin: 30px auto 0 !important;
+}
+
+.sg-contact-clean-form .sg-intake-back {
+  background: #ffffff !important;
+  color: var(--dark) !important;
+}
+
+.sg-contact-clean-form .sg-intake-next {
+  background: var(--dark) !important;
+  color: #ffffff !important;
+  box-shadow: 0 18px 34px rgba(16, 85, 31, 0.18) !important;
+}
+
+.sg-contact-clean-form .has-error small {
+  color: #9b2424 !important;
+}
+
+.sg-contact-clean-form .sg-intake-step small,
+.sg-contact-clean-form .sg-intake-note {
+  color: rgba(23, 59, 52, 0.72) !important;
+}
+
+@media (max-width: 900px) {
+  .sg-contact-clean-page {
+    padding-top: 38px !important;
+  }
+
+  .sg-contact-clean-page .sg-contact-hero {
+    margin-bottom: 36px !important;
+    padding: 0 16px !important;
+  }
+
+  .sg-contact-clean-shell {
+    min-height: 0 !important;
+    border-radius: 24px 24px 0 0 !important;
+    padding: 38px 16px 56px !important;
+    place-items: stretch !important;
+  }
+
+  .sg-contact-clean-shell::after {
+    width: 110px;
+    height: 70px;
+    top: -28px;
+  }
+
+  .sg-contact-clean-form {
+    width: 100% !important;
+  }
+
+  .sg-contact-clean-form .sg-intake-progress {
+    margin-bottom: 28px !important;
+  }
+
+  .sg-contact-clean-form .sg-intake-progress::before {
+    left: 13%;
+    right: 13%;
+    top: 18px;
+  }
+
+  .sg-contact-clean-form .sg-intake-progress button {
+    font-size: 0 !important;
+  }
+
+  .sg-contact-clean-form .sg-intake-progress button span {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 0.75rem !important;
+  }
+
+  .sg-contact-clean-form .sg-phone-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .sg-contact-clean-form .sg-whatsapp-check {
+    width: 100% !important;
+    border-radius: 16px !important;
+  }
+}
+
+/* ===== CONTACT INSPO FORM LAYOUT END ===== */
