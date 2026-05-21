@@ -215,14 +215,6 @@ export default function ContactClient() {
     if (!form.urgency) next.urgency = "Select urgency";
     if (form.challenge.trim().length < 40) next.challenge = "Write at least 40 characters";
 
-    if (form.website.trim()) {
-      next.website = "Submission blocked";
-    }
-
-    if (Date.now() - form.startedAt < 4000) {
-      next.startedAt = "Please take a moment to review before submitting";
-    }
-
     if (!form.consentProcessing) {
       next.consentProcessing = "Confirm data processing consent";
     }
@@ -276,7 +268,6 @@ export default function ContactClient() {
       internationalPhone: phoneNumber?.formatInternational() || form.phone,
       consentProcessing: form.consentProcessing,
       consentAccuracy: form.consentAccuracy,
-      submittedAt: new Date().toISOString(),
     });
   }
 
@@ -292,15 +283,6 @@ export default function ContactClient() {
 
         <section className="sg-contact-clean-shell">
           <form className="sg-contact-clean-form" onSubmit={handleSubmit} noValidate>
-            <label className="sg-bot-field" aria-hidden="true">
-              <span>Website</span>
-              <input
-                tabIndex={-1}
-                autoComplete="off"
-                value={form.website}
-                onChange={(event) => updateField("website", event.target.value)}
-              />
-            </label>
             <div className="sg-intake-progress" aria-label="Inquiry progress">
               {steps.map((item, index) => (
                 <button
@@ -528,11 +510,8 @@ export default function ContactClient() {
                     I confirm this inquiry is submitted by a real person and the information provided is accurate to the best of my knowledge.
                   </span>
                 </label>
-
-                {submitted && errors.startedAt && <small>{errors.startedAt}</small>}
                 {submitted && errors.consentProcessing && <small>{errors.consentProcessing}</small>}
                 {submitted && errors.consentAccuracy && <small>{errors.consentAccuracy}</small>}
-                {submitted && errors.website && <small>{errors.website}</small>}
               </div>
             )}
 

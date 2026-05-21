@@ -6695,3 +6695,56 @@ li,
 }
 
 /* ===== CONTACT SECURITY CONSENT END ===== */
+
+/* ===== CONTACT FORM PAGE BLEND START ===== */
+
+/* Remove the heavy form background so it blends with the page */
+.sg-contact-clean-shell {
+  min-height: auto !important;
+  border-radius: 0 !important;
+  padding: 24px 24px 88px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.sg-contact-clean-shell::before,
+.sg-contact-clean-shell::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Keep the form itself clean and premium */
+.sg-contact-clean-form {
+  width: min(100%, 720px) !important;
+  margin: 0 auto !important;
+  padding: clamp(22px, 4vw, 38px) !important;
+  border-radius: 28px !important;
+  background: #f7f8f0 !important;
+  border: 1px solid rgba(31, 31, 28, 0.08) !important;
+  box-shadow: 0 24px 70px rgba(20, 49, 38, 0.08) !important;
+}
+
+/* Consent panel should feel part of the form, not like legal clutter */
+.sg-consent-panel {
+  background: #ffffff !important;
+  border: 1px solid rgba(31, 31, 28, 0.08) !important;
+  box-shadow: none !important;
+}
+
+.sg-bot-field {
+  display: none !important;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .sg-contact-clean-shell {
+    padding: 12px 16px 56px !important;
+  }
+
+  .sg-contact-clean-form {
+    border-radius: 22px !important;
+    padding: 20px !important;
+  }
+}
+
+/* ===== CONTACT FORM PAGE BLEND END ===== */
