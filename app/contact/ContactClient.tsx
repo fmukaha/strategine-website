@@ -280,6 +280,30 @@ export default function ContactClient() {
           <span className="sg-page-kicker">Contact us</span>
           <h1>Start a project inquiry.</h1>
         </section>
+        <section className="sg-contact-data-purpose">
+          <span className="sg-section-kicker">How this inquiry is used</span>
+
+          <div className="sg-contact-data-purpose-grid">
+            <div>
+              <h2>Purposeful intake. No noise.</h2>
+            </div>
+
+            <div>
+              <p>
+                We collect this information only to understand your inquiry,
+                assess whether Strategine is the right fit, and respond with
+                relevant next steps.
+              </p>
+
+              <p>
+                Your details help us understand the organisation, decision
+                context, HREDD or responsible business challenge, and the level
+                of urgency. We do not use this form for spam, mailing lists, or
+                unrelated outreach.
+              </p>
+            </div>
+          </div>
+        </section>
 
         <section className="sg-contact-clean-shell">
           <form className="sg-contact-clean-form" onSubmit={handleSubmit} noValidate>

@@ -6748,3 +6748,59 @@ li,
 }
 
 /* ===== CONTACT FORM PAGE BLEND END ===== */
+
+/* ===== CONTACT DATA PURPOSE SECTION START ===== */
+
+.sg-contact-data-purpose {
+  max-width: var(--max);
+  margin: 0 auto 42px;
+  padding: 0 24px 42px;
+  border-bottom: 1px solid var(--line);
+}
+
+.sg-contact-data-purpose-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  gap: clamp(36px, 7vw, 96px);
+  align-items: start;
+}
+
+.sg-contact-data-purpose h2 {
+  max-width: 11ch;
+  color: var(--text);
+  font-size: clamp(2rem, 2.65vw, 2.75rem);
+  line-height: 1.12;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+}
+
+.sg-contact-data-purpose p {
+  max-width: 680px;
+  font-size: 16px;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+.sg-contact-data-purpose p + p {
+  margin-top: 16px;
+}
+
+@media (max-width: 900px) {
+  .sg-contact-data-purpose {
+    margin-bottom: 28px;
+    padding: 0 16px 32px;
+  }
+
+  .sg-contact-data-purpose-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .sg-contact-data-purpose h2 {
+    max-width: 12ch;
+    font-size: clamp(1.9rem, 8vw, 2.5rem);
+  }
+}
+
+/* ===== CONTACT DATA PURPOSE SECTION END ===== */
