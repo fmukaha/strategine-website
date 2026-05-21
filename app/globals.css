@@ -6486,3 +6486,32 @@ li,
 }
 
 /* ===== CONTACT COUNTRY DROPDOWN REDO END ===== */
+
+/* ===== CONTACT COUNTRY FLAGS START ===== */
+
+.sg-country-options button {
+  grid-template-columns: 30px 58px 1fr !important;
+}
+
+.sg-country-flag {
+  font-size: 1.15rem !important;
+  line-height: 1 !important;
+}
+
+.sg-country-code {
+  color: var(--dark) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+
+.sg-country-name {
+  color: var(--text) !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.sg-country-search-shell input {
+  letter-spacing: -0.01em !important;
+}
+
+/* ===== CONTACT COUNTRY FLAGS END ===== */

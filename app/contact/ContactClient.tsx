@@ -67,9 +67,19 @@ const countries: { code: CountryCode; label: string }[] = [
   { code: "US", label: "United States" },
 ];
 
+function countryFlag(code: CountryCode) {
+  return code
+    .toUpperCase()
+    .replace(/./g, (char) =>
+      String.fromCodePoint(127397 + char.charCodeAt(0))
+    );
+}
+
 function countryDisplay(code: CountryCode) {
   const country = countries.find((item) => item.code === code);
-  return country ? `+${getCountryCallingCode(country.code)} ${country.label}` : "";
+  return country
+    ? `${countryFlag(country.code)} +${getCountryCallingCode(country.code)} ${country.label}`
+    : "";
 }
 
 const roles = [
@@ -319,8 +329,7 @@ export default function ContactClient() {
                                 onMouseDown={(event) => event.preventDefault()}
                                 onClick={() => selectCountry(country.code)}
                               >
-                                <span>+{getCountryCallingCode(country.code)}</span>
-                                {country.label}
+                                <span className="sg-country-flag">{countryFlag(country.code)}</span><span className="sg-country-code">+{getCountryCallingCode(country.code)}</span><span className="sg-country-name">{country.label}</span>
                               </button>
                             ))
                           ) : (
