@@ -6411,3 +6411,78 @@ li,
 }
 
 /* ===== CONTACT SEARCHABLE COUNTRY CLEAN BACKGROUND END ===== */
+
+/* ===== CONTACT COUNTRY DROPDOWN REDO START ===== */
+
+.sg-country-combobox {
+  position: relative;
+  min-width: 0;
+}
+
+.sg-country-search-shell input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 16px !important;
+  line-height: 1.4;
+}
+
+.sg-country-options {
+  position: absolute;
+  z-index: 80;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  max-height: 260px;
+  overflow-y: auto;
+  padding: 8px;
+  border: 1px solid rgba(31, 31, 28, 0.1);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 22px 60px rgba(20, 49, 38, 0.18);
+}
+
+.sg-country-options button {
+  width: 100%;
+  min-height: 42px;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--text);
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  text-align: left;
+  font-size: 14px !important;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.sg-country-options button:hover {
+  background: var(--lime);
+  color: var(--dark);
+}
+
+.sg-country-options button span {
+  color: var(--dark);
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+
+.sg-country-options p {
+  padding: 12px;
+  color: rgba(23, 59, 52, 0.7);
+  font-size: 14px !important;
+  line-height: 1.3 !important;
+}
+
+.sg-phone-grid {
+  overflow: visible !important;
+}
+
+/* ===== CONTACT COUNTRY DROPDOWN REDO END ===== */

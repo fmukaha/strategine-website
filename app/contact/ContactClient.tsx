@@ -128,6 +128,7 @@ export default function ContactClient() {
   const [submitted, setSubmitted] = useState(false);
   const [countryDetected, setCountryDetected] = useState(false);
   const [countryInput, setCountryInput] = useState(countryDisplay(initialForm.country));
+  const [countryOpen, setCountryOpen] = useState(false);
 
   useEffect(() => {
     async function detectCountry() {
@@ -190,6 +191,7 @@ export default function ContactClient() {
 
   function updateCountryInput(value: string) {
     setCountryInput(value);
+    setCountryOpen(true);
 
     const match = countries.find((country) => {
       const display = countryDisplay(country.code).toLowerCase();
@@ -199,6 +201,16 @@ export default function ContactClient() {
     if (match) {
       updateField("country", match.code);
     }
+  }
+
+  const filteredCountries = countries.filter((country) =>
+    countryDisplay(country.code).toLowerCase().includes(countryInput.toLowerCase())
+  );
+
+  function selectCountry(code: CountryCode) {
+    updateField("country", code);
+    setCountryInput(countryDisplay(code));
+    setCountryOpen(false);
   }
 
   function updateField<K extends keyof FormState>(field: K, value: FormState[K]) {
@@ -278,23 +290,44 @@ export default function ContactClient() {
                 <label className={submitted && errors.phone ? "has-error" : ""}>
                   <span>Phone number</span>
                   <div className="sg-phone-grid">
-                    <div className="sg-select-shell sg-country-search-shell">
-                      <Globe2 size={17} strokeWidth={1.7} />
-                      <input
-                        list="country-code-options"
-                        value={countryInput}
-                        onChange={(event) => updateCountryInput(event.target.value)}
-                        onBlur={() => setCountryInput(countryDisplay(form.country))}
-                        placeholder="Search country code"
-                        aria-label="Search country code"
-                      />
-                      <ChevronDown size={16} strokeWidth={1.8} />
+                    <div className="sg-country-combobox">
+                      <div className="sg-select-shell sg-country-search-shell">
+                        <Globe2 size={17} strokeWidth={1.7} />
+                        <input
+                          value={countryInput}
+                          onChange={(event) => updateCountryInput(event.target.value)}
+                          onFocus={() => setCountryOpen(true)}
+                          onBlur={() => {
+                            window.setTimeout(() => {
+                              setCountryOpen(false);
+                              setCountryInput(countryDisplay(form.country));
+                            }, 140);
+                          }}
+                          placeholder="Search country code"
+                          aria-label="Search country code"
+                        />
+                        <ChevronDown size={16} strokeWidth={1.8} />
+                      </div>
 
-                      <datalist id="country-code-options">
-                        {countries.map((country) => (
-                          <option key={country.code} value={countryDisplay(country.code)} />
-                        ))}
-                      </datalist>
+                      {countryOpen && (
+                        <div className="sg-country-options">
+                          {filteredCountries.length > 0 ? (
+                            filteredCountries.map((country) => (
+                              <button
+                                key={country.code}
+                                type="button"
+                                onMouseDown={(event) => event.preventDefault()}
+                                onClick={() => selectCountry(country.code)}
+                              >
+                                <span>+{getCountryCallingCode(country.code)}</span>
+                                {country.label}
+                              </button>
+                            ))
+                          ) : (
+                            <p>No matching country</p>
+                          )}
+                        </div>
+                      )}
                     </div>
 
                     <div className="sg-input-shell">
