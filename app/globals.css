@@ -7724,3 +7724,106 @@ button {
 }
 
 /* ===== CONTACT PURPOSE STANDARD BLOCK END ===== */
+
+/* ===== FIX CONTACT PURPOSE BROKEN WRAP START ===== */
+
+/* Stop headings from breaking words */
+h1,
+h2,
+h3,
+.sg-contact-data-purpose h2,
+.sg-standard-intro h2,
+.sg-about-intro-section h2,
+.sg-services-intro h2 {
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  hyphens: none !important;
+}
+
+/* Contact purpose section: clean Services-style layout */
+.sg-contact-data-purpose {
+  width: 100% !important;
+  max-width: var(--sg-page-max) !important;
+  margin: 0 auto 56px !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+.sg-contact-data-purpose-grid {
+  display: grid !important;
+  grid-template-columns: 0.85fr 1fr !important;
+  gap: clamp(40px, 8vw, 120px) !important;
+  align-items: start !important;
+}
+
+.sg-contact-data-purpose-grid > div:first-child {
+  min-width: 0 !important;
+}
+
+.sg-contact-data-purpose-grid > div:last-child {
+  min-width: 0 !important;
+  max-width: 640px !important;
+  padding-top: 34px !important;
+}
+
+.sg-contact-data-purpose .sg-section-kicker {
+  display: block !important;
+  margin-bottom: 18px !important;
+}
+
+.sg-contact-data-purpose h2 {
+  max-width: 520px !important;
+  margin: 0 !important;
+  font-size: clamp(2rem, 2.8vw, 2.8rem) !important;
+  line-height: 1.12 !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.05em !important;
+}
+
+.sg-contact-data-purpose p {
+  max-width: 640px !important;
+  margin: 0 !important;
+  font-size: 16px !important;
+  line-height: 1.65 !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+
+.sg-contact-data-purpose p + p {
+  margin-top: 16px !important;
+}
+
+.sg-contact-data-purpose .sg-inline-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  color: var(--dark) !important;
+  text-decoration: underline !important;
+  text-underline-offset: 4px !important;
+  text-decoration-thickness: 1px !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+
+@media (max-width: 900px) {
+  .sg-contact-data-purpose {
+    margin-bottom: 38px !important;
+  }
+
+  .sg-contact-data-purpose-grid {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+
+  .sg-contact-data-purpose-grid > div:last-child {
+    max-width: 100% !important;
+    padding-top: 0 !important;
+  }
+
+  .sg-contact-data-purpose h2 {
+    max-width: 12ch !important;
+    font-size: clamp(1.9rem, 8vw, 2.5rem) !important;
+  }
+}
+
+/* ===== FIX CONTACT PURPOSE BROKEN WRAP END ===== */
