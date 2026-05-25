@@ -7947,3 +7947,17 @@ h3,
 }
 
 /* ===== CONTACT PURPOSE COPY ALIGNMENT END ===== */
+
+/* ===== CONTACT PURPOSE ZERO ALIGN START ===== */
+
+/* Kicker is outside the grid, so copy must align directly with h2 */
+.sg-contact-clean-page section.sg-contact-data-purpose .sg-contact-data-purpose-grid > div:last-child {
+  padding-top: 0 !important;
+  align-self: start !important;
+}
+
+.sg-contact-clean-page section.sg-contact-data-purpose .sg-contact-data-purpose-grid > div:last-child p:first-child {
+  margin-top: 0 !important;
+}
+
+/* ===== CONTACT PURPOSE ZERO ALIGN END ===== */
