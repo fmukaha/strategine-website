@@ -7047,3 +7047,54 @@ button {
 }
 
 /* ===== GLOBAL HEADER ALIGNMENT AND CONTACT IMAGE END ===== */
+
+/* ===== STANDARD HERO IMAGE SIZING START ===== */
+
+/* Standard image size for About, Services, Contact hero sections */
+.sg-about-hero-image,
+.sg-services-hero-image,
+.sg-contact-hero-image {
+  width: min(100%, 1040px) !important;
+  height: clamp(300px, 36vw, 460px) !important;
+  min-height: unset !important;
+  margin-top: 42px !important;
+  border-radius: 28px !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* Keep hero spacing consistent */
+.sg-about-hero,
+.sg-services-hero,
+.sg-contact-hero {
+  margin-bottom: 64px !important;
+}
+
+/* Mobile standard */
+@media (max-width: 900px) {
+  .sg-about-hero-image,
+  .sg-services-hero-image,
+  .sg-contact-hero-image {
+    width: 100% !important;
+    height: 260px !important;
+    margin-top: 28px !important;
+    border-radius: 22px !important;
+  }
+
+  .sg-about-hero,
+  .sg-services-hero,
+  .sg-contact-hero {
+    margin-bottom: 38px !important;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 420px) {
+  .sg-about-hero-image,
+  .sg-services-hero-image,
+  .sg-contact-hero-image {
+    height: 230px !important;
+  }
+}
+
+/* ===== STANDARD HERO IMAGE SIZING END ===== */
