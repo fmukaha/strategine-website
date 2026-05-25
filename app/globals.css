@@ -9495,48 +9495,147 @@ footer,
 /* ===== LANDING HERO EVERGREEN STYLE END ===== */
 
 
-/* ===== CANVAS CONTENT WIDE SHELL STANDARD START ===== */
+/* ===== SITE CANVAS STANDARD START ===== */
 
 /*
-  Standard:
-  - Header inner content stays on normal canvas.
-  - Page content stays on normal canvas.
-  - Only landing hero image shell and footer shell stretch wider.
+  Locked layout rule:
+  - All page content sits inside --sg-page-max.
+  - Header content sits inside --sg-page-max.
+  - Footer inner content sits inside --sg-page-max.
+  - Only approved visual shells may stretch wider: landing hero shell and footer shell.
+  - Mobile must never overflow horizontally.
 */
 
-/* Header content: normal canvas */
+:root {
+  --sg-page-max: 1180px;
+  --sg-page-pad-desktop: 24px;
+  --sg-page-pad-mobile: 16px;
+  --sg-wide-shell-pad-desktop: 20px;
+  --sg-wide-shell-pad-mobile: 12px;
+}
+
+html,
+body {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box !important;
+}
+
+main,
+section,
+div,
+form,
+article,
+header,
+footer,
+nav {
+  min-width: 0 !important;
+}
+
+img,
+video,
+svg,
+canvas {
+  max-width: 100% !important;
+}
+
+/* Standard content canvas */
+.sg-page-canvas,
+.sg-header-inner,
+.sg-about-page,
+.sg-services-page,
+.sg-contact-clean-page,
+.sg-insights-page,
+.sg-case-studies-page,
+.sg-placeholder-page,
+.sg-public-intel,
+.sg-home-teasers,
+.sg-home-mission-split,
+.sg-standard-hero,
+.sg-standard-intro,
+.sg-about-intro-section,
+.sg-services-intro,
+.sg-contact-data-purpose {
+  width: 100% !important;
+  max-width: var(--sg-page-max) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Standard page padding */
+.sg-about-page,
+.sg-services-page,
+.sg-contact-clean-page,
+.sg-insights-page,
+.sg-case-studies-page,
+.sg-placeholder-page {
+  padding-left: var(--sg-page-pad-desktop) !important;
+  padding-right: var(--sg-page-pad-desktop) !important;
+}
+
+/* Header content stays inside normal canvas */
 .sg-header {
   width: 100% !important;
-  padding: 18px 20px !important;
+  padding: 18px var(--sg-page-pad-desktop) !important;
   background: #ffffff !important;
 }
 
 .sg-header-inner {
-  width: 100% !important;
-  max-width: var(--sg-page-max, 1180px) !important;
-  margin: 0 auto !important;
   padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
-/* Landing page shell can be wider than normal canvas */
+.sg-logo,
+.sg-actions {
+  flex: 0 0 auto !important;
+}
+
+.sg-nav {
+  flex: 1 1 auto !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/* Landing page wide shell */
 .sg-home-evergreen-page {
   width: 100% !important;
   max-width: none !important;
-  padding: 22px 20px 0 !important;
+  margin: 0 auto !important;
+  padding: 22px var(--sg-wide-shell-pad-desktop) 0 !important;
 }
 
-/* Landing hero image stretches wider */
 .sg-home-evergreen-hero {
   width: 100% !important;
   max-width: none !important;
+  padding: 0 !important;
+  display: grid !important;
+  align-items: end !important;
 }
 
-/* But hero text content should not feel uncontrolled */
+/* Text inside wide hero returns to normal canvas */
 .sg-home-evergreen-content {
-  max-width: 760px !important;
+  width: 100% !important;
+  max-width: var(--sg-page-max) !important;
+  margin: 0 auto !important;
+  padding: clamp(42px, 6vw, 76px) var(--sg-page-pad-desktop) !important;
 }
 
-/* Footer shell stretches wider but keeps original styling */
+/* Hero badge aligns to canvas right edge */
+.sg-home-evergreen-badge {
+  right: max(
+    var(--sg-page-pad-desktop),
+    calc((100vw - var(--sg-page-max)) / 2 + var(--sg-page-pad-desktop))
+  ) !important;
+}
+
+/* Footer shell may stretch, but inner content stays on canvas */
 footer,
 .sg-footer {
   width: calc(100% - 40px) !important;
@@ -9547,34 +9646,82 @@ footer,
   overflow: hidden !important;
 }
 
-/* Footer internal content remains normal canvas */
 footer > *,
 .sg-footer > * {
-  max-width: var(--sg-page-max, 1180px) !important;
+  width: 100% !important;
+  max-width: var(--sg-page-max) !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
 
-/* Do not force newsletter into green/dark footer treatment */
+/* Newsletter remains its own design, not forced into footer shell styling */
 .sg-newsletter,
 .sg-footer-newsletter {
-  max-width: var(--sg-page-max, 1180px) !important;
+  width: 100% !important;
+  max-width: var(--sg-page-max) !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
 
-/* Mobile */
+/* Prevent text/input overflow on mobile */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+strong,
+small,
+button,
+label,
+input,
+select,
+textarea {
+  max-width: 100% !important;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100% !important;
+}
+
+/* Mobile canvas */
 @media (max-width: 900px) {
+  .sg-about-page,
+  .sg-services-page,
+  .sg-contact-clean-page,
+  .sg-insights-page,
+  .sg-case-studies-page,
+  .sg-placeholder-page {
+    padding-left: var(--sg-page-pad-mobile) !important;
+    padding-right: var(--sg-page-pad-mobile) !important;
+  }
+
   .sg-header {
-    padding: 14px 16px !important;
+    padding: 14px var(--sg-page-pad-mobile) !important;
   }
 
   .sg-header-inner {
-    max-width: var(--sg-page-max, 1180px) !important;
+    width: 100% !important;
+    max-width: var(--sg-page-max) !important;
   }
 
   .sg-home-evergreen-page {
-    padding: 16px 12px 0 !important;
+    padding: 16px var(--sg-wide-shell-pad-mobile) 0 !important;
+  }
+
+  .sg-home-evergreen-content {
+    padding: 26px !important;
+  }
+
+  .sg-home-evergreen-badge {
+    position: static !important;
+    margin: 24px 26px 26px !important;
   }
 
   footer,
@@ -9584,194 +9731,4 @@ footer > *,
   }
 }
 
-/* ===== CANVAS CONTENT WIDE SHELL STANDARD END ===== */
-
-
-/* ===== HERO CONTENT CANVAS ALIGNMENT START ===== */
-
-/* Wide image shell, normal canvas content inside */
-.sg-home-evergreen-hero {
-  width: 100% !important;
-  min-height: clamp(620px, 72vh, 760px) !important;
-  padding: 0 !important;
-  display: grid !important;
-  align-items: end !important;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(20, 49, 38, 0.86) 0%,
-      rgba(20, 49, 38, 0.68) 38%,
-      rgba(20, 49, 38, 0.28) 70%,
-      rgba(20, 49, 38, 0.08) 100%
-    ),
-    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2200&q=85") !important;
-  background-size: cover !important;
-  background-position: center !important;
-}
-
-/* The wording inside the image follows the site canvas */
-.sg-home-evergreen-content {
-  width: 100% !important;
-  max-width: var(--sg-page-max, 1180px) !important;
-  margin: 0 auto !important;
-  padding: clamp(42px, 6vw, 76px) var(--sg-page-pad-desktop, 24px) !important;
-  color: #ffffff !important;
-}
-
-.sg-home-evergreen-content .sg-page-kicker {
-  color: var(--lime) !important;
-  text-align: left !important;
-  margin: 0 0 18px !important;
-}
-
-.sg-home-evergreen-content h1 {
-  max-width: 780px !important;
-  margin: 0 !important;
-  color: #ffffff !important;
-  opacity: 1 !important;
-  font-size: clamp(4rem, 7.4vw, 7.2rem) !important;
-  line-height: 0.96 !important;
-  font-weight: 400 !important;
-  letter-spacing: -0.078em !important;
-  text-shadow: 0 24px 72px rgba(0, 0, 0, 0.34) !important;
-}
-
-.sg-home-evergreen-content h1 span {
-  color: var(--lime) !important;
-}
-
-.sg-home-evergreen-content p {
-  max-width: 640px !important;
-  margin: 28px 0 0 !important;
-  color: rgba(255, 255, 255, 0.94) !important;
-  font-size: 18px !important;
-  line-height: 1.62 !important;
-  text-shadow: 0 14px 42px rgba(0, 0, 0, 0.28) !important;
-}
-
-.sg-home-evergreen-actions {
-  margin-top: 36px !important;
-  display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 14px !important;
-}
-
-.sg-home-evergreen-actions a {
-  min-height: 54px !important;
-  border-radius: 12px !important;
-  padding: 0 24px !important;
-  font-size: 15px !important;
-  line-height: 1 !important;
-}
-
-.sg-home-evergreen-actions a:first-child {
-  background: var(--lime) !important;
-  color: var(--dark) !important;
-}
-
-.sg-home-evergreen-actions a:last-child {
-  background: var(--dark) !important;
-  color: #ffffff !important;
-}
-
-/* Badge also respects the canvas edge */
-.sg-home-evergreen-badge {
-  right: max(24px, calc((100vw - var(--sg-page-max, 1180px)) / 2 + 24px)) !important;
-  bottom: clamp(34px, 5vw, 76px) !important;
-}
-
-/* Mobile */
-@media (max-width: 900px) {
-  .sg-home-evergreen-hero {
-    min-height: 620px !important;
-    align-items: end !important;
-    background:
-      linear-gradient(
-        180deg,
-        rgba(20, 49, 38, 0.04) 0%,
-        rgba(20, 49, 38, 0.42) 46%,
-        rgba(20, 49, 38, 0.9) 100%
-      ),
-      url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85") !important;
-    background-size: cover !important;
-    background-position: center !important;
-  }
-
-  .sg-home-evergreen-content {
-    padding: 26px !important;
-  }
-
-  .sg-home-evergreen-content h1 {
-    max-width: 10ch !important;
-    font-size: clamp(3.2rem, 15vw, 4.8rem) !important;
-  }
-
-  .sg-home-evergreen-content p {
-    max-width: 100% !important;
-    font-size: 16px !important;
-  }
-
-  .sg-home-evergreen-actions {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-  }
-
-  .sg-home-evergreen-actions a {
-    width: 100% !important;
-  }
-
-  .sg-home-evergreen-badge {
-    position: static !important;
-    width: fit-content !important;
-    margin: 24px 26px 26px !important;
-  }
-}
-
-/* ===== HERO CONTENT CANVAS ALIGNMENT END ===== */
-
-
-/* ===== HEADER CANVAS FINAL START ===== */
-
-/* Header itself spans full width; contents stay inside site canvas */
-.sg-header {
-  width: 100% !important;
-  padding: 18px var(--sg-page-pad-desktop, 24px) !important;
-  background: #ffffff !important;
-}
-
-.sg-header-inner {
-  width: 100% !important;
-  max-width: var(--sg-page-max, 1180px) !important;
-  margin: 0 auto !important;
-  padding: 0 !important;
-  display: flex !important;
-  align-items: center !important;
-}
-
-/* Keep left logo, centered nav, right actions balanced inside canvas */
-.sg-logo {
-  flex: 0 0 auto !important;
-}
-
-.sg-nav {
-  flex: 1 1 auto !important;
-  display: flex !important;
-  justify-content: center !important;
-}
-
-.sg-actions {
-  flex: 0 0 auto !important;
-}
-
-/* Mobile stays contained */
-@media (max-width: 900px) {
-  .sg-header {
-    padding: 14px var(--sg-page-pad-mobile, 16px) !important;
-  }
-
-  .sg-header-inner {
-    max-width: var(--sg-page-max, 1180px) !important;
-  }
-}
-
-/* ===== HEADER CANVAS FINAL END ===== */
+/* ===== SITE CANVAS STANDARD END ===== */
