@@ -7961,3 +7961,164 @@ h3,
 }
 
 /* ===== CONTACT PURPOSE ZERO ALIGN END ===== */
+
+/* ===== REUSABLE SPLIT SECTION STANDARD START ===== */
+
+/*
+  Standard section block:
+  - kicker above left title
+  - title on left
+  - copy on right
+  - right copy aligns with title top, not kicker
+  - mobile stacks naturally
+*/
+
+.sg-split-section,
+.sg-standard-intro,
+.sg-about-intro-section,
+.sg-services-intro,
+.sg-contact-data-purpose,
+.sg-about-accountability-intro {
+  width: 100% !important;
+  display: grid !important;
+  grid-template-columns: 0.9fr 1fr !important;
+  gap: clamp(40px, 8vw, 120px) !important;
+  align-items: start !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* For sections where kicker is outside an inner grid */
+.sg-contact-data-purpose-grid {
+  display: grid !important;
+  grid-template-columns: 0.9fr 1fr !important;
+  gap: clamp(40px, 8vw, 120px) !important;
+  align-items: start !important;
+}
+
+/* Left column */
+.sg-split-section > div:first-child,
+.sg-standard-intro > div:first-child,
+.sg-about-intro-section > div:first-child,
+.sg-services-intro > div:first-child,
+.sg-contact-data-purpose-grid > div:first-child,
+.sg-about-accountability-intro > div:first-child {
+  min-width: 0 !important;
+}
+
+/* Right column: title-top aligned */
+.sg-split-section > div:last-child,
+.sg-standard-intro > div:last-child,
+.sg-about-intro-section > div:last-child,
+.sg-services-intro > div:last-child,
+.sg-contact-data-purpose-grid > div:last-child,
+.sg-about-accountability-intro > div:last-child,
+.sg-about-copy,
+.sg-services-copy {
+  min-width: 0 !important;
+  max-width: 660px !important;
+  padding-top: 0 !important;
+  align-self: start !important;
+}
+
+/* Kicker spacing */
+.sg-split-section .sg-section-kicker,
+.sg-standard-intro .sg-section-kicker,
+.sg-about-intro-section .sg-section-kicker,
+.sg-services-intro .sg-section-kicker,
+.sg-contact-data-purpose .sg-section-kicker,
+.sg-about-accountability-intro .sg-section-kicker {
+  display: block !important;
+  margin: 0 0 18px !important;
+}
+
+/* Standard split title */
+.sg-split-section h2,
+.sg-standard-intro h2,
+.sg-about-intro-section h2,
+.sg-services-intro h2,
+.sg-contact-data-purpose h2,
+.sg-about-accountability-intro h2 {
+  max-width: 620px !important;
+  margin: 0 !important;
+  color: var(--text) !important;
+  font-size: clamp(2rem, 2.8vw, 2.8rem) !important;
+  line-height: 1.12 !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.05em !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  hyphens: none !important;
+}
+
+/* Standard split copy */
+.sg-split-section p,
+.sg-standard-intro p,
+.sg-about-intro-section p,
+.sg-services-intro p,
+.sg-contact-data-purpose p,
+.sg-about-accountability-intro p {
+  max-width: 660px !important;
+  margin: 0 !important;
+  font-size: 16px !important;
+  line-height: 1.65 !important;
+  font-weight: 400 !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+
+.sg-split-section p + p,
+.sg-standard-intro p + p,
+.sg-about-intro-section p + p,
+.sg-services-intro p + p,
+.sg-contact-data-purpose p + p,
+.sg-about-accountability-intro p + p {
+  margin-top: 16px !important;
+}
+
+/* Mobile standard */
+@media (max-width: 900px) {
+  .sg-split-section,
+  .sg-standard-intro,
+  .sg-about-intro-section,
+  .sg-services-intro,
+  .sg-contact-data-purpose,
+  .sg-about-accountability-intro,
+  .sg-contact-data-purpose-grid {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+
+  .sg-split-section > div:last-child,
+  .sg-standard-intro > div:last-child,
+  .sg-about-intro-section > div:last-child,
+  .sg-services-intro > div:last-child,
+  .sg-contact-data-purpose-grid > div:last-child,
+  .sg-about-accountability-intro > div:last-child,
+  .sg-about-copy,
+  .sg-services-copy {
+    max-width: 100% !important;
+    padding-top: 0 !important;
+  }
+
+  .sg-split-section h2,
+  .sg-standard-intro h2,
+  .sg-about-intro-section h2,
+  .sg-services-intro h2,
+  .sg-contact-data-purpose h2,
+  .sg-about-accountability-intro h2 {
+    max-width: 12ch !important;
+    font-size: clamp(1.9rem, 8vw, 2.5rem) !important;
+  }
+
+  .sg-split-section p,
+  .sg-standard-intro p,
+  .sg-about-intro-section p,
+  .sg-services-intro p,
+  .sg-contact-data-purpose p,
+  .sg-about-accountability-intro p {
+    max-width: 100% !important;
+  }
+}
+
+/* ===== REUSABLE SPLIT SECTION STANDARD END ===== */
