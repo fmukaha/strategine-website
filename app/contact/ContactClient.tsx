@@ -297,6 +297,11 @@ export default function ContactClient() {
         <section className="sg-standard-hero sg-contact-hero">
           <span className="sg-page-kicker">Contact us</span>
           <h1>Start a project inquiry.</h1>
+
+          <div
+            className="sg-contact-hero-image"
+            aria-label="Strategine contact intake"
+          />
         </section>
         <section className="sg-contact-data-purpose">
           <span className="sg-section-kicker">How this inquiry is used</span>
