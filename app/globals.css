@@ -8122,3 +8122,44 @@ h3,
 }
 
 /* ===== REUSABLE SPLIT SECTION STANDARD END ===== */
+
+/* ===== SPLIT SECTION TITLE ALIGNMENT FIX START ===== */
+
+/*
+  Rule:
+  If kicker is inside the left column above the title,
+  the right copy must be pushed down to align with the title.
+*/
+@media (min-width: 901px) {
+  .sg-services-intro > div:last-child,
+  .sg-about-intro-section > div:last-child,
+  .sg-standard-intro > div:last-child,
+  .sg-about-accountability-intro > div:last-child,
+  .sg-services-copy,
+  .sg-about-copy {
+    padding-top: 34px !important;
+  }
+
+  /*
+    Exception:
+    Contact data purpose has the kicker outside the inner grid,
+    so right copy aligns directly with the title.
+  */
+  .sg-contact-data-purpose-grid > div:last-child {
+    padding-top: 0 !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .sg-services-intro > div:last-child,
+  .sg-about-intro-section > div:last-child,
+  .sg-standard-intro > div:last-child,
+  .sg-about-accountability-intro > div:last-child,
+  .sg-services-copy,
+  .sg-about-copy,
+  .sg-contact-data-purpose-grid > div:last-child {
+    padding-top: 0 !important;
+  }
+}
+
+/* ===== SPLIT SECTION TITLE ALIGNMENT FIX END ===== */
