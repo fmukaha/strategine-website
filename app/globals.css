@@ -7922,3 +7922,28 @@ h3,
 }
 
 /* ===== CONTACT PURPOSE FINAL FIX END ===== */
+
+/* ===== CONTACT PURPOSE COPY ALIGNMENT START ===== */
+
+@media (min-width: 901px) {
+  .sg-contact-clean-page .sg-contact-data-purpose-grid > div:last-child {
+    padding-top: 34px !important;
+  }
+}
+
+/* Align right copy to the title baseline, not the top/kicker */
+.sg-contact-clean-page .sg-contact-data-purpose h2 {
+  margin-top: 0 !important;
+}
+
+.sg-contact-clean-page .sg-contact-data-purpose-grid > div:last-child p:first-child {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 900px) {
+  .sg-contact-clean-page .sg-contact-data-purpose-grid > div:last-child {
+    padding-top: 0 !important;
+  }
+}
+
+/* ===== CONTACT PURPOSE COPY ALIGNMENT END ===== */
