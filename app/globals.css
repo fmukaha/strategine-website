@@ -9728,3 +9728,50 @@ footer > *,
 }
 
 /* ===== HERO CONTENT CANVAS ALIGNMENT END ===== */
+
+
+/* ===== HEADER CANVAS FINAL START ===== */
+
+/* Header itself spans full width; contents stay inside site canvas */
+.sg-header {
+  width: 100% !important;
+  padding: 18px var(--sg-page-pad-desktop, 24px) !important;
+  background: #ffffff !important;
+}
+
+.sg-header-inner {
+  width: 100% !important;
+  max-width: var(--sg-page-max, 1180px) !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Keep left logo, centered nav, right actions balanced inside canvas */
+.sg-logo {
+  flex: 0 0 auto !important;
+}
+
+.sg-nav {
+  flex: 1 1 auto !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.sg-actions {
+  flex: 0 0 auto !important;
+}
+
+/* Mobile stays contained */
+@media (max-width: 900px) {
+  .sg-header {
+    padding: 14px var(--sg-page-pad-mobile, 16px) !important;
+  }
+
+  .sg-header-inner {
+    max-width: var(--sg-page-max, 1180px) !important;
+  }
+}
+
+/* ===== HEADER CANVAS FINAL END ===== */
