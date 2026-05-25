@@ -49,7 +49,7 @@ export default function Header() {
 
       {open && (
         <nav className="sg-mobile-nav" aria-label="Mobile navigation">
-          {[...navItems, { label: "Start a project", href: "/contact" }].map((item) => (
+          {navItems.map((item) => (
             <Link key={item.label} href={item.href} onClick={() => setOpen(false)}>
               {item.label}
             </Link>
