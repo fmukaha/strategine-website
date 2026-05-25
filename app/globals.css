@@ -9495,9 +9495,8 @@ footer,
 /* ===== LANDING HERO EVERGREEN STYLE END ===== */
 
 
-/* ===== HEADER FOOTER CANVAS ALIGNMENT START ===== */
+/* ===== HEADER FOOTER WIDTH CORRECTION START ===== */
 
-/* Header content aligns to the same canvas as page sections */
 .sg-header {
   width: 100% !important;
   padding: 18px 20px !important;
@@ -9506,86 +9505,50 @@ footer,
 
 .sg-header-inner {
   width: 100% !important;
-  max-width: var(--sg-page-max, 1180px) !important;
+  max-width: none !important;
   margin: 0 auto !important;
-  padding: 0 !important;
+  padding: 0 12px !important;
 }
 
-/* Footer gets the same oversized visual treatment as the landing hero */
+.sg-nav {
+  justify-content: center !important;
+}
+
+.sg-logo,
+.sg-actions {
+  flex-shrink: 0 !important;
+}
+
 footer,
 .sg-footer {
   width: calc(100% - 40px) !important;
   max-width: none !important;
-  margin: clamp(72px, 8vw, 110px) auto 20px !important;
-  border-radius: 28px !important;
-  overflow: hidden !important;
-  background:
-    radial-gradient(circle at 82% 12%, rgba(199, 220, 73, 0.18), transparent 26%),
-    linear-gradient(135deg, #195b24 0%, #143126 100%) !important;
-  color: #ffffff !important;
-}
-
-/* Footer inner content still respects the page canvas */
-footer > *,
-.sg-footer > * {
-  max-width: var(--sg-page-max, 1180px) !important;
   margin-left: auto !important;
   margin-right: auto !important;
+  border-radius: 28px !important;
+  overflow: hidden !important;
 }
 
-/* Footer text legibility on dark oversized block */
-footer h2,
-footer h3,
-footer h4,
-.sg-footer h2,
-.sg-footer h3,
-.sg-footer h4 {
-  color: #ffffff !important;
-  font-weight: 400 !important;
+.sg-newsletter,
+.sg-footer-newsletter {
+  background: revert-layer !important;
+  color: revert-layer !important;
 }
 
-footer p,
-footer a,
-footer span,
-footer small,
-.sg-footer p,
-.sg-footer a,
-.sg-footer span,
-.sg-footer small {
-  color: rgba(255, 255, 255, 0.84) !important;
-}
-
-footer a:hover,
-.sg-footer a:hover {
-  color: var(--lime) !important;
-}
-
-/* Newsletter/footer inputs remain readable */
-footer input,
-.sg-footer input {
-  background: #ffffff !important;
-  color: var(--text) !important;
-  border-color: rgba(255, 255, 255, 0.16) !important;
-}
-
-footer button,
-.sg-footer button {
-  background: var(--lime) !important;
-  color: var(--dark) !important;
-}
-
-/* Mobile */
 @media (max-width: 900px) {
   .sg-header {
-    padding: 14px 16px !important;
+    padding: 14px 12px !important;
+  }
+
+  .sg-header-inner {
+    padding: 0 !important;
   }
 
   footer,
   .sg-footer {
     width: calc(100% - 24px) !important;
-    margin: 64px auto 12px !important;
     border-radius: 22px !important;
   }
 }
 
-/* ===== HEADER FOOTER CANVAS ALIGNMENT END ===== */
+/* ===== HEADER FOOTER WIDTH CORRECTION END ===== */
