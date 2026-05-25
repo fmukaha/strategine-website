@@ -10416,3 +10416,45 @@ footer,
 }
 
 /* ===== WHATSAPP ICON ONLY END ===== */
+
+
+/* ===== LOGO RESTORE START ===== */
+
+.sg-logo {
+  display: inline-flex !important;
+  align-items: center !important;
+  width: auto !important;
+  max-width: none !important;
+  min-width: max-content !important;
+  overflow: visible !important;
+  flex-shrink: 0 !important;
+}
+
+.sg-logo img {
+  width: 150px !important;
+  max-width: none !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+@media (max-width: 1100px) {
+  .sg-logo {
+    max-width: none !important;
+    min-width: max-content !important;
+    overflow: visible !important;
+  }
+
+  .sg-logo img {
+    width: 150px !important;
+    max-width: none !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .sg-logo img {
+    width: 142px !important;
+  }
+}
+
+/* ===== LOGO RESTORE END ===== */
