@@ -8163,3 +8163,71 @@ h3,
 }
 
 /* ===== SPLIT SECTION TITLE ALIGNMENT FIX END ===== */
+
+/* ===== CONTACT FORM WIDER CANVAS START ===== */
+
+.sg-contact-clean-shell {
+  width: 100% !important;
+  max-width: var(--sg-page-max) !important;
+  margin: 0 auto !important;
+  padding: 0 0 88px !important;
+}
+
+.sg-contact-clean-form {
+  width: 100% !important;
+  max-width: 980px !important;
+  margin: 0 auto !important;
+  padding: clamp(28px, 4vw, 46px) !important;
+}
+
+.sg-contact-clean-form .sg-intake-step {
+  width: 100% !important;
+  max-width: 860px !important;
+  margin: 0 auto !important;
+}
+
+@media (min-width: 901px) {
+  .sg-contact-clean-form .sg-intake-step {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 22px 24px !important;
+    align-items: start !important;
+  }
+
+  .sg-contact-clean-form .sg-intake-step > label {
+    min-width: 0 !important;
+  }
+
+  .sg-contact-clean-form .sg-intake-step > label:has(textarea),
+  .sg-contact-clean-form .sg-intake-step > .sg-whatsapp-check {
+    grid-column: 1 / -1 !important;
+  }
+
+  .sg-contact-clean-form .sg-phone-grid {
+    grid-template-columns: 0.8fr 1fr !important;
+    gap: 12px !important;
+  }
+
+  .sg-contact-clean-form .sg-intake-actions,
+  .sg-contact-clean-form .sg-consent-panel,
+  .sg-contact-clean-form .sg-intake-review {
+    width: 100% !important;
+    max-width: 860px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .sg-contact-clean-shell {
+    padding: 0 0 56px !important;
+  }
+
+  .sg-contact-clean-form {
+    max-width: 100% !important;
+    padding: 20px !important;
+  }
+
+  .sg-contact-clean-form .sg-intake-step {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ===== CONTACT FORM WIDER CANVAS END ===== */
