@@ -8626,3 +8626,128 @@ h3,
 }
 
 /* ===== CONTACT FORM GRID FINAL END ===== */
+
+
+/* ===== WHATSAPP CHIP CLEANUP START ===== */
+
+.sg-whatsapp-check {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin-top: -2px !important;
+  min-height: auto !important;
+  width: fit-content !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  border-radius: 0 !important;
+}
+
+.sg-whatsapp-check:hover,
+.sg-whatsapp-check:focus-within {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.sg-whatsapp-check input[type="checkbox"] {
+  accent-color: #25D366 !important;
+  width: 16px !important;
+  height: 16px !important;
+  margin: 0 !important;
+}
+
+.sg-whatsapp-check svg {
+  color: #25D366 !important;
+  stroke: #25D366 !important;
+  fill: none !important;
+  width: 16px !important;
+  height: 16px !important;
+  flex-shrink: 0 !important;
+}
+
+.sg-whatsapp-check span,
+.sg-whatsapp-check label,
+.sg-whatsapp-check p {
+  color: var(--dark) !important;
+  font-size: 0.92rem !important;
+  line-height: 1.4 !important;
+}
+
+@media (max-width: 900px) {
+  .sg-whatsapp-check {
+    width: fit-content !important;
+    padding: 0 !important;
+    margin-top: -4px !important;
+  }
+}
+
+/* ===== WHATSAPP CHIP CLEANUP END ===== */
+
+
+/* ===== INTEGRATED WHATSAPP PHONE FIELD START ===== */
+
+.sg-phone-input-shell {
+  grid-template-columns: 24px minmax(0, 1fr) auto !important;
+  gap: 10px !important;
+  padding-right: 10px !important;
+}
+
+.sg-phone-whatsapp-toggle {
+  height: 38px !important;
+  min-width: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 0 10px !important;
+  border-radius: 999px !important;
+  background: rgba(37, 211, 102, 0.1) !important;
+  color: #075E54 !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+}
+
+.sg-phone-whatsapp-toggle input {
+  width: 15px !important;
+  height: 15px !important;
+  margin: 0 !important;
+  accent-color: #25D366 !important;
+}
+
+.sg-phone-whatsapp-toggle svg {
+  width: 15px !important;
+  height: 15px !important;
+  color: #25D366 !important;
+  stroke: #25D366 !important;
+  flex-shrink: 0 !important;
+}
+
+.sg-phone-whatsapp-toggle span {
+  color: #075E54 !important;
+  font-size: 0.78rem !important;
+  line-height: 1 !important;
+  font-weight: 500 !important;
+}
+
+.sg-phone-whatsapp-toggle:hover {
+  background: rgba(37, 211, 102, 0.16) !important;
+}
+
+@media (max-width: 520px) {
+  .sg-phone-input-shell {
+    grid-template-columns: 24px minmax(0, 1fr) 38px !important;
+    padding-right: 10px !important;
+  }
+
+  .sg-phone-whatsapp-toggle {
+    width: 38px !important;
+    justify-content: center !important;
+    padding: 0 !important;
+  }
+
+  .sg-phone-whatsapp-toggle span {
+    display: none !important;
+  }
+}
+
+/* ===== INTEGRATED WHATSAPP PHONE FIELD END ===== */

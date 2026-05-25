@@ -423,7 +423,7 @@ export default function ContactClient() {
                       )}
                     </div>
 
-                    <div className="sg-input-shell">
+                    <div className="sg-input-shell sg-phone-input-shell">
                       <Phone size={18} strokeWidth={1.7} />
                       <input
                         value={form.phone}
@@ -431,19 +431,20 @@ export default function ContactClient() {
                         placeholder={phoneExamples[form.country] || "Enter phone number"}
                         autoComplete="tel"
                       />
+                      <label className="sg-phone-whatsapp-toggle" title="This number is available on WhatsApp">
+                        <input
+                          type="checkbox"
+                          checked={form.isWhatsapp}
+                          onChange={(event) => updateField("isWhatsapp", event.target.checked)}
+                        />
+                        <MessageCircle size={16} strokeWidth={1.8} />
+                        <span>WhatsApp</span>
+                      </label>
                     </div>
                   </div>
 
                   {countryDetected && <small>Country code detected automatically. You can change it.</small>}
                   {submitted && errors.phone && <small>{errors.phone}</small>}
-                </label>
-
-                <label className="sg-whatsapp-check">
-                  <input type="checkbox" checked={form.isWhatsapp} onChange={(event) => updateField("isWhatsapp", event.target.checked)} />
-                  <span>
-                    <MessageCircle size={18} strokeWidth={1.7} />
-                    This number is available on WhatsApp
-                  </span>
                 </label>
               </div>
             )}
