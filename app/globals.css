@@ -9294,3 +9294,202 @@ footer,
 }
 
 /* ===== CLEAN HERO READABILITY FIX END ===== */
+
+
+/* ===== LANDING HERO EVERGREEN STYLE START ===== */
+
+.sg-home-evergreen-page {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 22px 20px 0;
+}
+
+.sg-home-evergreen-hero {
+  width: 100%;
+  min-height: clamp(620px, 72vh, 760px);
+  border-radius: 28px;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-items: end;
+  padding: clamp(34px, 6vw, 76px);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(20, 49, 38, 0.72) 0%,
+      rgba(20, 49, 38, 0.48) 34%,
+      rgba(20, 49, 38, 0.16) 72%,
+      rgba(20, 49, 38, 0.06) 100%
+    ),
+    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2200&q=85");
+  background-size: cover;
+  background-position: center;
+}
+
+.sg-home-evergreen-content {
+  max-width: 760px;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
+.sg-home-evergreen-content .sg-page-kicker {
+  color: var(--lime) !important;
+  margin-bottom: 18px;
+}
+
+.sg-home-evergreen-content h1 {
+  margin: 0;
+  max-width: 820px;
+  color: #ffffff;
+  font-size: clamp(4rem, 7.8vw, 7.8rem);
+  line-height: 0.95;
+  font-weight: 400;
+  letter-spacing: -0.08em;
+  text-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+}
+
+.sg-home-evergreen-content h1 span {
+  color: var(--lime);
+  display: inline-block;
+  position: relative;
+}
+
+.sg-home-evergreen-content h1 span::after {
+  content: "";
+  position: absolute;
+  left: 2%;
+  right: 0;
+  bottom: -0.08em;
+  height: 0.13em;
+  border-radius: 999px;
+  background: var(--lime);
+  transform: rotate(-2deg);
+  opacity: 0.9;
+}
+
+.sg-home-evergreen-content p {
+  max-width: 680px;
+  margin-top: 28px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.sg-home-evergreen-actions {
+  margin-top: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.sg-home-evergreen-actions a {
+  min-height: 54px;
+  border-radius: 12px;
+  padding: 0 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.sg-home-evergreen-actions a:first-child {
+  background: var(--lime);
+  color: var(--dark);
+}
+
+.sg-home-evergreen-actions a:last-child {
+  background: var(--dark);
+  color: #ffffff;
+}
+
+.sg-home-evergreen-badge {
+  position: absolute;
+  right: clamp(26px, 5vw, 76px);
+  bottom: clamp(28px, 5vw, 74px);
+  min-height: 54px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(14px);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 20px 8px 9px;
+  color: var(--dark);
+  z-index: 3;
+}
+
+.sg-home-evergreen-badge strong {
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  background: var(--lime);
+  color: var(--dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.sg-home-evergreen-badge span {
+  color: var(--dark);
+  font-size: 0.95rem;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .sg-home-evergreen-page {
+    padding: 16px 12px 0;
+  }
+
+  .sg-home-evergreen-hero {
+    min-height: 620px;
+    border-radius: 22px;
+    padding: 26px;
+    align-items: end;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(20, 49, 38, 0.04) 0%,
+        rgba(20, 49, 38, 0.42) 45%,
+        rgba(20, 49, 38, 0.88) 100%
+      ),
+      url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .sg-home-evergreen-content h1 {
+    max-width: 9ch;
+    font-size: clamp(3.4rem, 16vw, 5rem);
+  }
+
+  .sg-home-evergreen-content p {
+    font-size: 16px;
+  }
+
+  .sg-home-evergreen-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .sg-home-evergreen-actions a {
+    width: 100%;
+  }
+
+  .sg-home-evergreen-badge {
+    position: static;
+    width: fit-content;
+    margin-top: 24px;
+  }
+}
+
+/* ===== LANDING HERO EVERGREEN STYLE END ===== */
