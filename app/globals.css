@@ -8231,3 +8231,138 @@ h3,
 }
 
 /* ===== CONTACT FORM WIDER CANVAS END ===== */
+
+/* ===== CONTACT FORM RESPONSIVE POLISH START ===== */
+
+.sg-contact-clean-shell {
+  max-width: var(--sg-page-max) !important;
+  margin: 0 auto !important;
+  padding: 8px 0 88px !important;
+}
+
+.sg-contact-clean-form {
+  width: min(100%, 960px) !important;
+  margin: 0 auto !important;
+  padding: clamp(28px, 4vw, 42px) !important;
+  border-radius: 26px !important;
+  background: #f7f8f0 !important;
+  border: 1px solid rgba(31, 31, 28, 0.08) !important;
+  box-shadow: 0 20px 60px rgba(20, 49, 38, 0.06) !important;
+}
+
+/* Stepper should feel balanced, not floating */
+.sg-contact-clean-form .sg-intake-progress {
+  width: min(100%, 640px) !important;
+  margin: 0 auto 34px !important;
+}
+
+/* Form content should not leave a huge empty canvas */
+.sg-contact-clean-form .sg-intake-step {
+  width: 100% !important;
+  max-width: 760px !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  gap: 20px 24px !important;
+  align-items: start !important;
+}
+
+@media (min-width: 901px) {
+  .sg-contact-clean-form .sg-intake-step {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .sg-contact-clean-form .sg-intake-step > label {
+    min-width: 0 !important;
+  }
+
+  .sg-contact-clean-form .sg-intake-step > label:nth-child(3),
+  .sg-contact-clean-form .sg-intake-step > .sg-whatsapp-check,
+  .sg-contact-clean-form .sg-intake-step > label:has(textarea) {
+    grid-column: 1 / -1 !important;
+  }
+
+  .sg-contact-clean-form .sg-phone-grid {
+    width: min(100%, 560px) !important;
+    grid-template-columns: 0.95fr 1.05fr !important;
+    gap: 12px !important;
+  }
+
+  .sg-contact-clean-form .sg-whatsapp-check {
+    width: fit-content !important;
+  }
+
+  .sg-contact-clean-form .sg-intake-actions {
+    width: min(100%, 760px) !important;
+    margin: 30px auto 0 !important;
+  }
+}
+
+/* Inputs */
+.sg-contact-clean-form .sg-input-shell,
+.sg-contact-clean-form .sg-select-shell,
+.sg-contact-clean-form .sg-country-selected {
+  min-height: 58px !important;
+  border-radius: 16px !important;
+}
+
+.sg-contact-clean-form .sg-country-selected {
+  grid-template-columns: 26px auto minmax(0, 1fr) 16px !important;
+  padding: 0 14px !important;
+}
+
+.sg-contact-clean-form .sg-country-selected strong {
+  min-width: 0 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+/* Button should sit neatly inside the card */
+.sg-contact-clean-form .sg-intake-next {
+  min-width: 150px !important;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .sg-contact-clean-shell {
+    padding: 0 0 56px !important;
+  }
+
+  .sg-contact-clean-form {
+    width: 100% !important;
+    padding: 20px !important;
+    border-radius: 22px !important;
+  }
+
+  .sg-contact-clean-form .sg-intake-progress {
+    margin-bottom: 28px !important;
+  }
+
+  .sg-contact-clean-form .sg-intake-step {
+    grid-template-columns: 1fr !important;
+    max-width: 100% !important;
+    gap: 18px !important;
+  }
+
+  .sg-contact-clean-form .sg-phone-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .sg-contact-clean-form .sg-whatsapp-check {
+    width: 100% !important;
+  }
+
+  .sg-contact-clean-form .sg-intake-actions {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .sg-contact-clean-form .sg-intake-back,
+  .sg-contact-clean-form .sg-intake-next {
+    width: 100% !important;
+  }
+}
+
+/* ===== CONTACT FORM RESPONSIVE POLISH END ===== */
