@@ -7343,3 +7343,295 @@ button {
 }
 
 /* ===== RESTORE SERVICES HERO IMAGE END ===== */
+
+/* ===== STRATEGINE STANDARD LAYOUT SYSTEM START ===== */
+
+/* Global canvas lock */
+html,
+body {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box !important;
+}
+
+:root {
+  --sg-page-max: 1180px;
+  --sg-page-pad-desktop: 24px;
+  --sg-page-pad-mobile: 16px;
+  --sg-hero-image-height-desktop: 460px;
+  --sg-hero-image-height-mobile: 300px;
+  --sg-hero-image-height-small: 270px;
+  --sg-radius-hero: 22px;
+  --sg-section-gap-desktop: 72px;
+  --sg-section-gap-mobile: 42px;
+}
+
+/* Shared page canvas */
+.sg-about-page,
+.sg-services-page,
+.sg-contact-clean-page,
+.sg-insights-page,
+.sg-case-studies-page,
+.sg-placeholder-page {
+  width: 100% !important;
+  max-width: var(--sg-page-max) !important;
+  margin: 0 auto !important;
+  padding: 56px var(--sg-page-pad-desktop) 0 !important;
+}
+
+/* Shared hero block: About / Services / Contact */
+.sg-about-hero,
+.sg-services-hero,
+.sg-contact-hero {
+  width: 100% !important;
+  display: grid !important;
+  justify-items: center !important;
+  text-align: center !important;
+  margin: 0 0 var(--sg-section-gap-desktop) !important;
+}
+
+.sg-about-hero .sg-page-kicker,
+.sg-services-hero .sg-page-kicker,
+.sg-contact-hero .sg-page-kicker {
+  display: block !important;
+  text-align: center !important;
+  margin: 0 0 18px !important;
+}
+
+.sg-about-hero h1,
+.sg-services-hero h1,
+.sg-contact-hero h1 {
+  max-width: 760px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  font-size: clamp(2.5rem, 4vw, 4rem) !important;
+  line-height: 1.08 !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.055em !important;
+}
+
+/* Exact shared hero image frame */
+.sg-about-hero-image,
+.sg-services-hero-image,
+.sg-contact-hero-image,
+.sg-services-image {
+  display: block !important;
+  width: 100% !important;
+  height: var(--sg-hero-image-height-desktop) !important;
+  min-height: 0 !important;
+  max-height: var(--sg-hero-image-height-desktop) !important;
+  margin: 42px auto 0 !important;
+  border-radius: var(--sg-radius-hero) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  overflow: hidden !important;
+}
+
+/* Restore/standardize Services image if class name differs */
+.sg-services-image,
+.sg-services-hero-image {
+  background:
+    linear-gradient(180deg, rgba(20, 49, 38, 0.03), rgba(20, 49, 38, 0.08)),
+    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80") !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* Contact image standard */
+.sg-contact-hero-image {
+  background:
+    linear-gradient(180deg, rgba(20, 49, 38, 0.03), rgba(20, 49, 38, 0.08)),
+    url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=80") !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* About image standard */
+.sg-about-hero-image {
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* Shared intro block below hero */
+.sg-standard-intro,
+.sg-about-intro-section,
+.sg-services-intro,
+.sg-contact-data-purpose {
+  width: 100% !important;
+  display: grid !important;
+  grid-template-columns: 0.9fr 1fr !important;
+  gap: clamp(40px, 8vw, 120px) !important;
+  align-items: start !important;
+  margin-top: 0 !important;
+}
+
+/* Right-side copy aligns to H2 title, not kicker */
+.sg-standard-intro > div:last-child,
+.sg-about-intro-section > div:last-child,
+.sg-services-intro > div:last-child,
+.sg-contact-data-purpose-grid > div:last-child,
+.sg-about-copy,
+.sg-services-copy {
+  padding-top: 34px !important;
+}
+
+/* Contact data purpose uses same intro grid */
+.sg-contact-data-purpose {
+  max-width: none !important;
+  margin: 0 0 42px !important;
+  padding: 0 0 42px !important;
+  border-bottom: 0 !important;
+}
+
+.sg-contact-data-purpose-grid {
+  display: contents !important;
+}
+
+/* Contact form sits inside same canvas */
+.sg-contact-clean-shell {
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+.sg-contact-clean-form {
+  width: min(100%, 720px) !important;
+  margin: 0 auto !important;
+  min-width: 0 !important;
+}
+
+/* Prevent dropdowns and long content from expanding viewport */
+main,
+section,
+div,
+form,
+article,
+header,
+footer,
+nav {
+  min-width: 0 !important;
+}
+
+img,
+video,
+svg {
+  max-width: 100% !important;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+strong,
+small,
+button,
+label,
+input,
+select,
+textarea {
+  overflow-wrap: anywhere !important;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100% !important;
+}
+
+/* Mobile standard */
+@media (max-width: 900px) {
+  .sg-about-page,
+  .sg-services-page,
+  .sg-contact-clean-page,
+  .sg-insights-page,
+  .sg-case-studies-page,
+  .sg-placeholder-page {
+    padding: 38px var(--sg-page-pad-mobile) 0 !important;
+  }
+
+  .sg-about-hero,
+  .sg-services-hero,
+  .sg-contact-hero {
+    justify-items: start !important;
+    text-align: left !important;
+    margin-bottom: var(--sg-section-gap-mobile) !important;
+  }
+
+  .sg-about-hero .sg-page-kicker,
+  .sg-services-hero .sg-page-kicker,
+  .sg-contact-hero .sg-page-kicker,
+  .sg-about-hero h1,
+  .sg-services-hero h1,
+  .sg-contact-hero h1 {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  .sg-about-hero h1,
+  .sg-services-hero h1,
+  .sg-contact-hero h1 {
+    max-width: 11ch !important;
+    font-size: clamp(2.25rem, 10vw, 3rem) !important;
+  }
+
+  .sg-about-hero-image,
+  .sg-services-hero-image,
+  .sg-contact-hero-image,
+  .sg-services-image {
+    width: 100% !important;
+    height: var(--sg-hero-image-height-mobile) !important;
+    max-height: var(--sg-hero-image-height-mobile) !important;
+    margin-top: 28px !important;
+    border-radius: 20px !important;
+  }
+
+  .sg-standard-intro,
+  .sg-about-intro-section,
+  .sg-services-intro,
+  .sg-contact-data-purpose {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .sg-standard-intro > div:last-child,
+  .sg-about-intro-section > div:last-child,
+  .sg-services-intro > div:last-child,
+  .sg-contact-data-purpose-grid > div:last-child,
+  .sg-about-copy,
+  .sg-services-copy {
+    padding-top: 0 !important;
+  }
+
+  .sg-contact-data-purpose {
+    margin-bottom: 28px !important;
+    padding-bottom: 28px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .sg-about-hero-image,
+  .sg-services-hero-image,
+  .sg-contact-hero-image,
+  .sg-services-image {
+    height: var(--sg-hero-image-height-small) !important;
+    max-height: var(--sg-hero-image-height-small) !important;
+  }
+}
+
+/* ===== STRATEGINE STANDARD LAYOUT SYSTEM END ===== */
