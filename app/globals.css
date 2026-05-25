@@ -7098,3 +7098,52 @@ button {
 }
 
 /* ===== STANDARD HERO IMAGE SIZING END ===== */
+
+/* ===== LARGE STANDARD HERO IMAGE SIZING START ===== */
+
+/* Match Services hero image scale across About, Services, Contact */
+.sg-about-hero-image,
+.sg-services-hero-image,
+.sg-contact-hero-image {
+  width: min(100%, 1180px) !important;
+  height: clamp(360px, 42vw, 560px) !important;
+  min-height: unset !important;
+  margin-top: 42px !important;
+  border-radius: 28px !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.sg-about-hero,
+.sg-services-hero,
+.sg-contact-hero {
+  margin-bottom: 72px !important;
+}
+
+/* Mobile: still large, but contained */
+@media (max-width: 900px) {
+  .sg-about-hero-image,
+  .sg-services-hero-image,
+  .sg-contact-hero-image {
+    width: 100% !important;
+    height: 300px !important;
+    margin-top: 28px !important;
+    border-radius: 22px !important;
+  }
+
+  .sg-about-hero,
+  .sg-services-hero,
+  .sg-contact-hero {
+    margin-bottom: 42px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .sg-about-hero-image,
+  .sg-services-hero-image,
+  .sg-contact-hero-image {
+    height: 270px !important;
+  }
+}
+
+/* ===== LARGE STANDARD HERO IMAGE SIZING END ===== */
