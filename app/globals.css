@@ -8366,3 +8366,263 @@ h3,
 }
 
 /* ===== CONTACT FORM RESPONSIVE POLISH END ===== */
+
+/* ===== CONTACT FORM GRID FINAL START ===== */
+
+/* Final contact form structure: balanced, aligned, responsive */
+.sg-contact-clean-shell {
+  width: 100% !important;
+  max-width: var(--sg-page-max) !important;
+  margin: 0 auto !important;
+  padding: 0 0 88px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.sg-contact-clean-form {
+  width: min(100%, 980px) !important;
+  margin: 0 auto !important;
+  padding: clamp(28px, 4vw, 44px) !important;
+  border-radius: 28px !important;
+  background: #f7f8f0 !important;
+  border: 1px solid rgba(31, 31, 28, 0.08) !important;
+  box-shadow: 0 24px 70px rgba(20, 49, 38, 0.08) !important;
+}
+
+/* Stepper centered and stable */
+.sg-contact-clean-form .sg-intake-progress {
+  width: min(100%, 640px) !important;
+  margin: 0 auto 38px !important;
+}
+
+/* Main field grid */
+.sg-contact-clean-form .sg-intake-step {
+  width: min(100%, 820px) !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 22px 24px !important;
+  align-items: start !important;
+}
+
+/* Every field fills its assigned cell */
+.sg-contact-clean-form .sg-intake-step > label {
+  width: 100% !important;
+  min-width: 0 !important;
+  display: grid !important;
+  gap: 9px !important;
+}
+
+/* Labels */
+.sg-contact-clean-form .sg-intake-step label > span {
+  min-height: 16px !important;
+  color: var(--dark) !important;
+  font-size: 0.74rem !important;
+  line-height: 1.2 !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.04em !important;
+}
+
+/* Inputs/select shells: exact matching frame */
+.sg-contact-clean-form .sg-input-shell,
+.sg-contact-clean-form .sg-select-shell,
+.sg-contact-clean-form .sg-country-selected {
+  width: 100% !important;
+  height: 58px !important;
+  min-height: 58px !important;
+  border-radius: 16px !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(31, 31, 28, 0.08) !important;
+  box-shadow: 0 14px 34px rgba(20, 49, 38, 0.045) !important;
+}
+
+/* Actual input text */
+.sg-contact-clean-form input,
+.sg-contact-clean-form select,
+.sg-contact-clean-form textarea {
+  font-size: 15px !important;
+  line-height: 1.4 !important;
+}
+
+/* Phone field occupies full row */
+.sg-contact-clean-form .sg-intake-step > label:has(.sg-phone-grid) {
+  grid-column: 1 / -1 !important;
+}
+
+/* Phone country + number: equal visual weight */
+.sg-contact-clean-form .sg-phone-grid {
+  width: 100% !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+  align-items: start !important;
+}
+
+/* Country selector same size as phone input */
+.sg-contact-clean-form .sg-country-premium,
+.sg-contact-clean-form .sg-country-selected,
+.sg-contact-clean-form .sg-phone-grid .sg-input-shell {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+/* Country selector internals */
+.sg-contact-clean-form .sg-country-selected {
+  display: grid !important;
+  grid-template-columns: 28px auto minmax(0, 1fr) 18px !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 0 16px !important;
+}
+
+.sg-contact-clean-form .sg-country-selected img {
+  width: 24px !important;
+  height: 18px !important;
+  object-fit: cover !important;
+  border-radius: 4px !important;
+}
+
+.sg-contact-clean-form .sg-country-selected span {
+  white-space: nowrap !important;
+}
+
+.sg-contact-clean-form .sg-country-selected strong {
+  min-width: 0 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  font-weight: 400 !important;
+}
+
+/* WhatsApp chip full row but compact */
+.sg-contact-clean-form .sg-whatsapp-check {
+  grid-column: 1 / -1 !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+  min-height: 44px !important;
+  border-radius: 999px !important;
+  padding: 0 16px !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(31, 31, 28, 0.08) !important;
+  box-shadow: 0 14px 34px rgba(20, 49, 38, 0.04) !important;
+}
+
+/* Textarea always full row */
+.sg-contact-clean-form .sg-intake-step > label:has(textarea) {
+  grid-column: 1 / -1 !important;
+}
+
+.sg-contact-clean-form textarea {
+  width: 100% !important;
+  min-height: 150px !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(31, 31, 28, 0.08) !important;
+  box-shadow: 0 14px 34px rgba(20, 49, 38, 0.045) !important;
+}
+
+/* Review + consent align with form grid */
+.sg-contact-clean-form .sg-intake-review,
+.sg-contact-clean-form .sg-consent-panel,
+.sg-contact-clean-form .sg-intake-actions {
+  width: min(100%, 820px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Button row */
+.sg-contact-clean-form .sg-intake-actions {
+  margin-top: 30px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+}
+
+.sg-contact-clean-form .sg-intake-next,
+.sg-contact-clean-form .sg-intake-back {
+  height: 52px !important;
+  min-width: 150px !important;
+  border-radius: 999px !important;
+}
+
+/* Country dropdown overlays without resizing the card */
+.sg-contact-clean-form .sg-country-premium {
+  position: relative !important;
+}
+
+.sg-contact-clean-form .sg-country-menu {
+  position: absolute !important;
+  z-index: 999 !important;
+  top: calc(100% + 10px) !important;
+  left: 0 !important;
+  right: 0 !important;
+  max-height: 320px !important;
+  overflow: hidden !important;
+}
+
+.sg-contact-clean-form .sg-country-list {
+  max-height: 250px !important;
+  overflow-y: auto !important;
+}
+
+/* Mobile: single-column, same polished structure */
+@media (max-width: 900px) {
+  .sg-contact-clean-shell {
+    padding: 0 0 56px !important;
+  }
+
+  .sg-contact-clean-form {
+    width: 100% !important;
+    padding: 20px !important;
+    border-radius: 22px !important;
+  }
+
+  .sg-contact-clean-form .sg-intake-progress {
+    margin-bottom: 28px !important;
+  }
+
+  .sg-contact-clean-form .sg-intake-step {
+    width: 100% !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .sg-contact-clean-form .sg-intake-step > label,
+  .sg-contact-clean-form .sg-intake-step > label:has(.sg-phone-grid),
+  .sg-contact-clean-form .sg-intake-step > label:has(textarea),
+  .sg-contact-clean-form .sg-whatsapp-check {
+    grid-column: 1 / -1 !important;
+  }
+
+  .sg-contact-clean-form .sg-phone-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .sg-contact-clean-form .sg-whatsapp-check {
+    width: 100% !important;
+    border-radius: 16px !important;
+  }
+
+  .sg-contact-clean-form .sg-country-menu {
+    position: absolute !important;
+    max-height: 280px !important;
+  }
+
+  .sg-contact-clean-form .sg-country-list {
+    max-height: 210px !important;
+  }
+
+  .sg-contact-clean-form .sg-intake-actions {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .sg-contact-clean-form .sg-intake-next,
+  .sg-contact-clean-form .sg-intake-back {
+    width: 100% !important;
+  }
+}
+
+/* ===== CONTACT FORM GRID FINAL END ===== */
