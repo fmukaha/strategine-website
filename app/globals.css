@@ -8919,3 +8919,33 @@ h3,
 }
 
 /* ===== CONTACT FORM ALIGNMENT WHATSAPP FIX END ===== */
+
+
+/* ===== STEPPER CLEAN ACTIVE STATE START ===== */
+
+.sg-contact-clean-form .sg-intake-progress button,
+.sg-contact-clean-form .sg-intake-progress button.is-active,
+.sg-contact-clean-form .sg-intake-progress button.is-complete {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.sg-contact-clean-form .sg-intake-progress button span {
+  background: var(--lime) !important;
+  color: var(--dark) !important;
+  border: 1px solid rgba(16, 85, 31, 0.14) !important;
+}
+
+.sg-contact-clean-form .sg-intake-progress button.is-active span,
+.sg-contact-clean-form .sg-intake-progress button.is-complete span {
+  background: var(--dark) !important;
+  color: var(--lime) !important;
+  border-color: var(--dark) !important;
+}
+
+.sg-contact-clean-form .sg-intake-progress button {
+  color: var(--dark) !important;
+}
+
+/* ===== STEPPER CLEAN ACTIVE STATE END ===== */
