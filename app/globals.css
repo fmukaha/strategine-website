@@ -10331,3 +10331,27 @@ footer,
 }
 
 /* ===== TABLET HEADER COLLISION FIX END ===== */
+
+
+/* ===== FOOTER LINKEDIN ONLY MOBILE CENTER START ===== */
+
+.sg-footer-socials,
+.sg-socials,
+.footer-socials {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+}
+
+@media (max-width: 900px) {
+  .sg-footer-socials,
+  .sg-socials,
+  .footer-socials {
+    justify-content: center !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* ===== FOOTER LINKEDIN ONLY MOBILE CENTER END ===== */

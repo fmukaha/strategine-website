@@ -34,9 +34,9 @@ export default function Footer() {
           </nav>
 
           <div className="sg-socials">
-            <a href="#" aria-label="Instagram">◎</a>
-            <a href="#" aria-label="Social">✣</a>
-            <a href="#" aria-label="Facebook">f</a>
+            
+            
+            
             <a href="#" aria-label="LinkedIn">in</a>
           </div>
         </div>
