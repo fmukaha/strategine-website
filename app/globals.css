@@ -10355,3 +10355,64 @@ footer,
 }
 
 /* ===== FOOTER LINKEDIN ONLY MOBILE CENTER END ===== */
+
+
+/* ===== WHATSAPP ICON ONLY START ===== */
+
+.sg-phone-whatsapp-toggle {
+  width: 42px !important;
+  min-width: 42px !important;
+  height: 42px !important;
+  padding: 0 !important;
+  border-radius: 999px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(37, 211, 102, 0.12) !important;
+  border: 1px solid rgba(37, 211, 102, 0.22) !important;
+}
+
+.sg-phone-whatsapp-toggle input,
+.sg-phone-whatsapp-toggle svg,
+.sg-phone-whatsapp-toggle span {
+  display: none !important;
+}
+
+.sg-phone-whatsapp-toggle::before {
+  content: "" !important;
+  width: 22px !important;
+  height: 22px !important;
+  display: block !important;
+  background-color: #25D366 !important;
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.01 3.2C9.04 3.2 3.37 8.78 3.37 15.65c0 2.2.59 4.35 1.71 6.24L3.2 28.8l7.12-1.84a12.8 12.8 0 0 0 5.69 1.34c6.97 0 12.64-5.58 12.64-12.45S22.98 3.2 16.01 3.2Zm0 22.95c-1.83 0-3.62-.49-5.18-1.42l-.37-.22-4.22 1.09 1.12-4.03-.24-.39a10.13 10.13 0 0 1-1.57-5.42c0-5.67 4.7-10.29 10.47-10.29s10.47 4.62 10.47 10.29-4.7 10.39-10.48 10.39Zm5.74-7.7c-.31-.15-1.85-.9-2.14-1-.29-.1-.5-.15-.71.15-.21.31-.82 1-.99 1.2-.18.21-.36.23-.67.08-.31-.15-1.31-.48-2.5-1.53-.92-.81-1.55-1.82-1.73-2.13-.18-.31-.02-.48.14-.63.14-.14.31-.36.46-.54.15-.18.21-.31.31-.51.1-.21.05-.38-.03-.54-.08-.15-.71-1.69-.97-2.32-.26-.61-.52-.53-.71-.54h-.61c-.21 0-.54.08-.82.38-.28.31-1.08 1.04-1.08 2.54s1.11 2.95 1.26 3.16c.15.21 2.18 3.29 5.29 4.61.74.32 1.32.51 1.77.65.74.23 1.42.2 1.96.12.6-.09 1.85-.75 2.11-1.47.26-.72.26-1.34.18-1.47-.08-.13-.28-.21-.59-.36Z'/%3E%3C/svg%3E") !important;
+  mask-repeat: no-repeat !important;
+  mask-position: center !important;
+  mask-size: contain !important;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.01 3.2C9.04 3.2 3.37 8.78 3.37 15.65c0 2.2.59 4.35 1.71 6.24L3.2 28.8l7.12-1.84a12.8 12.8 0 0 0 5.69 1.34c6.97 0 12.64-5.58 12.64-12.45S22.98 3.2 16.01 3.2Zm0 22.95c-1.83 0-3.62-.49-5.18-1.42l-.37-.22-4.22 1.09 1.12-4.03-.24-.39a10.13 10.13 0 0 1-1.57-5.42c0-5.67 4.7-10.29 10.47-10.29s10.47 4.62 10.47 10.29-4.7 10.39-10.48 10.39Zm5.74-7.7c-.31-.15-1.85-.9-2.14-1-.29-.1-.5-.15-.71.15-.21.31-.82 1-.99 1.2-.18.21-.36.23-.67.08-.31-.15-1.31-.48-2.5-1.53-.92-.81-1.55-1.82-1.73-2.13-.18-.31-.02-.48.14-.63.14-.14.31-.36.46-.54.15-.18.21-.31.31-.51.1-.21.05-.38-.03-.54-.08-.15-.71-1.69-.97-2.32-.26-.61-.52-.53-.71-.54h-.61c-.21 0-.54.08-.82.38-.28.31-1.08 1.04-1.08 2.54s1.11 2.95 1.26 3.16c.15.21 2.18 3.29 5.29 4.61.74.32 1.32.51 1.77.65.74.23 1.42.2 1.96.12.6-.09 1.85-.75 2.11-1.47.26-.72.26-1.34.18-1.47-.08-.13-.28-.21-.59-.36Z'/%3E%3C/svg%3E") !important;
+  -webkit-mask-repeat: no-repeat !important;
+  -webkit-mask-position: center !important;
+  -webkit-mask-size: contain !important;
+}
+
+.sg-phone-whatsapp-toggle:has(input:not(:checked)) {
+  background: #ffffff !important;
+}
+
+.sg-phone-whatsapp-toggle:has(input:not(:checked))::before {
+  background-color: #25D366 !important;
+  opacity: 0.62 !important;
+}
+
+/* keep phone field stable on small screens */
+@media (max-width: 520px) {
+  .sg-phone-input-shell {
+    grid-template-columns: 24px minmax(0, 1fr) 42px !important;
+  }
+
+  .sg-phone-whatsapp-toggle {
+    width: 42px !important;
+    min-width: 42px !important;
+  }
+}
+
+/* ===== WHATSAPP ICON ONLY END ===== */
