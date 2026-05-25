@@ -9495,8 +9495,16 @@ footer,
 /* ===== LANDING HERO EVERGREEN STYLE END ===== */
 
 
-/* ===== HEADER FOOTER WIDTH CORRECTION START ===== */
+/* ===== CANVAS CONTENT WIDE SHELL STANDARD START ===== */
 
+/*
+  Standard:
+  - Header inner content stays on normal canvas.
+  - Page content stays on normal canvas.
+  - Only landing hero image shell and footer shell stretch wider.
+*/
+
+/* Header content: normal canvas */
 .sg-header {
   width: 100% !important;
   padding: 18px 20px !important;
@@ -9505,20 +9513,30 @@ footer,
 
 .sg-header-inner {
   width: 100% !important;
-  max-width: none !important;
+  max-width: var(--sg-page-max, 1180px) !important;
   margin: 0 auto !important;
-  padding: 0 12px !important;
+  padding: 0 !important;
 }
 
-.sg-nav {
-  justify-content: center !important;
+/* Landing page shell can be wider than normal canvas */
+.sg-home-evergreen-page {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 22px 20px 0 !important;
 }
 
-.sg-logo,
-.sg-actions {
-  flex-shrink: 0 !important;
+/* Landing hero image stretches wider */
+.sg-home-evergreen-hero {
+  width: 100% !important;
+  max-width: none !important;
 }
 
+/* But hero text content should not feel uncontrolled */
+.sg-home-evergreen-content {
+  max-width: 760px !important;
+}
+
+/* Footer shell stretches wider but keeps original styling */
 footer,
 .sg-footer {
   width: calc(100% - 40px) !important;
@@ -9529,19 +9547,34 @@ footer,
   overflow: hidden !important;
 }
 
-.sg-newsletter,
-.sg-footer-newsletter {
-  background: revert-layer !important;
-  color: revert-layer !important;
+/* Footer internal content remains normal canvas */
+footer > *,
+.sg-footer > * {
+  max-width: var(--sg-page-max, 1180px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
+/* Do not force newsletter into green/dark footer treatment */
+.sg-newsletter,
+.sg-footer-newsletter {
+  max-width: var(--sg-page-max, 1180px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Mobile */
 @media (max-width: 900px) {
   .sg-header {
-    padding: 14px 12px !important;
+    padding: 14px 16px !important;
   }
 
   .sg-header-inner {
-    padding: 0 !important;
+    max-width: var(--sg-page-max, 1180px) !important;
+  }
+
+  .sg-home-evergreen-page {
+    padding: 16px 12px 0 !important;
   }
 
   footer,
@@ -9551,4 +9584,4 @@ footer,
   }
 }
 
-/* ===== HEADER FOOTER WIDTH CORRECTION END ===== */
+/* ===== CANVAS CONTENT WIDE SHELL STANDARD END ===== */
