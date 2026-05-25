@@ -8751,3 +8751,171 @@ h3,
 }
 
 /* ===== INTEGRATED WHATSAPP PHONE FIELD END ===== */
+
+
+/* ===== CONTACT FORM ALIGNMENT WHATSAPP FIX START ===== */
+
+/* Keep the form grid, fields, and actions aligned to the same inner canvas */
+.sg-contact-clean-form .sg-intake-step,
+.sg-contact-clean-form .sg-intake-actions,
+.sg-contact-clean-form .sg-consent-panel,
+.sg-contact-clean-form .sg-intake-review {
+  width: min(100%, 820px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Contact step: exact two-column rhythm */
+@media (min-width: 901px) {
+  .sg-contact-clean-form .sg-intake-step {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: 24px !important;
+    row-gap: 22px !important;
+  }
+
+  .sg-contact-clean-form .sg-intake-step > label:has(.sg-phone-grid) {
+    grid-column: 1 / -1 !important;
+  }
+
+  .sg-contact-clean-form .sg-phone-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 24px !important;
+    width: 100% !important;
+  }
+}
+
+/* All input boxes match exactly */
+.sg-contact-clean-form .sg-input-shell,
+.sg-contact-clean-form .sg-select-shell,
+.sg-contact-clean-form .sg-country-selected {
+  height: 58px !important;
+  min-height: 58px !important;
+  width: 100% !important;
+}
+
+/* Phone field with integrated WhatsApp control */
+.sg-phone-input-shell {
+  grid-template-columns: 24px minmax(0, 1fr) auto !important;
+  gap: 10px !important;
+  padding-right: 10px !important;
+}
+
+.sg-phone-input-shell input {
+  min-width: 0 !important;
+}
+
+/* Replace broken WhatsApp-looking icon with a clean native control */
+.sg-phone-whatsapp-toggle {
+  height: 38px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  padding: 0 11px !important;
+  border-radius: 999px !important;
+  background: rgba(37, 211, 102, 0.11) !important;
+  color: #075E54 !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  border: 1px solid rgba(37, 211, 102, 0.18) !important;
+}
+
+.sg-phone-whatsapp-toggle input,
+.sg-phone-whatsapp-toggle svg {
+  display: none !important;
+}
+
+.sg-phone-whatsapp-toggle::before {
+  content: "✓";
+  width: 17px !important;
+  height: 17px !important;
+  border-radius: 999px !important;
+  background: #25D366 !important;
+  color: #ffffff !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 11px !important;
+  line-height: 1 !important;
+  font-weight: 600 !important;
+}
+
+.sg-phone-whatsapp-toggle:has(input:not(:checked))::before {
+  content: "";
+  background: transparent !important;
+  border: 1.5px solid #25D366 !important;
+}
+
+.sg-phone-whatsapp-toggle span {
+  color: #075E54 !important;
+  font-size: 0.78rem !important;
+  line-height: 1 !important;
+  font-weight: 500 !important;
+}
+
+/* Action buttons align with form columns */
+.sg-contact-clean-form .sg-intake-actions {
+  margin-top: 30px !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+  align-items: center !important;
+}
+
+.sg-contact-clean-form .sg-intake-back {
+  justify-self: start !important;
+}
+
+.sg-contact-clean-form .sg-intake-next {
+  justify-self: end !important;
+}
+
+.sg-contact-clean-form .sg-intake-back,
+.sg-contact-clean-form .sg-intake-next {
+  min-width: 150px !important;
+  height: 52px !important;
+}
+
+/* Mobile: full-width, neat, no crowding */
+@media (max-width: 900px) {
+  .sg-contact-clean-form .sg-intake-step,
+  .sg-contact-clean-form .sg-intake-actions,
+  .sg-contact-clean-form .sg-consent-panel,
+  .sg-contact-clean-form .sg-intake-review {
+    width: 100% !important;
+  }
+
+  .sg-contact-clean-form .sg-phone-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .sg-contact-clean-form .sg-intake-actions {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .sg-contact-clean-form .sg-intake-back,
+  .sg-contact-clean-form .sg-intake-next {
+    width: 100% !important;
+    justify-self: stretch !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .sg-phone-input-shell {
+    grid-template-columns: 24px minmax(0, 1fr) 40px !important;
+  }
+
+  .sg-phone-whatsapp-toggle {
+    width: 40px !important;
+    justify-content: center !important;
+    padding: 0 !important;
+  }
+
+  .sg-phone-whatsapp-toggle span {
+    display: none !important;
+  }
+}
+
+/* ===== CONTACT FORM ALIGNMENT WHATSAPP FIX END ===== */
