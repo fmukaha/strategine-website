@@ -9661,3 +9661,83 @@ footer,
 }
 
 /* ===== SITE CANVAS STANDARD END ===== */
+
+
+/* ===== HERO FOOTER SHELL ALIGNMENT START ===== */
+
+/*
+  One rule for wide visual shells:
+  - landing hero image shell
+  - footer shell
+  Both use the exact same outer margin and width.
+*/
+
+:root {
+  --sg-wide-shell-pad-desktop: 20px;
+  --sg-wide-shell-pad-mobile: 12px;
+}
+
+/* Hero outer shell */
+.sg-home-evergreen-page {
+  width: calc(100% - (var(--sg-wide-shell-pad-desktop) * 2)) !important;
+  max-width: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 22px 0 0 !important;
+}
+
+.sg-home-evergreen-hero {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Footer outer shell: match hero shell exactly */
+footer,
+.sg-footer {
+  width: calc(100% - (var(--sg-wide-shell-pad-desktop) * 2)) !important;
+  max-width: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  border-radius: 28px !important;
+  overflow: hidden !important;
+}
+
+/* Content inside wide shells remains normal canvas */
+.sg-home-evergreen-content,
+footer > *,
+.sg-footer > * {
+  width: 100% !important;
+  max-width: var(--sg-page-max, 1180px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Hero text legibility only */
+.sg-home-evergreen-content h1 {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  text-shadow: 0 24px 72px rgba(0, 0, 0, 0.36) !important;
+}
+
+.sg-home-evergreen-content p {
+  color: rgba(255, 255, 255, 0.94) !important;
+  text-shadow: 0 14px 42px rgba(0, 0, 0, 0.28) !important;
+}
+
+/* Mobile: same alignment rule */
+@media (max-width: 900px) {
+  .sg-home-evergreen-page {
+    width: calc(100% - (var(--sg-wide-shell-pad-mobile) * 2)) !important;
+    padding: 16px 0 0 !important;
+  }
+
+  footer,
+  .sg-footer {
+    width: calc(100% - (var(--sg-wide-shell-pad-mobile) * 2)) !important;
+    border-radius: 22px !important;
+  }
+}
+
+/* ===== HERO FOOTER SHELL ALIGNMENT END ===== */
