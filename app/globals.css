@@ -7310,3 +7310,36 @@ button {
 }
 
 /* ===== MATCH ABOUT CONTACT TO SERVICES HERO END ===== */
+
+/* ===== RESTORE SERVICES HERO IMAGE START ===== */
+
+.sg-services-hero-image {
+  display: block !important;
+  width: 100% !important;
+  height: clamp(360px, 34vw, 460px) !important;
+  min-height: unset !important;
+  margin-top: 42px !important;
+  border-radius: 22px !important;
+  background:
+    linear-gradient(180deg, rgba(20, 49, 38, 0.03), rgba(20, 49, 38, 0.08)),
+    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 900px) {
+  .sg-services-hero-image {
+    height: 300px !important;
+    margin-top: 28px !important;
+    border-radius: 20px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .sg-services-hero-image {
+    height: 270px !important;
+  }
+}
+
+/* ===== RESTORE SERVICES HERO IMAGE END ===== */
