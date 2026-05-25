@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import PublicIntelligence from "./components/PublicIntelligence";
 import {
   BarChart3,
   FileSearch,
@@ -118,6 +119,8 @@ export default function HomePage() {
           </div>
 </section>
 </main>
+
+      <PublicIntelligence />
 
       <Footer />
     </>
