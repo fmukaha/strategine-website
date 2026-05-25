@@ -8949,3 +8949,44 @@ h3,
 }
 
 /* ===== STEPPER CLEAN ACTIVE STATE END ===== */
+
+
+/* ===== FRAMEWORK LINKS FOOTER SPACE START ===== */
+
+.sg-framework-inline-link {
+  color: inherit !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+}
+
+.sg-framework-inline-link::after {
+  content: "↗";
+  font-size: 0.78em;
+  line-height: 1;
+  color: var(--dark);
+  opacity: 0.75;
+}
+
+.sg-framework-inline-link:hover {
+  color: var(--dark) !important;
+  text-decoration: underline !important;
+  text-underline-offset: 4px !important;
+}
+
+/* Give footer/newsletter breathing room */
+footer,
+.sg-footer,
+.sg-newsletter,
+.sg-footer-newsletter {
+  margin-top: clamp(72px, 8vw, 120px) !important;
+}
+
+.sg-frameworks,
+.sg-framework-section,
+.sg-about-frameworks {
+  margin-bottom: clamp(72px, 8vw, 120px) !important;
+}
+
+/* ===== FRAMEWORK LINKS FOOTER SPACE END ===== */
