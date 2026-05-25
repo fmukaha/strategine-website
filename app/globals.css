@@ -9498,12 +9498,11 @@ footer,
 /* ===== SITE CANVAS STANDARD START ===== */
 
 /*
-  Locked layout rule:
-  - All page content sits inside --sg-page-max.
-  - Header content sits inside --sg-page-max.
-  - Footer inner content sits inside --sg-page-max.
-  - Only approved visual shells may stretch wider: landing hero shell and footer shell.
-  - Mobile must never overflow horizontally.
+  Canvas-only rule:
+  - Do not change colours, typography, backgrounds, or component design.
+  - Only constrain content width and prevent overflow.
+  - Normal content stays inside --sg-page-max.
+  - Wide visual shells may stretch, but their inner content stays on canvas.
 */
 
 :root {
@@ -9545,8 +9544,7 @@ canvas {
   max-width: 100% !important;
 }
 
-/* Standard content canvas */
-.sg-page-canvas,
+/* Normal content canvas */
 .sg-header-inner,
 .sg-about-page,
 .sg-services-page,
@@ -9554,21 +9552,25 @@ canvas {
 .sg-insights-page,
 .sg-case-studies-page,
 .sg-placeholder-page,
-.sg-public-intel,
-.sg-home-teasers,
-.sg-home-mission-split,
 .sg-standard-hero,
 .sg-standard-intro,
 .sg-about-intro-section,
 .sg-services-intro,
-.sg-contact-data-purpose {
+.sg-contact-data-purpose,
+.sg-public-intel,
+.sg-home-teasers,
+.sg-home-mission-split,
+footer > *,
+.sg-footer > *,
+.sg-newsletter,
+.sg-footer-newsletter {
   width: 100% !important;
   max-width: var(--sg-page-max) !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
 
-/* Standard page padding */
+/* Standard page padding only */
 .sg-about-page,
 .sg-services-page,
 .sg-contact-clean-page,
@@ -9579,115 +9581,50 @@ canvas {
   padding-right: var(--sg-page-pad-desktop) !important;
 }
 
-/* Header content stays inside normal canvas */
+/* Header shell full width, header content constrained */
 .sg-header {
   width: 100% !important;
-  padding: 18px var(--sg-page-pad-desktop) !important;
-  background: #ffffff !important;
+  padding-left: var(--sg-page-pad-desktop) !important;
+  padding-right: var(--sg-page-pad-desktop) !important;
 }
 
 .sg-header-inner {
-  padding: 0 !important;
-  display: flex !important;
-  align-items: center !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
-.sg-logo,
-.sg-actions {
-  flex: 0 0 auto !important;
-}
-
-.sg-nav {
-  flex: 1 1 auto !important;
-  display: flex !important;
-  justify-content: center !important;
-}
-
-/* Landing page wide shell */
+/* Landing hero shell can be wider */
 .sg-home-evergreen-page {
   width: 100% !important;
   max-width: none !important;
-  margin: 0 auto !important;
-  padding: 22px var(--sg-wide-shell-pad-desktop) 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: var(--sg-wide-shell-pad-desktop) !important;
+  padding-right: var(--sg-wide-shell-pad-desktop) !important;
 }
 
 .sg-home-evergreen-hero {
   width: 100% !important;
   max-width: none !important;
-  padding: 0 !important;
-  display: grid !important;
-  align-items: end !important;
 }
 
-/* Text inside wide hero returns to normal canvas */
+/* Content inside landing hero returns to normal canvas */
 .sg-home-evergreen-content {
   width: 100% !important;
   max-width: var(--sg-page-max) !important;
-  margin: 0 auto !important;
-  padding: clamp(42px, 6vw, 76px) var(--sg-page-pad-desktop) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: var(--sg-page-pad-desktop) !important;
+  padding-right: var(--sg-page-pad-desktop) !important;
 }
 
-/* Hero badge aligns to canvas right edge */
-.sg-home-evergreen-badge {
-  right: max(
-    var(--sg-page-pad-desktop),
-    calc((100vw - var(--sg-page-max)) / 2 + var(--sg-page-pad-desktop))
-  ) !important;
-}
-
-/* Footer shell may stretch, but inner content stays on canvas */
+/* Footer shell may stretch, footer content remains constrained */
 footer,
 .sg-footer {
   width: calc(100% - 40px) !important;
   max-width: none !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  border-radius: 28px !important;
-  overflow: hidden !important;
-}
-
-footer > *,
-.sg-footer > * {
-  width: 100% !important;
-  max-width: var(--sg-page-max) !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* Newsletter remains its own design, not forced into footer shell styling */
-.sg-newsletter,
-.sg-footer-newsletter {
-  width: 100% !important;
-  max-width: var(--sg-page-max) !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* Prevent text/input overflow on mobile */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-a,
-span,
-strong,
-small,
-button,
-label,
-input,
-select,
-textarea {
-  max-width: 100% !important;
-}
-
-input,
-select,
-textarea,
-button {
-  max-width: 100% !important;
 }
 
 /* Mobile canvas */
@@ -9703,31 +9640,23 @@ button {
   }
 
   .sg-header {
-    padding: 14px var(--sg-page-pad-mobile) !important;
-  }
-
-  .sg-header-inner {
-    width: 100% !important;
-    max-width: var(--sg-page-max) !important;
+    padding-left: var(--sg-page-pad-mobile) !important;
+    padding-right: var(--sg-page-pad-mobile) !important;
   }
 
   .sg-home-evergreen-page {
-    padding: 16px var(--sg-wide-shell-pad-mobile) 0 !important;
+    padding-left: var(--sg-wide-shell-pad-mobile) !important;
+    padding-right: var(--sg-wide-shell-pad-mobile) !important;
   }
 
   .sg-home-evergreen-content {
-    padding: 26px !important;
-  }
-
-  .sg-home-evergreen-badge {
-    position: static !important;
-    margin: 24px 26px 26px !important;
+    padding-left: var(--sg-page-pad-mobile) !important;
+    padding-right: var(--sg-page-pad-mobile) !important;
   }
 
   footer,
   .sg-footer {
     width: calc(100% - 24px) !important;
-    border-radius: 22px !important;
   }
 }
 
