@@ -10951,53 +10951,98 @@ footer,
 /* ===== DRAWER MENU SIZE ICON CONSISTENCY END ===== */
 
 
-/* ===== NEWSLETTER CANVAS LOCK START ===== */
+/* ===== RESPONSIVE CANVAS NEWSLETTER FIX START ===== */
 
-/* Newsletter and similar footer-top content must stay inside the site canvas */
+/* Global responsive safety */
+html,
+body {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box !important;
+}
+
+main,
+section,
+article,
+div,
+form,
+header,
+footer,
+nav {
+  min-width: 0 !important;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100% !important;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100% !important;
+}
+
+/* Normal content canvas */
+.sg-header-inner,
+.sg-about-page,
+.sg-services-page,
+.sg-contact-clean-page,
+.sg-insights-page,
+.sg-case-studies-page,
+.sg-placeholder-page,
+.sg-public-intel,
+.sg-home-teasers,
+.sg-standard-intro,
+.sg-about-intro-section,
+.sg-services-intro,
+.sg-contact-data-purpose,
 .sg-newsletter,
 .sg-footer-newsletter,
 .sg-footer-signup,
-.sg-briefs-signup,
-section:has(input[type="email"]) {
+.sg-briefs-signup {
   width: 100% !important;
   max-width: var(--sg-page-max, 1180px) !important;
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+/* Newsletter row: desktop stays side-by-side and button keeps proper width */
+.sg-newsletter,
+.sg-footer-newsletter,
+.sg-footer-signup,
+.sg-briefs-signup {
   padding-left: var(--sg-page-pad-desktop, 24px) !important;
   padding-right: var(--sg-page-pad-desktop, 24px) !important;
-  overflow-x: clip !important;
+  overflow-x: hidden !important;
 }
 
-/* Keep newsletter inner grid from stretching beyond canvas */
-.sg-newsletter > *,
-.sg-footer-newsletter > *,
-.sg-footer-signup > *,
-.sg-briefs-signup > *,
-section:has(input[type="email"]) > * {
-  max-width: 100% !important;
-  min-width: 0 !important;
-}
-
-/* Email form row must shrink correctly */
 .sg-newsletter form,
 .sg-footer-newsletter form,
 .sg-footer-signup form,
-.sg-briefs-signup form,
-section:has(input[type="email"]) form {
+.sg-briefs-signup form {
   width: 100% !important;
   max-width: 620px !important;
-  min-width: 0 !important;
   display: grid !important;
-  grid-template-columns: minmax(0, 1fr) auto !important;
+  grid-template-columns: minmax(0, 1fr) 150px !important;
   gap: 12px !important;
+  align-items: center !important;
 }
 
-/* Inputs/buttons cannot force overflow */
 .sg-newsletter input,
 .sg-footer-newsletter input,
 .sg-footer-signup input,
-.sg-briefs-signup input,
-section:has(input[type="email"]) input {
+.sg-briefs-signup input {
   width: 100% !important;
   min-width: 0 !important;
 }
@@ -11005,19 +11050,23 @@ section:has(input[type="email"]) input {
 .sg-newsletter button,
 .sg-footer-newsletter button,
 .sg-footer-signup button,
-.sg-briefs-signup button,
-section:has(input[type="email"]) button {
+.sg-briefs-signup button {
+  width: 150px !important;
+  min-width: 150px !important;
+  height: 48px !important;
+  padding: 0 20px !important;
   white-space: nowrap !important;
-  flex-shrink: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
-/* Mobile/tablet: stack neatly */
+/* Mobile/tablet: stack cleanly */
 @media (max-width: 900px) {
   .sg-newsletter,
   .sg-footer-newsletter,
   .sg-footer-signup,
-  .sg-briefs-signup,
-  section:has(input[type="email"]) {
+  .sg-briefs-signup {
     padding-left: var(--sg-page-pad-mobile, 16px) !important;
     padding-right: var(--sg-page-pad-mobile, 16px) !important;
   }
@@ -11025,8 +11074,7 @@ section:has(input[type="email"]) button {
   .sg-newsletter form,
   .sg-footer-newsletter form,
   .sg-footer-signup form,
-  .sg-briefs-signup form,
-  section:has(input[type="email"]) form {
+  .sg-briefs-signup form {
     max-width: 100% !important;
     grid-template-columns: 1fr !important;
   }
@@ -11034,10 +11082,28 @@ section:has(input[type="email"]) button {
   .sg-newsletter button,
   .sg-footer-newsletter button,
   .sg-footer-signup button,
-  .sg-briefs-signup button,
-  section:has(input[type="email"]) button {
+  .sg-briefs-signup button {
     width: 100% !important;
+    min-width: 0 !important;
   }
 }
 
-/* ===== NEWSLETTER CANVAS LOCK END ===== */
+/* Very small screens: prevent any drift */
+@media (max-width: 420px) {
+  .sg-home-evergreen-page,
+  footer,
+  .sg-footer {
+    width: calc(100% - 24px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .sg-drawer-panel {
+    left: 8px !important;
+    right: 8px !important;
+    width: auto !important;
+    max-width: calc(100vw - 16px) !important;
+  }
+}
+
+/* ===== RESPONSIVE CANVAS NEWSLETTER FIX END ===== */
