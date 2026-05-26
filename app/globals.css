@@ -11588,3 +11588,14 @@ button {
 }
 
 /* ===== DMKL STYLE HEADER RESTORE END ===== */
+
+
+/* ===== REMOVE HEADER BOTTOM LINE START ===== */
+
+.sg-dmkl-header,
+.sg-drawer-header,
+.sg-header {
+  border-bottom: 0 !important;
+}
+
+/* ===== REMOVE HEADER BOTTOM LINE END ===== */
