@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -83,10 +83,6 @@ export default function Header() {
                 </Link>
               ))}
             </nav>
-
-            <div className="sg-drawer-note">
-              <p>Responsible Business Intelligence Systems.</p>
-            </div>
           </aside>
         </div>
       )}
