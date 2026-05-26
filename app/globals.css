@@ -10949,3 +10949,95 @@ footer,
 }
 
 /* ===== DRAWER MENU SIZE ICON CONSISTENCY END ===== */
+
+
+/* ===== NEWSLETTER CANVAS LOCK START ===== */
+
+/* Newsletter and similar footer-top content must stay inside the site canvas */
+.sg-newsletter,
+.sg-footer-newsletter,
+.sg-footer-signup,
+.sg-briefs-signup,
+section:has(input[type="email"]) {
+  width: 100% !important;
+  max-width: var(--sg-page-max, 1180px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: var(--sg-page-pad-desktop, 24px) !important;
+  padding-right: var(--sg-page-pad-desktop, 24px) !important;
+  overflow-x: clip !important;
+}
+
+/* Keep newsletter inner grid from stretching beyond canvas */
+.sg-newsletter > *,
+.sg-footer-newsletter > *,
+.sg-footer-signup > *,
+.sg-briefs-signup > *,
+section:has(input[type="email"]) > * {
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
+
+/* Email form row must shrink correctly */
+.sg-newsletter form,
+.sg-footer-newsletter form,
+.sg-footer-signup form,
+.sg-briefs-signup form,
+section:has(input[type="email"]) form {
+  width: 100% !important;
+  max-width: 620px !important;
+  min-width: 0 !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: 12px !important;
+}
+
+/* Inputs/buttons cannot force overflow */
+.sg-newsletter input,
+.sg-footer-newsletter input,
+.sg-footer-signup input,
+.sg-briefs-signup input,
+section:has(input[type="email"]) input {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+.sg-newsletter button,
+.sg-footer-newsletter button,
+.sg-footer-signup button,
+.sg-briefs-signup button,
+section:has(input[type="email"]) button {
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+/* Mobile/tablet: stack neatly */
+@media (max-width: 900px) {
+  .sg-newsletter,
+  .sg-footer-newsletter,
+  .sg-footer-signup,
+  .sg-briefs-signup,
+  section:has(input[type="email"]) {
+    padding-left: var(--sg-page-pad-mobile, 16px) !important;
+    padding-right: var(--sg-page-pad-mobile, 16px) !important;
+  }
+
+  .sg-newsletter form,
+  .sg-footer-newsletter form,
+  .sg-footer-signup form,
+  .sg-briefs-signup form,
+  section:has(input[type="email"]) form {
+    max-width: 100% !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .sg-newsletter button,
+  .sg-footer-newsletter button,
+  .sg-footer-signup button,
+  .sg-briefs-signup button,
+  section:has(input[type="email"]) button {
+    width: 100% !important;
+  }
+}
+
+/* ===== NEWSLETTER CANVAS LOCK END ===== */
