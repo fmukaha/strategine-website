@@ -1,8 +1,8 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -79,7 +79,8 @@ export default function Header() {
                   onClick={() => setOpen(false)}
                   className={isActive(item.href) ? "is-active" : ""}
                 >
-                  {item.label}
+                  <span>{item.label}</span>
+                  <ArrowUpRight size={18} strokeWidth={1.9} aria-hidden="true" />
                 </Link>
               ))}
             </nav>
