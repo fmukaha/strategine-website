@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -33,11 +33,6 @@ export default function HomePage() {
               <Link href="/services">Explore services</Link>
               <Link href="/contact">Start a project</Link>
             </div>
-          </div>
-
-          <div className="sg-home-evergreen-badge" aria-label="Strategine focus">
-            <strong>3</strong>
-            <span>Data maturity layers</span>
           </div>
         </section>
       </main>
