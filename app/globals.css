@@ -10802,3 +10802,150 @@ footer,
 }
 
 /* ===== HEADER BACKGROUND LOGO FIX END ===== */
+
+
+/* ===== DRAWER LINK HOVER STYLE START ===== */
+
+.sg-drawer-nav {
+  gap: 6px !important;
+}
+
+.sg-drawer-nav a {
+  width: 100% !important;
+  min-height: 58px !important;
+  border-radius: 16px !important;
+  padding: 0 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  color: var(--text) !important;
+  font-size: clamp(1.45rem, 3vw, 2.1rem) !important;
+  line-height: 1 !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.045em !important;
+  text-decoration: none !important;
+  transition: background 0.16s ease, color 0.16s ease, transform 0.16s ease !important;
+}
+
+.sg-drawer-nav a svg {
+  width: 32px !important;
+  height: 32px !important;
+  padding: 8px !important;
+  border-radius: 999px !important;
+  background: var(--dark) !important;
+  color: var(--lime) !important;
+  opacity: 0 !important;
+  transform: translateX(-6px) !important;
+  transition: opacity 0.16s ease, transform 0.16s ease !important;
+  flex-shrink: 0 !important;
+}
+
+.sg-drawer-nav a:hover,
+.sg-drawer-nav a.is-active {
+  background: var(--lime) !important;
+  color: var(--dark) !important;
+}
+
+.sg-drawer-nav a:hover svg,
+.sg-drawer-nav a.is-active svg {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+@media (hover: none) {
+  .sg-drawer-nav a svg {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .sg-drawer-nav {
+    gap: 4px !important;
+  }
+
+  .sg-drawer-nav a {
+    min-height: 54px !important;
+    font-size: 1.35rem !important;
+  }
+}
+
+/* ===== DRAWER LINK HOVER STYLE END ===== */
+
+
+/* ===== DRAWER MENU SIZE ICON CONSISTENCY START ===== */
+
+.sg-drawer-nav {
+  gap: 8px !important;
+}
+
+.sg-drawer-nav a {
+  width: 100% !important;
+  min-height: 52px !important;
+  border-radius: 16px !important;
+  padding: 0 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  color: var(--text) !important;
+  font-size: clamp(1.25rem, 2vw, 1.55rem) !important;
+  line-height: 1 !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.035em !important;
+  text-decoration: none !important;
+}
+
+.sg-drawer-nav a svg {
+  width: 30px !important;
+  height: 30px !important;
+  padding: 7px !important;
+  border-radius: 999px !important;
+  background: var(--dark) !important;
+  color: var(--lime) !important;
+  opacity: 0 !important;
+  transform: translateX(-6px) !important;
+  transition: opacity 0.16s ease, transform 0.16s ease !important;
+  flex-shrink: 0 !important;
+}
+
+.sg-drawer-nav a:hover,
+.sg-drawer-nav a.is-active {
+  background: var(--lime) !important;
+  color: var(--dark) !important;
+}
+
+.sg-drawer-nav a:hover svg,
+.sg-drawer-nav a.is-active svg {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+@media (hover: none) {
+  .sg-drawer-nav a svg {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .sg-drawer-panel-top {
+    padding: 28px 26px 20px !important;
+  }
+
+  .sg-drawer-nav {
+    padding: 28px 26px !important;
+    gap: 6px !important;
+  }
+
+  .sg-drawer-nav a {
+    min-height: 50px !important;
+    font-size: 1.28rem !important;
+  }
+
+  .sg-drawer-nav a svg {
+    width: 28px !important;
+    height: 28px !important;
+  }
+}
+
+/* ===== DRAWER MENU SIZE ICON CONSISTENCY END ===== */
