@@ -10742,3 +10742,63 @@ footer,
 }
 
 /* ===== HEADER LOGO MENU HERO CLEANUP END ===== */
+
+
+/* ===== HEADER BACKGROUND LOGO FIX START ===== */
+
+/* Restore header bar background */
+.sg-drawer-header {
+  position: sticky !important;
+  top: 0 !important;
+  left: auto !important;
+  z-index: 80 !important;
+  width: 100% !important;
+  background: rgba(255, 255, 255, 0.86) !important;
+  backdrop-filter: blur(18px) !important;
+}
+
+/* Remove only the logo's own white box/background */
+.sg-drawer-logo,
+.sg-drawer-logo * {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+.sg-drawer-logo {
+  padding: 0 !important;
+  border-radius: 0 !important;
+  overflow: visible !important;
+}
+
+.sg-drawer-logo img {
+  background: transparent !important;
+  width: 150px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+/* Keep menu pill as designed */
+.sg-drawer-menu-button {
+  background: rgba(255, 255, 255, 0.86) !important;
+  border: 1px solid rgba(31, 31, 28, 0.08) !important;
+  box-shadow: 0 14px 34px rgba(20, 49, 38, 0.06) !important;
+}
+
+/* Add safe breathing room below sticky header */
+.sg-home-evergreen-page {
+  padding-top: 22px !important;
+}
+
+@media (max-width: 900px) {
+  .sg-drawer-logo img {
+    width: 142px !important;
+  }
+
+  .sg-home-evergreen-page {
+    padding-top: 16px !important;
+  }
+}
+
+/* ===== HEADER BACKGROUND LOGO FIX END ===== */
