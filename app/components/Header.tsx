@@ -2,14 +2,34 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
+  {
+    label: "Services",
+    href: "/services",
+    children: [
+      { label: "Due diligence systems", href: "/services" },
+      { label: "Risk visibility", href: "/services" },
+      { label: "Evidence pathways", href: "/services" },
+      { label: "Accountability design", href: "/services" },
+      { label: "Responsible business oversight", href: "/services" },
+      { label: "All services", href: "/services", featured: true },
+    ],
+  },
+  {
+    label: "About",
+    href: "/about",
+    children: [
+      { label: "Who we are", href: "/about" },
+      { label: "Our mission", href: "/about" },
+      { label: "Frameworks we work with", href: "/about" },
+      { label: "Why Strategine", href: "/about" },
+    ],
+  },
   { label: "Insights", href: "/insights" },
   { label: "Contact", href: "/contact" },
 ];
@@ -36,6 +56,43 @@ export default function Header() {
               priority
             />
           </Link>
+
+          <nav className="sg-desktop-nav" aria-label="Main navigation">
+            {navItems.map((item) =>
+              item.children ? (
+                <div className="sg-nav-group" key={item.label}>
+                  <Link
+                    href={item.href}
+                    className={isActive(item.href) ? "is-active" : ""}
+                  >
+                    <span>{item.label}</span>
+                    <ChevronDown size={14} strokeWidth={2} />
+                  </Link>
+
+                  <div className="sg-nav-dropdown">
+                    {item.children.map((child) => (
+                      <Link
+                        key={child.label}
+                        href={child.href}
+                        className={child.featured ? "is-featured" : ""}
+                      >
+                        <span>{child.label}</span>
+                        <ArrowUpRight size={16} strokeWidth={1.9} />
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={isActive(item.href) ? "is-active" : ""}
+                >
+                  {item.label}
+                </Link>
+              )
+            )}
+          </nav>
 
           <button
             type="button"
