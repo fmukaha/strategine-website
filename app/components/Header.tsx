@@ -1,8 +1,9 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, Phone, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const navItems = [
@@ -14,50 +15,81 @@ const navItems = [
 ];
 
 export default function Header() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
+  function isActive(href: string) {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  }
+
   return (
-    <header className="sg-header">
-      <div className="sg-header-inner">
-        <Link href="/" className="sg-logo" aria-label="Strategine home">
-          <Image src="/strategine_logo.svg" alt="Strategine" width={150} height={40} priority />
-        </Link>
-
-        <nav className="sg-nav" aria-label="Main navigation">
-          {navItems.map((item) => (
-            <Link key={item.href} href={item.href}>
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="sg-actions">
-          <Link href="/contact" className="sg-phone" aria-label="Talk to us">
-            <Phone size={16} strokeWidth={2.2} />
-            <span>Talk to us</span>
+    <>
+      <header className="sg-drawer-header">
+        <div className="sg-drawer-header-inner">
+          <Link href="/" className="sg-drawer-logo" aria-label="Strategine home">
+            <Image
+              src="/strategine_logo.svg"
+              alt="Strategine"
+              width={150}
+              height={40}
+              priority
+            />
           </Link>
 
-          <Link href="/contact" className="sg-project">
-            Start a project
-          </Link>
-
-          <button type="button" className="sg-menu" onClick={() => setOpen(!open)} aria-label="Open menu">
-            {open ? <X size={21} strokeWidth={2.3} /> : <Menu size={21} strokeWidth={2.3} />}
+          <button
+            type="button"
+            className="sg-drawer-menu-button"
+            onClick={() => setOpen(true)}
+            aria-label="Open menu"
+          >
+            <span>Menu</span>
+            <Menu size={22} strokeWidth={1.9} />
           </button>
         </div>
-      </div>
+      </header>
 
       {open && (
-        <nav className="sg-mobile-nav" aria-label="Mobile navigation">
-          {navItems.map((item) => (
-            <Link key={item.label} href={item.href} onClick={() => setOpen(false)}>
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+        <div className="sg-drawer-overlay">
+          <button
+            type="button"
+            aria-label="Close menu overlay"
+            className="sg-drawer-backdrop"
+            onClick={() => setOpen(false)}
+          />
+
+          <aside className="sg-drawer-panel" aria-label="Main menu">
+            <div className="sg-drawer-panel-top">
+              <button
+                type="button"
+                className="sg-drawer-close"
+                onClick={() => setOpen(false)}
+                aria-label="Close menu"
+              >
+                <X size={18} strokeWidth={1.9} />
+                <span>Menu</span>
+              </button>
+            </div>
+
+            <nav className="sg-drawer-nav">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className={isActive(item.href) ? "is-active" : ""}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+
+            <div className="sg-drawer-note">
+              <p>Responsible Business Intelligence Systems.</p>
+            </div>
+          </aside>
+        </div>
       )}
-    </header>
+    </>
   );
 }
-
-

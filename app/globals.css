@@ -10458,3 +10458,179 @@ footer,
 }
 
 /* ===== LOGO RESTORE END ===== */
+
+
+/* ===== STRATEGINE DRAWER HEADER START ===== */
+
+.sg-drawer-header {
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(18px);
+}
+
+.sg-drawer-header-inner {
+  width: 100%;
+  max-width: var(--sg-page-max, 1180px);
+  height: 76px;
+  margin: 0 auto;
+  padding: 0 var(--sg-page-pad-desktop, 24px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sg-drawer-logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.sg-drawer-logo img {
+  width: 150px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.sg-drawer-menu-button {
+  height: 48px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  padding: 0 20px;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 500;
+  cursor: pointer;
+  backdrop-filter: blur(14px);
+}
+
+.sg-drawer-menu-button:hover {
+  background: var(--soft);
+}
+
+.sg-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+}
+
+.sg-drawer-backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(31, 31, 28, 0.46);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+}
+
+.sg-drawer-panel {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: min(100%, 460px);
+  height: 100%;
+  background: #f7f8f0;
+  box-shadow: -30px 0 80px rgba(20, 49, 38, 0.18);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.sg-drawer-panel-top {
+  padding: 34px 32px 26px;
+}
+
+.sg-drawer-close {
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.sg-drawer-nav {
+  padding: 34px 32px;
+  display: grid;
+  gap: 24px;
+}
+
+.sg-drawer-nav a {
+  width: fit-content;
+  color: var(--text);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  text-decoration: none;
+}
+
+.sg-drawer-nav a:hover,
+.sg-drawer-nav a.is-active {
+  color: var(--dark);
+}
+
+.sg-drawer-note {
+  margin-top: auto;
+  padding: 36px 32px 42px;
+}
+
+.sg-drawer-note p {
+  max-width: 280px;
+  color: var(--text);
+  font-size: clamp(1.75rem, 3vw, 2.45rem);
+  line-height: 1.08;
+  font-weight: 400;
+  letter-spacing: -0.055em;
+}
+
+@media (max-width: 900px) {
+  .sg-drawer-header-inner {
+    height: 68px;
+    padding: 0 var(--sg-page-pad-mobile, 16px);
+  }
+
+  .sg-drawer-logo img {
+    width: 142px;
+  }
+
+  .sg-drawer-menu-button {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+  }
+
+  .sg-drawer-menu-button span {
+    display: none;
+  }
+
+  .sg-drawer-panel {
+    width: min(100%, 390px);
+  }
+
+  .sg-drawer-panel-top,
+  .sg-drawer-nav,
+  .sg-drawer-note {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+
+  .sg-drawer-nav a {
+    font-size: 2.15rem;
+  }
+}
+
+/* ===== STRATEGINE DRAWER HEADER END ===== */
