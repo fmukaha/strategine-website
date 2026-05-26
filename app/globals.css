@@ -10634,3 +10634,83 @@ footer,
 }
 
 /* ===== STRATEGINE DRAWER HEADER END ===== */
+
+
+/* ===== DRAWER HEADER CONTAINER FIX START ===== */
+
+/* Header content must stay inside the standard website canvas */
+.sg-drawer-header {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: clip !important;
+}
+
+.sg-drawer-header-inner {
+  width: 100% !important;
+  max-width: var(--sg-page-max, 1180px) !important;
+  margin: 0 auto !important;
+  padding-left: var(--sg-page-pad-desktop, 24px) !important;
+  padding-right: var(--sg-page-pad-desktop, 24px) !important;
+  overflow: visible !important;
+}
+
+/* Logo + menu cannot force overflow */
+.sg-drawer-logo,
+.sg-drawer-menu-button {
+  flex-shrink: 0 !important;
+}
+
+.sg-drawer-logo {
+  min-width: 0 !important;
+  max-width: calc(100% - 64px) !important;
+}
+
+.sg-drawer-logo img {
+  width: 150px !important;
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+/* Drawer overlay can cover screen, but panel must never exceed viewport */
+.sg-drawer-overlay {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+}
+
+.sg-drawer-panel {
+  width: min(460px, calc(100vw - 24px)) !important;
+  max-width: calc(100vw - 24px) !important;
+  right: 12px !important;
+  top: 12px !important;
+  bottom: 12px !important;
+  height: auto !important;
+  border-radius: 24px !important;
+  overflow-x: hidden !important;
+}
+
+/* Mobile lock */
+@media (max-width: 900px) {
+  .sg-drawer-header-inner {
+    padding-left: var(--sg-page-pad-mobile, 16px) !important;
+    padding-right: var(--sg-page-pad-mobile, 16px) !important;
+  }
+
+  .sg-drawer-logo {
+    max-width: calc(100% - 56px) !important;
+  }
+
+  .sg-drawer-logo img {
+    width: 142px !important;
+  }
+
+  .sg-drawer-panel {
+    width: calc(100vw - 24px) !important;
+    max-width: calc(100vw - 24px) !important;
+    right: 12px !important;
+    left: 12px !important;
+  }
+}
+
+/* ===== DRAWER HEADER CONTAINER FIX END ===== */
