@@ -11391,3 +11391,200 @@ button {
 }
 
 /* ===== RESTORE FULL HEADER FEATURES WHITE BG END ===== */
+
+
+/* ===== DMKL STYLE HEADER RESTORE START ===== */
+
+.sg-dmkl-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 90 !important;
+  width: 100% !important;
+  border-bottom: 1px solid rgba(31, 31, 28, 0.08) !important;
+  background: #ffffff !important;
+}
+
+.sg-dmkl-header-inner {
+  width: 100% !important;
+  max-width: var(--sg-page-max, 1180px) !important;
+  height: 72px !important;
+  margin: 0 auto !important;
+  padding: 0 var(--sg-page-pad-desktop, 24px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.sg-dmkl-logo {
+  display: inline-flex !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+  background: transparent !important;
+}
+
+.sg-dmkl-logo img {
+  width: 150px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  background: transparent !important;
+}
+
+.sg-dmkl-menu-pill {
+  height: 48px !important;
+  border: 1px solid rgba(31, 31, 28, 0.08) !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+  color: var(--text) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  padding: 0 20px !important;
+  font-size: 15px !important;
+  line-height: 1 !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  box-shadow: 0 14px 34px rgba(20, 49, 38, 0.06) !important;
+}
+
+.sg-dmkl-menu-pill:hover svg {
+  transform: translateX(2px) !important;
+}
+
+.sg-dmkl-menu-pill svg {
+  transition: transform 0.16s ease !important;
+}
+
+.sg-dmkl-menu-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 120 !important;
+}
+
+.sg-dmkl-menu-backdrop {
+  position: absolute !important;
+  inset: 0 !important;
+  border: 0 !important;
+  background: rgba(31, 31, 28, 0.45) !important;
+  backdrop-filter: blur(5px) !important;
+  cursor: pointer !important;
+}
+
+.sg-dmkl-menu-panel {
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+  width: min(100%, 460px) !important;
+  height: 100% !important;
+  background: #f7f8f0 !important;
+  box-shadow: -30px 0 80px rgba(20, 49, 38, 0.18) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow-y: auto !important;
+}
+
+.sg-dmkl-menu-top {
+  padding: 34px 32px 26px !important;
+}
+
+.sg-dmkl-menu-close {
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--text) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  font-size: 15px !important;
+  line-height: 1 !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+}
+
+.sg-dmkl-menu-nav {
+  padding: 34px 32px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 28px !important;
+}
+
+.sg-dmkl-menu-nav a {
+  width: fit-content !important;
+  color: var(--text) !important;
+  font-size: 24px !important;
+  line-height: 1 !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.02em !important;
+  text-decoration: none !important;
+  transition: color 0.16s ease !important;
+}
+
+.sg-dmkl-menu-nav a:hover,
+.sg-dmkl-menu-nav a.is-active {
+  color: var(--dark) !important;
+}
+
+.sg-dmkl-menu-footer {
+  margin-top: auto !important;
+  padding: 48px 32px 40px !important;
+}
+
+.sg-dmkl-menu-footer p {
+  color: rgba(23, 59, 52, 0.68) !important;
+  font-size: 13px !important;
+  line-height: 1 !important;
+  font-weight: 500 !important;
+  margin: 0 !important;
+}
+
+.sg-dmkl-menu-footer strong {
+  display: block !important;
+  max-width: 280px !important;
+  margin-top: 18px !important;
+  color: var(--text) !important;
+  font-size: 30px !important;
+  line-height: 1.05 !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.045em !important;
+}
+
+@media (max-width: 900px) {
+  .sg-dmkl-header-inner {
+    height: 68px !important;
+    padding: 0 var(--sg-page-pad-mobile, 16px) !important;
+  }
+
+  .sg-dmkl-logo img {
+    width: 142px !important;
+  }
+
+  .sg-dmkl-menu-pill {
+    height: 44px !important;
+    padding: 0 14px !important;
+  }
+
+  .sg-dmkl-menu-panel {
+    width: min(100%, 390px) !important;
+  }
+
+  .sg-dmkl-menu-top,
+  .sg-dmkl-menu-nav,
+  .sg-dmkl-menu-footer {
+    padding-left: 26px !important;
+    padding-right: 26px !important;
+  }
+
+  .sg-dmkl-menu-nav {
+    gap: 24px !important;
+  }
+
+  .sg-dmkl-menu-nav a {
+    font-size: 22px !important;
+  }
+
+  .sg-dmkl-menu-footer strong {
+    font-size: 26px !important;
+  }
+}
+
+/* ===== DMKL STYLE HEADER RESTORE END ===== */
