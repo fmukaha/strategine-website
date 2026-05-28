@@ -11754,3 +11754,30 @@ footer a::after,
 }
 
 /* ===== FOOTER HOVER LIME TEXT FIX END ===== */
+
+
+/* ===== INSIGHTS FILTER REMOVAL CLEANUP START ===== */
+
+.sg-insights-controls,
+.sg-insights-search,
+.sg-insights-themes,
+.sg-insights-sidebar {
+  display: none !important;
+}
+
+.sg-insights-grid,
+.sg-insights-list {
+  width: 100% !important;
+  max-width: var(--sg-page-max, 1180px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (max-width: 900px) {
+  .sg-insights-grid,
+  .sg-insights-list {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ===== INSIGHTS FILTER REMOVAL CLEANUP END ===== */
