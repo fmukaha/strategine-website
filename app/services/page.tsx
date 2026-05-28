@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -53,38 +53,16 @@ export default function ServicesPage() {
       <Header />
 
       <main className="sg-services-page">
-        <section className="sg-services-hero-clean">
-          <div className="sg-services-hero-copy">
-            <span className="sg-page-kicker">Services</span>
+                <section className="sg-services-top-hero">
+          <span className="sg-page-kicker">Services</span>
 
-            <h1>Build the systems behind responsible business.</h1>
+          <h1>Build the systems behind responsible business.</h1>
 
-            <p>
-              We help organisations move from policies and scattered records to
-              structured accountability systems for risk visibility, evidence,
-              ownership, response, and leadership oversight.
-            </p>
-
-            <Link href="/contact" className="sg-services-hero-link">
-              Start a project inquiry
-              <ArrowUpRight size={18} strokeWidth={1.8} aria-hidden="true" />
-            </Link>
-          </div>
-
-          <div className="sg-services-hero-panel" aria-label="Strategine services model">
-            <div>
-              <span>Risk signals</span>
-              <strong>01</strong>
-            </div>
-            <div>
-              <span>Evidence pathways</span>
-              <strong>02</strong>
-            </div>
-            <div>
-              <span>Ownership rhythm</span>
-              <strong>03</strong>
-            </div>
-          </div>
+          <p>
+            We help organisations move from policies and scattered records to
+            structured accountability systems for risk visibility, evidence,
+            ownership, and leadership oversight.
+          </p>
         </section>
 
         <section className="sg-services-problem-selector">
