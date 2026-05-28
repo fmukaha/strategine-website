@@ -53,11 +53,11 @@ export default function ServicesPage() {
       <Header />
 
       <main className="sg-services-page">
-        <section className="sg-standard-hero sg-services-about-style-hero">
+        <section className="sg-standard-hero sg-about-hero sg-services-hero">
           <span className="sg-page-kicker">Services</span>
           <h1>Build the systems behind responsible business.</h1>
           <div
-            className="sg-services-hero-image"
+            className="sg-about-hero-image sg-services-hero-image"
             aria-label="Strategine responsible business services"
           />
         </section>

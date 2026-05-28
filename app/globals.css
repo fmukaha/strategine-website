@@ -12153,129 +12153,18 @@ footer a::after,
 /* ===== SERVICES CREATIVE REBUILD END ===== */
 
 
-/* ===== SERVICES HERO STANDARD RESET START ===== */
+/* ===== SERVICES EXACT ABOUT HERO START ===== */
 
-.sg-services-hero-clean,
-.sg-services-hero-panel,
-.sg-services-hero-copy,
-.sg-services-hero-link {
-  display: revert-layer !important;
-}
+/*
+  Services hero must inherit the exact About page hero structure:
+  .sg-standard-hero
+  .sg-about-hero
+  .sg-about-hero-image
 
-.sg-services-top-hero {
-  width: 100% !important;
-  max-width: var(--sg-page-max, 1180px) !important;
-  margin: 0 auto !important;
-  padding: clamp(72px, 10vw, 128px) var(--sg-page-pad-desktop, 24px) clamp(42px, 6vw, 76px) !important;
-  text-align: center !important;
-}
-
-.sg-services-top-hero h1 {
-  max-width: 820px !important;
-  margin: 18px auto 0 !important;
-  color: var(--text) !important;
-  font-size: clamp(3rem, 5.4vw, 5.2rem) !important;
-  line-height: 0.98 !important;
-  font-weight: 400 !important;
-  letter-spacing: -0.075em !important;
-}
-
-.sg-services-top-hero p {
-  max-width: 720px !important;
-  margin: 26px auto 0 !important;
-  color: var(--text) !important;
-  font-size: 17px !important;
-  line-height: 1.65 !important;
-}
-
-@media (max-width: 900px) {
-  .sg-services-top-hero {
-    padding: 64px var(--sg-page-pad-mobile, 16px) 42px !important;
-    text-align: left !important;
-  }
-
-  .sg-services-top-hero h1 {
-    max-width: 10ch !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    font-size: clamp(3rem, 14vw, 4.4rem) !important;
-  }
-
-  .sg-services-top-hero p {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    font-size: 16px !important;
-  }
-}
-
-/* ===== SERVICES HERO STANDARD RESET END ===== */
-
-
-/* ===== SERVICES HERO TOP SPACING MATCH ABOUT START ===== */
-
-.sg-services-top-hero {
-  padding-top: clamp(48px, 7vw, 88px) !important;
-  padding-bottom: clamp(42px, 6vw, 76px) !important;
-}
-
-@media (max-width: 900px) {
-  .sg-services-top-hero {
-    padding-top: 42px !important;
-    padding-bottom: 38px !important;
-  }
-}
-
-/* ===== SERVICES HERO TOP SPACING MATCH ABOUT END ===== */
-
-
-/* ===== SERVICES HERO FINAL TOP ALIGNMENT START ===== */
-
-/* Match Services hero start position closer to About page */
-.sg-services-top-hero {
-  padding-top: clamp(30px, 4vw, 52px) !important;
-  padding-bottom: clamp(42px, 6vw, 72px) !important;
-}
-
-.sg-services-top-hero .sg-page-kicker {
-  margin-top: 0 !important;
-}
-
-@media (max-width: 900px) {
-  .sg-services-top-hero {
-    padding-top: 30px !important;
-    padding-bottom: 38px !important;
-  }
-}
-
-/* ===== SERVICES HERO FINAL TOP ALIGNMENT END ===== */
-
-
-/* ===== SERVICES HERO ABOUT STYLE START ===== */
-
-.sg-services-about-style-hero {
-  width: 100% !important;
-  max-width: var(--sg-page-max, 1180px) !important;
-  margin: 0 auto !important;
-  padding: clamp(38px, 6vw, 76px) var(--sg-page-pad-desktop, 24px) 0 !important;
-  text-align: center !important;
-}
-
-.sg-services-about-style-hero h1 {
-  max-width: 900px !important;
-  margin: 18px auto 0 !important;
-  color: var(--text) !important;
-  font-size: clamp(3rem, 5.4vw, 5.2rem) !important;
-  line-height: 0.98 !important;
-  font-weight: 400 !important;
-  letter-spacing: -0.075em !important;
-}
+  Only the image source is changed here.
+*/
 
 .sg-services-hero-image {
-  width: 100% !important;
-  min-height: clamp(360px, 42vw, 520px) !important;
-  margin-top: clamp(34px, 5vw, 58px) !important;
-  border-radius: 28px !important;
-  overflow: hidden !important;
   background:
     linear-gradient(180deg, rgba(20, 49, 38, 0.02), rgba(20, 49, 38, 0.08)),
     url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=85") !important;
@@ -12283,23 +12172,4 @@ footer a::after,
   background-position: center !important;
 }
 
-@media (max-width: 900px) {
-  .sg-services-about-style-hero {
-    padding: 34px var(--sg-page-pad-mobile, 16px) 0 !important;
-    text-align: left !important;
-  }
-
-  .sg-services-about-style-hero h1 {
-    max-width: 10ch !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    font-size: clamp(3rem, 14vw, 4.4rem) !important;
-  }
-
-  .sg-services-hero-image {
-    min-height: 320px !important;
-    border-radius: 22px !important;
-  }
-}
-
-/* ===== SERVICES HERO ABOUT STYLE END ===== */
+/* ===== SERVICES EXACT ABOUT HERO END ===== */
