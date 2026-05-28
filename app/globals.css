@@ -12153,41 +12153,99 @@ footer a::after,
 /* ===== SERVICES CREATIVE REBUILD END ===== */
 
 
-/* ===== SERVICES EXACT ABOUT HERO START ===== */
+/* ===== UNIFIED PAGE HERO STANDARD START ===== */
 
 /*
-  Services hero must inherit the exact About page hero structure:
-  .sg-standard-hero
-  .sg-about-hero
-  .sg-about-hero-image
-
-  Only the image source is changed here.
+  Locked page-header standard:
+  Applies to About, Services, and Insights.
+  Structure:
+  kicker -> h1 -> image
 */
+
+.sg-about-hero,
+.sg-services-hero,
+.sg-insights-hero {
+  width: 100% !important;
+  max-width: var(--sg-page-max, 1180px) !important;
+  margin: 0 auto !important;
+  padding: clamp(44px, 6vw, 76px) var(--sg-page-pad-desktop, 24px) 0 !important;
+  text-align: center !important;
+}
+
+.sg-about-hero .sg-page-kicker,
+.sg-services-hero .sg-page-kicker,
+.sg-insights-hero .sg-page-kicker {
+  display: block !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+.sg-about-hero h1,
+.sg-services-hero h1,
+.sg-insights-hero h1 {
+  max-width: 900px !important;
+  margin: 18px auto 0 !important;
+  color: var(--text) !important;
+  font-size: clamp(3rem, 5.4vw, 5.2rem) !important;
+  line-height: 0.98 !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.075em !important;
+}
+
+.sg-about-hero-image,
+.sg-services-hero-image,
+.sg-insights-hero-image {
+  width: 100% !important;
+  min-height: clamp(360px, 42vw, 520px) !important;
+  margin-top: clamp(34px, 5vw, 58px) !important;
+  border-radius: 28px !important;
+  overflow: hidden !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
 
 .sg-services-hero-image {
   background:
     linear-gradient(180deg, rgba(20, 49, 38, 0.02), rgba(20, 49, 38, 0.08)),
     url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=85") !important;
-  background-size: cover !important;
-  background-position: center !important;
 }
-
-/* ===== SERVICES EXACT ABOUT HERO END ===== */
-
-
-/* ===== INSIGHTS EXACT ABOUT HERO START ===== */
-
-/*
-  Insights hero uses the exact About page hero structure/classes.
-  Only the image source is changed here.
-*/
 
 .sg-insights-hero-image {
   background:
     linear-gradient(180deg, rgba(20, 49, 38, 0.02), rgba(20, 49, 38, 0.08)),
     url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=85") !important;
-  background-size: cover !important;
-  background-position: center !important;
 }
 
-/* ===== INSIGHTS EXACT ABOUT HERO END ===== */
+@media (max-width: 900px) {
+  .sg-about-hero,
+  .sg-services-hero,
+  .sg-insights-hero {
+    padding: 34px var(--sg-page-pad-mobile, 16px) 0 !important;
+    text-align: left !important;
+  }
+
+  .sg-about-hero .sg-page-kicker,
+  .sg-services-hero .sg-page-kicker,
+  .sg-insights-hero .sg-page-kicker {
+    margin: 0 !important;
+    text-align: left !important;
+  }
+
+  .sg-about-hero h1,
+  .sg-services-hero h1,
+  .sg-insights-hero h1 {
+    max-width: 10ch !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    font-size: clamp(3rem, 14vw, 4.4rem) !important;
+  }
+
+  .sg-about-hero-image,
+  .sg-services-hero-image,
+  .sg-insights-hero-image {
+    min-height: 320px !important;
+    border-radius: 22px !important;
+  }
+}
+
+/* ===== UNIFIED PAGE HERO STANDARD END ===== */
