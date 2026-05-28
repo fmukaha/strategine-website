@@ -11717,3 +11717,40 @@ footer button:hover,
 }
 
 /* ===== FOOTER HOVER ANIMATION END ===== */
+
+
+/* ===== FOOTER HOVER LIME TEXT FIX START ===== */
+
+footer a:hover,
+.sg-footer a:hover,
+footer a:hover span,
+.sg-footer a:hover span,
+footer a:hover small,
+.sg-footer a:hover small {
+  color: var(--lime) !important;
+}
+
+footer a::after,
+.sg-footer a::after {
+  background: var(--lime) !important;
+}
+
+/* LinkedIn/social hover: lime icon/text on dark pill */
+.sg-footer-socials a:hover,
+.sg-socials a:hover,
+.footer-socials a:hover {
+  background: var(--dark) !important;
+  color: var(--lime) !important;
+}
+
+.sg-footer-socials a:hover svg,
+.sg-socials a:hover svg,
+.footer-socials a:hover svg,
+.sg-footer-socials a:hover span,
+.sg-socials a:hover span,
+.footer-socials a:hover span {
+  color: var(--lime) !important;
+  stroke: var(--lime) !important;
+}
+
+/* ===== FOOTER HOVER LIME TEXT FIX END ===== */
