@@ -71,6 +71,46 @@ const systemFlow = [
   },
 ];
 
+
+const servicePathways = [
+  {
+    title: "Risk visibility architecture",
+    text: "Map risk signals across grievances, audits, incidents, field activity, supplier records, and worker feedback.",
+    outcome: "A clearer view of what needs attention.",
+    href: "#risk-visibility",
+  },
+  {
+    title: "Evidence and data structure",
+    text: "Define the fields, records, source logic, validation checks, and evidence requirements needed for credible oversight.",
+    outcome: "A practical evidence model teams can maintain.",
+    href: "#evidence-structure",
+  },
+  {
+    title: "Grievance and response intelligence",
+    text: "Structure grievance, incident, remediation, escalation, and follow-up data into a usable management layer.",
+    outcome: "A way to see what is moving, stuck, or unresolved.",
+    href: "#response-tracking",
+  },
+  {
+    title: "Ownership and escalation design",
+    text: "Clarify who owns each risk, who reviews progress, when escalation happens, and what closure means.",
+    outcome: "Clear responsibility instead of loose follow-up.",
+    href: "#ownership",
+  },
+  {
+    title: "Leadership reporting rhythm",
+    text: "Design the management view leaders need to track exposure, progress, unresolved issues, and decisions required.",
+    outcome: "A repeatable oversight rhythm.",
+    href: "#leadership-reporting",
+  },
+  {
+    title: "Implementation support",
+    text: "Help translate the structure into tools, routines, reporting views, and team habits that can be used consistently.",
+    outcome: "A system that survives beyond the first report.",
+    href: "#implementation",
+  },
+];
+
 export default function ServicesPage() {
   return (
     <>
@@ -124,28 +164,40 @@ export default function ServicesPage() {
             })}
           </div></section>
 
-        <section className="sg-services-system-flow">
-          <div className="sg-services-system-copy">
-            <span className="sg-section-kicker">The system we build</span>
-            <h2>From scattered signals to managed accountability.</h2>
+        
+        <section className="sg-services-matrix-section">
+          <div className="sg-services-matrix-intro">
+            <span className="sg-section-kicker">Service pathways</span>
 
-            <p>
-              We help teams connect the signals they already have into a clear
-              operating model for evidence, ownership, response, and leadership
-              review.
-            </p>
+            <div>
+              <h2>Choose the accountability layer you need to strengthen.</h2>
+              <p>
+                Each pathway can stand alone or connect into a wider responsible
+                business intelligence system.
+              </p>
+            </div>
           </div>
 
-          <div className="sg-services-system-map" aria-label="Strategine accountability system flow">
-            {systemFlow.map((item, index) => (
-              <article className="sg-services-system-step" key={item.label}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
+          <div className="sg-services-matrix-grid">
+            {servicePathways.map((item) => (
+              <a href={item.href} className="sg-services-matrix-item" key={item.title}>
                 <div>
-                  <h3>{item.label}</h3>
+                  <h3>{item.title}</h3>
                   <p>{item.text}</p>
                 </div>
-              </article>
+
+                <div className="sg-services-matrix-outcome">
+                  <span>{item.outcome}</span>
+                  <strong aria-hidden="true">↗</strong>
+                </div>
+              </a>
             ))}
+
+            <div className="sg-services-matrix-cta">
+              <span className="sg-section-kicker">Not sure where to start?</span>
+              <h3>Tell us what you are trying to evidence or bring under control.</h3>
+              <a href="/contact">Start a project inquiry</a>
+            </div>
           </div>
         </section>
       </main>
