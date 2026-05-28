@@ -115,6 +115,24 @@ export default function ServicesPage() {
             <p>Reports connect to evidence.</p>
           </div>
 </section>
+        <section className="sg-services-contact-cta">
+          <div>
+            <span className="sg-section-kicker">Start here</span>
+            <h2>Need to make due diligence easier to manage?</h2>
+          </div>
+
+          <div>
+            <p>
+              Tell us what you are trying to evidence, improve, or bring under
+              control. We will help you structure the system behind it.
+            </p>
+
+            <Link href="/contact" className="sg-services-contact-button">
+              Start a project inquiry
+            </Link>
+          </div>
+        </section>
+
 </main>
 
       <Footer />
