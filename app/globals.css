@@ -12209,3 +12209,20 @@ footer a::after,
 }
 
 /* ===== SERVICES HERO STANDARD RESET END ===== */
+
+
+/* ===== SERVICES HERO TOP SPACING MATCH ABOUT START ===== */
+
+.sg-services-top-hero {
+  padding-top: clamp(48px, 7vw, 88px) !important;
+  padding-bottom: clamp(42px, 6vw, 76px) !important;
+}
+
+@media (max-width: 900px) {
+  .sg-services-top-hero {
+    padding-top: 42px !important;
+    padding-bottom: 38px !important;
+  }
+}
+
+/* ===== SERVICES HERO TOP SPACING MATCH ABOUT END ===== */
