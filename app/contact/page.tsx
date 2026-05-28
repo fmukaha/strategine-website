@@ -22,5 +22,5 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  return <ContactClient />;
+  return <div id="project-inquiry" className="sg-contact-form-anchor"><ContactClient /></div>;
 }

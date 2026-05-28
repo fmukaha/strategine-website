@@ -170,43 +170,6 @@ export default function ServicesPage() {
               );
             })}
           </div></section>
-
-        
-        <section className="sg-services-matrix-section">
-          <div className="sg-services-matrix-intro">
-            <span className="sg-section-kicker">Service pathways</span>
-
-            <div>
-              <h2>Choose the accountability layer you need to strengthen.</h2>
-              <p>
-                Each pathway can stand alone or connect into a wider responsible
-                business intelligence system.
-              </p>
-            </div>
-          </div>
-
-          <div className="sg-services-matrix-grid">
-            {servicePathways.map((item) => (
-              <a href={item.href} className="sg-services-matrix-item" key={item.title}>
-                <div>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </div>
-
-                <div className="sg-services-matrix-outcome">
-                  <span>{item.outcome}</span>
-                  <strong aria-hidden="true">↗</strong>
-                </div>
-              </a>
-            ))}
-
-            <div className="sg-services-matrix-cta">
-              <span className="sg-section-kicker">Not sure where to start?</span>
-              <h3>Tell us what you are trying to evidence or bring under control.</h3>
-              <a href="/contact#project-inquiry">Start a project inquiry</a>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />

@@ -12650,3 +12650,104 @@ footer a::after,
 }
 
 /* ===== SERVICES DIRECT FORM CTA END ===== */
+
+
+/* ===== SERVICES SELECTOR BREATHING ROOM START ===== */
+
+/* Direct form jump target */
+.sg-contact-form-anchor,
+#project-inquiry {
+  scroll-margin-top: 96px;
+}
+
+/* Make selector section feel less squeezed */
+.sg-services-problem-selector {
+  margin-bottom: clamp(84px, 10vw, 140px) !important;
+}
+
+.sg-services-selector-head {
+  margin-bottom: clamp(42px, 5vw, 64px) !important;
+}
+
+.sg-services-problem-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+}
+
+/* Let the fifth card breathe instead of becoming a narrow column */
+.sg-services-problem-card {
+  min-height: 320px !important;
+  padding: 28px !important;
+}
+
+.sg-services-problem-card h3 {
+  max-width: 14ch !important;
+  font-size: clamp(1.45rem, 1.9vw, 2rem) !important;
+}
+
+.sg-services-problem-card p {
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+}
+
+/* Make the “not sure” card a strong wide CTA */
+.sg-services-problem-card:last-child {
+  grid-column: span 2 !important;
+  min-height: 320px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+
+.sg-services-problem-card:last-child h3 {
+  max-width: 16ch !important;
+}
+
+.sg-services-problem-card:last-child p {
+  max-width: 520px !important;
+}
+
+/* Remove old section spacing if removed section classes still exist somewhere */
+.sg-services-matrix-section,
+.sg-services-system-flow {
+  display: none !important;
+}
+
+@media (max-width: 1100px) {
+  .sg-services-problem-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .sg-services-problem-card:last-child {
+    grid-column: span 2 !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .sg-contact-form-anchor,
+  #project-inquiry {
+    scroll-margin-top: 78px;
+  }
+
+  .sg-services-problem-selector {
+    margin-bottom: 72px !important;
+  }
+
+  .sg-services-selector-head {
+    margin-bottom: 28px !important;
+  }
+
+  .sg-services-problem-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .sg-services-problem-card,
+  .sg-services-problem-card:last-child {
+    grid-column: auto !important;
+    min-height: 260px !important;
+    padding: 24px !important;
+  }
+}
+
+/* ===== SERVICES SELECTOR BREATHING ROOM END ===== */
