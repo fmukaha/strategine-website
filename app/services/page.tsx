@@ -47,6 +47,30 @@ const problemCards = [
   },
 ];
 
+
+const systemFlow = [
+  {
+    label: "Risk signals",
+    text: "Grievances, audits, incidents, field activity, supplier records, and worker feedback.",
+  },
+  {
+    label: "Evidence",
+    text: "Documents, actions, dates, owners, status, validation notes, and supporting records.",
+  },
+  {
+    label: "Ownership",
+    text: "Clear responsibility for follow-up, escalation, review, and closure.",
+  },
+  {
+    label: "Response",
+    text: "Track action taken, unresolved exposure, remediation status, and next decisions.",
+  },
+  {
+    label: "Leadership view",
+    text: "A practical management layer for oversight, reporting, and accountability.",
+  },
+];
+
 export default function ServicesPage() {
   return (
     <>
@@ -98,6 +122,30 @@ export default function ServicesPage() {
                 </Link>
               );
             })}
+          </div></section>
+
+        <section className="sg-services-system-flow">
+          <div className="sg-services-system-copy">
+            <span className="sg-section-kicker">The system we build</span>
+            <h2>From scattered signals to managed accountability.</h2>
+
+            <p>
+              We help teams connect the signals they already have into a clear
+              operating model for evidence, ownership, response, and leadership
+              review.
+            </p>
+          </div>
+
+          <div className="sg-services-system-map" aria-label="Strategine accountability system flow">
+            {systemFlow.map((item, index) => (
+              <article className="sg-services-system-step" key={item.label}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <div>
+                  <h3>{item.label}</h3>
+                  <p>{item.text}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </section>
       </main>
