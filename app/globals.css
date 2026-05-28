@@ -11886,3 +11886,73 @@ footer a::after,
 }
 
 /* ===== SERVICES CTA HEADER SIZE FIX END ===== */
+
+
+/* ===== ABOUT LINK ALIGNMENT FIX START ===== */
+
+/* Fix UNGP link wrapping/alignment in About mission text */
+.sg-about-page .sg-inline-link,
+.sg-home-mission-card .sg-inline-link,
+.sg-services-contact-cta .sg-inline-link {
+  display: inline !important;
+  color: var(--dark) !important;
+  text-decoration: underline !important;
+  text-underline-offset: 4px !important;
+  text-decoration-thickness: 1px !important;
+  white-space: normal !important;
+}
+
+/* Hide old loose external-link span/icon that was drifting */
+.sg-about-page .sg-inline-link span,
+.sg-home-mission-card .sg-inline-link span,
+.sg-services-contact-cta .sg-inline-link span {
+  display: none !important;
+}
+
+/* Add consistent compact link button immediately after text */
+.sg-about-page .sg-inline-link::after,
+.sg-home-mission-card .sg-inline-link::after,
+.sg-services-contact-cta .sg-inline-link::after {
+  content: "↗" !important;
+  width: 28px !important;
+  height: 28px !important;
+  margin-left: 8px !important;
+  border-radius: 999px !important;
+  background: var(--soft) !important;
+  color: var(--dark) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 0.85rem !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  vertical-align: middle !important;
+  transform: translateY(-1px) !important;
+  transition: background 0.16s ease, color 0.16s ease, transform 0.16s ease !important;
+}
+
+.sg-about-page .sg-inline-link:hover::after,
+.sg-home-mission-card .sg-inline-link:hover::after,
+.sg-services-contact-cta .sg-inline-link:hover::after {
+  background: var(--lime) !important;
+  color: var(--dark) !important;
+  transform: translate(2px, -3px) !important;
+}
+
+/* Keep the paragraph rhythm clean */
+.sg-about-page p,
+.sg-home-mission-card p {
+  text-wrap: pretty;
+}
+
+@media (max-width: 900px) {
+  .sg-about-page .sg-inline-link::after,
+  .sg-home-mission-card .sg-inline-link::after,
+  .sg-services-contact-cta .sg-inline-link::after {
+    width: 26px !important;
+    height: 26px !important;
+    margin-left: 6px !important;
+  }
+}
+
+/* ===== ABOUT LINK ALIGNMENT FIX END ===== */
