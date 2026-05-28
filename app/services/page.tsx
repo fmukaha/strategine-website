@@ -45,6 +45,13 @@ const problemCards = [
     icon: BarChart3,
     tag: "Oversight",
   },
+  {
+    title: "I am not sure where this fits",
+    text: "Tell us what you are trying to evidence, improve, or bring under control. We will help you identify the right starting point.",
+    href: "/contact#project-inquiry",
+    icon: ArrowUpRight,
+    tag: "Talk to us",
+  },
 ];
 
 
@@ -196,7 +203,7 @@ export default function ServicesPage() {
             <div className="sg-services-matrix-cta">
               <span className="sg-section-kicker">Not sure where to start?</span>
               <h3>Tell us what you are trying to evidence or bring under control.</h3>
-              <a href="/contact">Start a project inquiry</a>
+              <a href="/contact#project-inquiry">Start a project inquiry</a>
             </div>
           </div>
         </section>

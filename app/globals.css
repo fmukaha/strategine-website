@@ -12577,3 +12577,76 @@ footer a::after,
 }
 
 /* ===== SERVICES MATRIX SECTION END ===== */
+
+
+/* ===== SERVICES DIRECT FORM CTA START ===== */
+
+/* 5-card service selector: 4 problem cards + 1 direct contact card */
+.sg-services-problem-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+}
+
+.sg-services-problem-card:last-child {
+  background:
+    radial-gradient(circle at 88% 14%, rgba(199, 220, 73, 0.34), transparent 34%),
+    var(--dark) !important;
+  color: #ffffff !important;
+}
+
+.sg-services-problem-card:last-child h3,
+.sg-services-problem-card:last-child p {
+  color: #ffffff !important;
+}
+
+.sg-services-problem-card:last-child .sg-services-problem-top span {
+  background: var(--lime) !important;
+  color: var(--dark) !important;
+}
+
+.sg-services-problem-card:last-child .sg-services-problem-top svg {
+  color: var(--lime) !important;
+}
+
+.sg-services-problem-card:last-child .sg-services-problem-arrow {
+  background: var(--lime) !important;
+  color: var(--dark) !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.sg-services-problem-card:last-child:hover {
+  background: var(--lime) !important;
+  color: var(--dark) !important;
+}
+
+.sg-services-problem-card:last-child:hover h3,
+.sg-services-problem-card:last-child:hover p {
+  color: var(--dark) !important;
+}
+
+.sg-services-problem-card:last-child:hover .sg-services-problem-arrow {
+  background: var(--dark) !important;
+  color: var(--lime) !important;
+}
+
+#project-inquiry {
+  scroll-margin-top: 92px;
+}
+
+@media (max-width: 1180px) {
+  .sg-services-problem-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .sg-services-problem-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  #project-inquiry {
+    scroll-margin-top: 76px;
+  }
+}
+
+/* ===== SERVICES DIRECT FORM CTA END ===== */
