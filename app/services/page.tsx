@@ -1,37 +1,79 @@
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import {
-  BarChart3,
-  FileSearch,
-  GitBranch,
-  Layers3,
-  Network,
-  ShieldCheck,
-} from "lucide-react";
+import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 
-const stats = [
-  { value: "6+", label: "Intelligence domains", icon: Network },
-  { value: "3", label: "Data maturity layers", icon: Layers3 },
-  { value: "1", label: "Accountability system", icon: ShieldCheck },
+export const metadata: Metadata = {
+  title: "Services | Strategine",
+  description:
+    "Strategine helps organisations build responsible business intelligence systems for HREDD, risk visibility, evidence, accountability, and leadership oversight.",
+};
+
+const audiences = [
+  {
+    title: "Leadership teams",
+    text: "Need confidence that commitments are backed by evidence, ownership, and review.",
+  },
+  {
+    title: "Sustainability and ESG teams",
+    text: "Need practical systems for HREDD, environmental due diligence, and responsible business oversight.",
+  },
+  {
+    title: "Operations and field teams",
+    text: "Need workflows that connect grievances, audits, incidents, field activity, and follow-up actions.",
+  },
 ];
 
-const services = [
+const pathways = [
   {
-    title: "Landscape diagnostic",
-    text: "Map data sources, workflows, risks, evidence gaps, and reporting readiness.",
-    icon: FileSearch,
+    title: "Due diligence system design",
+    text: "Map risks, responsibilities, evidence needs, review routines, and escalation pathways.",
   },
   {
-    title: "Reporting architecture",
-    text: "Define KPIs, ownership, escalation, action tracking, and reporting logic.",
-    icon: BarChart3,
+    title: "Risk and evidence architecture",
+    text: "Define what data matters, where it comes from, how it is validated, and how it supports decisions.",
   },
   {
-    title: "System build",
-    text: "Build evidence structures, evidence systems, workflows, access rules, and review routines.",
-    icon: GitBranch,
+    title: "Grievance and response intelligence",
+    text: "Structure grievance, incident, and remediation data so teams can see patterns, ownership, and follow-up status.",
   },
+  {
+    title: "Leadership reporting rhythm",
+    text: "Build the management view that helps leaders track risk, response, progress, and unresolved exposure.",
+  },
+];
+
+const process = [
+  {
+    step: "01",
+    title: "Diagnose",
+    text: "Understand workflows, data sources, governance gaps, reporting needs, and accountability risks.",
+  },
+  {
+    step: "02",
+    title: "Structure",
+    text: "Design indicators, roles, evidence fields, escalation logic, review cycles, and decision points.",
+  },
+  {
+    step: "03",
+    title: "Build",
+    text: "Translate the structure into usable tools, records, reporting views, and management routines.",
+  },
+  {
+    step: "04",
+    title: "Embed",
+    text: "Support teams to use the system consistently, improve data quality, and turn insights into action.",
+  },
+];
+
+const outputs = [
+  "A practical accountability model",
+  "Clear data and evidence requirements",
+  "Defined ownership and escalation points",
+  "Risk and response tracking structures",
+  "Management-ready reporting logic",
+  "A stronger basis for responsible business oversight",
 ];
 
 export default function ServicesPage() {
@@ -39,83 +81,99 @@ export default function ServicesPage() {
     <>
       <Header />
 
-      <main className="sg-services-page">
-        <section className="sg-standard-hero sg-services-hero">
+      <main className="sg-services-v2-page">
+        <section className="sg-services-v2-hero">
           <span className="sg-page-kicker">Services</span>
-          <h1>Responsible intelligence systems.</h1>
-          <div className="sg-services-image" aria-label="Strategine services" />
+          <h1>Build the systems behind responsible business.</h1>
+          <p>
+            Strategine helps organisations turn due diligence commitments into
+            practical systems for risk visibility, evidence, accountability, and
+            leadership oversight.
+          </p>
         </section>
 
-        <section className="sg-standard-intro sg-services-intro">
+        <section className="sg-services-v2-split">
           <div>
-            <span className="sg-section-kicker">What we do</span>
-            <h2>Make risk visible.</h2>
+            <span className="sg-section-kicker">What we build</span>
+            <h2>Not reports. Operating systems for accountability.</h2>
           </div>
 
-          <div className="sg-services-copy">
-            <p>
-              Strategine helps organisations turn complex operational data into
-              clear intelligence for responsible business oversight.
-            </p>
-            <p>
-              We structure the logic behind reporting, escalation, ownership,
-              evidence, and action.
-            </p>
-            <p>
-              The result is a practical system leadership can use routinely.
-            </p>
+          <p>
+            We design the structures that help teams know what risks exist, who
+            owns them, what action has been taken, what evidence supports the
+            response, and what still needs management attention.
+          </p>
+        </section>
+
+        <section className="sg-services-v2-section">
+          <div className="sg-services-v2-section-head">
+            <span className="sg-section-kicker">Who it helps</span>
+            <h2>Built for teams that need clarity.</h2>
+          </div>
+
+          <div className="sg-services-v2-card-grid">
+            {audiences.map((item) => (
+              <article className="sg-services-v2-card" key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
           </div>
         </section>
 
-        <section className="sg-standard-stats sg-services-stats">
-          {stats.map((item) => {
-            const Icon = item.icon;
+        <section className="sg-services-v2-section">
+          <div className="sg-services-v2-section-head">
+            <span className="sg-section-kicker">Service pathways</span>
+            <h2>Where we can support.</h2>
+          </div>
 
-            return (
-              <div key={item.label} className="sg-services-stat">
-                <span className="sg-stat-icon" aria-hidden="true">
-                  <Icon size={24} strokeWidth={1.7} />
-                </span>
-                <strong>{item.value}</strong>
-                <small>{item.label}</small>
-              </div>
-            );
-          })}
-        </section>
-
-        <section className="sg-service-grid-section">
-          <span className="sg-section-kicker">How we help</span>
-          <h2>Three practical entry points.</h2>
-
-          <div className="sg-service-grid">
-            {services.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <article className="sg-service-card" key={item.title}>
-                  <span className="sg-card-symbol" aria-hidden="true">
-                    <Icon size={24} strokeWidth={1.6} />
-                  </span>
-
+          <div className="sg-services-v2-pathways">
+            {pathways.map((item) => (
+              <article className="sg-services-v2-pathway" key={item.title}>
+                <div>
                   <h3>{item.title}</h3>
                   <p>{item.text}</p>
-</article>
-              );
-            })}
+                </div>
+                <ArrowUpRight size={18} strokeWidth={1.8} aria-hidden="true" />
+              </article>
+            ))}
           </div>
         </section>
 
-        <section className="sg-impact-section">
-          <span className="sg-section-kicker">Outcome</span>
-          <h2>Clearer oversight. Faster action.</h2>
-
-          <div className="sg-impact-points">
-            <p>Leadership sees the signal.</p>
-            <p>Teams understand ownership.</p>
-            <p>Reports connect to evidence.</p>
+        <section className="sg-services-v2-process">
+          <div className="sg-services-v2-section-head">
+            <span className="sg-section-kicker">How we work</span>
+            <h2>Simple enough to use. Strong enough to govern.</h2>
           </div>
-</section>
-        <section className="sg-services-contact-cta">
+
+          <div className="sg-services-v2-process-grid">
+            {process.map((item) => (
+              <article className="sg-services-v2-process-card" key={item.step}>
+                <span>{item.step}</span>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="sg-services-v2-outputs">
+          <div>
+            <span className="sg-section-kicker">What you walk away with</span>
+            <h2>A stronger accountability layer.</h2>
+          </div>
+
+          <div className="sg-services-v2-output-list">
+            {outputs.map((item) => (
+              <div key={item}>
+                <CheckCircle2 size={18} strokeWidth={1.9} aria-hidden="true" />
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="sg-services-v2-cta">
           <div>
             <span className="sg-section-kicker">Start here</span>
             <h2>Need to make due diligence easier to manage?</h2>
@@ -127,13 +185,13 @@ export default function ServicesPage() {
               control. We will help you structure the system behind it.
             </p>
 
-            <Link href="/contact" className="sg-services-contact-button">
+            <Link href="/contact">
               Start a project inquiry
+              <ArrowUpRight size={18} strokeWidth={1.8} aria-hidden="true" />
             </Link>
           </div>
         </section>
-
-</main>
+      </main>
 
       <Footer />
     </>
