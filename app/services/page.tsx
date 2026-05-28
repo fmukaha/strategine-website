@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   description:
     "Strategine services for responsible business intelligence, HREDD, risk visibility, evidence, and accountability systems.",
 };
-
 
 const serviceFoundations = [
   {
@@ -39,30 +38,30 @@ export default function ServicesPage() {
             ownership, and leadership oversight.
           </p>
         </section>
-        <section className="sg-services-foundation">
-          <div className="sg-services-split-head">
-            <div>
-              <span className="sg-section-kicker">What we build</span>
-              <h2>Operating systems for accountability.</h2>
-            </div>
 
+        <section className="sg-standard-intro">
+          <div>
+            <span className="sg-section-kicker">What we build</span>
+            <h2>Operating systems for accountability.</h2>
+          </div>
+
+          <div>
             <p>
               We design the structures that help teams know what risks exist,
               who owns them, what action has been taken, what evidence supports
               the response, and what still needs management attention.
             </p>
           </div>
-
-          <div className="sg-services-foundation-grid">
-            {serviceFoundations.map((item) => (
-              <article className="sg-services-foundation-card" key={item.title}>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </article>
-            ))}
-          </div>
         </section>
 
+        <section className="sg-home-focus-grid">
+          {serviceFoundations.map((item) => (
+            <article className="sg-home-focus-card" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </section>
       </main>
 
       <Footer />
