@@ -53,16 +53,13 @@ export default function ServicesPage() {
       <Header />
 
       <main className="sg-services-page">
-                <section className="sg-services-top-hero">
+        <section className="sg-standard-hero sg-services-about-style-hero">
           <span className="sg-page-kicker">Services</span>
-
           <h1>Build the systems behind responsible business.</h1>
-
-          <p>
-            We help organisations move from policies and scattered records to
-            structured accountability systems for risk visibility, evidence,
-            ownership, and leadership oversight.
-          </p>
+          <div
+            className="sg-services-hero-image"
+            aria-label="Strategine responsible business services"
+          />
         </section>
 
         <section className="sg-services-problem-selector">
