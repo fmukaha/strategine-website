@@ -11867,3 +11867,22 @@ footer a::after,
 }
 
 /* ===== SERVICES CONTACT CTA END ===== */
+
+
+/* ===== SERVICES CTA HEADER SIZE FIX START ===== */
+
+.sg-services-contact-cta h2 {
+  max-width: 620px !important;
+  font-size: clamp(2rem, 2.8vw, 2.8rem) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.05em !important;
+}
+
+@media (max-width: 900px) {
+  .sg-services-contact-cta h2 {
+    max-width: 12ch !important;
+    font-size: clamp(1.9rem, 8vw, 2.5rem) !important;
+  }
+}
+
+/* ===== SERVICES CTA HEADER SIZE FIX END ===== */
