@@ -12249,3 +12249,81 @@ footer a::after,
 }
 
 /* ===== UNIFIED PAGE HERO STANDARD END ===== */
+
+
+/* ===== PAGE HERO SPACING REFINEMENT START ===== */
+
+/* Tighter, cleaner hero standard for About, Services, Insights */
+.sg-about-hero,
+.sg-services-hero,
+.sg-insights-hero {
+  padding-top: clamp(24px, 3.6vw, 46px) !important;
+  padding-bottom: 0 !important;
+}
+
+.sg-about-hero h1,
+.sg-services-hero h1,
+.sg-insights-hero h1 {
+  max-width: 820px !important;
+  margin-top: 14px !important;
+  font-size: clamp(2.65rem, 4.6vw, 4.35rem) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.068em !important;
+}
+
+.sg-about-hero-image,
+.sg-services-hero-image,
+.sg-insights-hero-image {
+  margin-top: clamp(26px, 3.8vw, 42px) !important;
+  min-height: clamp(340px, 38vw, 480px) !important;
+}
+
+/* Fix spacing immediately after hero image */
+.sg-about-hero + section,
+.sg-services-hero + section,
+.sg-insights-hero + section {
+  margin-top: clamp(54px, 7vw, 86px) !important;
+}
+
+/* Prevent duplicated page-section top gaps after hero */
+.sg-about-page > section:nth-child(2),
+.sg-services-page > section:nth-child(2),
+.sg-insights-page > section:nth-child(2) {
+  margin-top: clamp(54px, 7vw, 86px) !important;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .sg-about-hero,
+  .sg-services-hero,
+  .sg-insights-hero {
+    padding-top: 24px !important;
+  }
+
+  .sg-about-hero h1,
+  .sg-services-hero h1,
+  .sg-insights-hero h1 {
+    max-width: 11ch !important;
+    margin-top: 12px !important;
+    font-size: clamp(2.65rem, 11.5vw, 3.75rem) !important;
+    line-height: 1.02 !important;
+  }
+
+  .sg-about-hero-image,
+  .sg-services-hero-image,
+  .sg-insights-hero-image {
+    margin-top: 24px !important;
+    min-height: 300px !important;
+  }
+
+  .sg-about-hero + section,
+  .sg-services-hero + section,
+  .sg-insights-hero + section,
+  .sg-about-page > section:nth-child(2),
+  .sg-services-page > section:nth-child(2),
+  .sg-insights-page > section:nth-child(2) {
+    margin-top: 46px !important;
+  }
+}
+
+/* ===== PAGE HERO SPACING REFINEMENT END ===== */
