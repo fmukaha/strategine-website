@@ -12226,3 +12226,25 @@ footer a::after,
 }
 
 /* ===== SERVICES HERO TOP SPACING MATCH ABOUT END ===== */
+
+
+/* ===== SERVICES HERO FINAL TOP ALIGNMENT START ===== */
+
+/* Match Services hero start position closer to About page */
+.sg-services-top-hero {
+  padding-top: clamp(30px, 4vw, 52px) !important;
+  padding-bottom: clamp(42px, 6vw, 72px) !important;
+}
+
+.sg-services-top-hero .sg-page-kicker {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 900px) {
+  .sg-services-top-hero {
+    padding-top: 30px !important;
+    padding-bottom: 38px !important;
+  }
+}
+
+/* ===== SERVICES HERO FINAL TOP ALIGNMENT END ===== */
