@@ -13084,3 +13084,69 @@ footer a::after,
 }
 
 /* ===== SERVICES CTA THIN HORIZONTAL END ===== */
+
+
+/* ===== SERVICES FINAL CTA TEXT ONLY START ===== */
+
+.sg-services-problem-card:last-child {
+  cursor: pointer !important;
+  grid-template-columns: minmax(0, 0.42fr) minmax(0, 1fr) auto !important;
+}
+
+.sg-services-problem-card:last-child .sg-services-problem-top {
+  display: none !important;
+}
+
+.sg-services-problem-card:last-child > div:nth-of-type(2) {
+  display: contents !important;
+}
+
+.sg-services-problem-card:last-child h3 {
+  grid-column: 1 !important;
+  color: #ffffff !important;
+}
+
+.sg-services-problem-card:last-child p {
+  grid-column: 2 !important;
+  color: #ffffff !important;
+}
+
+.sg-services-problem-card:last-child .sg-services-problem-arrow {
+  grid-column: 3 !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.sg-services-problem-card:last-child:hover h3,
+.sg-services-problem-card:last-child:hover p {
+  color: var(--dark) !important;
+}
+
+.sg-contact-form-anchor,
+#project-inquiry {
+  scroll-margin-top: 96px !important;
+}
+
+@media (max-width: 900px) {
+  .sg-services-problem-card:last-child {
+    grid-template-columns: 1fr auto !important;
+    grid-template-rows: auto auto !important;
+  }
+
+  .sg-services-problem-card:last-child h3,
+  .sg-services-problem-card:last-child p {
+    grid-column: 1 / -1 !important;
+  }
+
+  .sg-services-problem-card:last-child .sg-services-problem-arrow {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+  }
+
+  .sg-contact-form-anchor,
+  #project-inquiry {
+    scroll-margin-top: 78px !important;
+  }
+}
+
+/* ===== SERVICES FINAL CTA TEXT ONLY END ===== */
