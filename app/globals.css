@@ -12891,3 +12891,41 @@ footer a::after,
 }
 
 /* ===== SERVICES COMPACT CTA LINK END ===== */
+
+
+/* ===== SERVICES CTA PILL TOP ALIGN START ===== */
+
+.sg-services-problem-card:last-child {
+  align-items: start !important;
+}
+
+.sg-services-problem-card:last-child .sg-services-problem-top {
+  align-self: start !important;
+  padding-top: 2px !important;
+}
+
+.sg-services-problem-card:last-child > div:nth-of-type(2) {
+  align-self: start !important;
+}
+
+.sg-services-problem-card:last-child .sg-services-problem-arrow {
+  align-self: start !important;
+  margin-top: 0 !important;
+}
+
+@media (max-width: 900px) {
+  .sg-services-problem-card:last-child {
+    align-items: start !important;
+  }
+
+  .sg-services-problem-card:last-child .sg-services-problem-top {
+    grid-column: 1 / -1 !important;
+    align-self: start !important;
+  }
+
+  .sg-services-problem-card:last-child .sg-services-problem-arrow {
+    align-self: end !important;
+  }
+}
+
+/* ===== SERVICES CTA PILL TOP ALIGN END ===== */
