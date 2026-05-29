@@ -12929,3 +12929,74 @@ footer a::after,
 }
 
 /* ===== SERVICES CTA PILL TOP ALIGN END ===== */
+
+
+/* ===== SERVICES CTA MATCH CARD STRUCTURE START ===== */
+
+/* Make the final "not sure" CTA follow the same internal structure as the other service cards */
+.sg-services-problem-card:last-child {
+  grid-column: 1 / -1 !important;
+  min-height: 240px !important;
+  border-radius: 26px !important;
+  padding: 28px !important;
+  display: grid !important;
+  grid-template-rows: auto 1fr auto !important;
+  grid-template-columns: 1fr !important;
+  gap: 28px !important;
+  align-items: stretch !important;
+}
+
+.sg-services-problem-card:last-child .sg-services-problem-top {
+  width: 100% !important;
+  align-self: start !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 14px !important;
+  padding-top: 0 !important;
+}
+
+.sg-services-problem-card:last-child .sg-services-problem-top svg {
+  display: block !important;
+  color: var(--lime) !important;
+}
+
+.sg-services-problem-card:last-child > div:nth-of-type(2) {
+  align-self: start !important;
+  max-width: 760px !important;
+}
+
+.sg-services-problem-card:last-child h3 {
+  max-width: 16ch !important;
+  margin: 0 !important;
+  font-size: clamp(1.45rem, 1.9vw, 2rem) !important;
+  line-height: 1.12 !important;
+}
+
+.sg-services-problem-card:last-child p {
+  max-width: 680px !important;
+  margin-top: 18px !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+}
+
+.sg-services-problem-card:last-child .sg-services-problem-arrow {
+  justify-self: end !important;
+  align-self: end !important;
+  width: 42px !important;
+  height: 42px !important;
+}
+
+@media (max-width: 900px) {
+  .sg-services-problem-card:last-child {
+    min-height: 250px !important;
+    padding: 24px !important;
+    gap: 24px !important;
+  }
+
+  .sg-services-problem-card:last-child > div:nth-of-type(2) {
+    max-width: 100% !important;
+  }
+}
+
+/* ===== SERVICES CTA MATCH CARD STRUCTURE END ===== */
