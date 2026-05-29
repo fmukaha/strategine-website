@@ -12829,3 +12829,65 @@ footer a::after,
 }
 
 /* ===== SERVICES SELECTOR 2X2 CTA LAYOUT END ===== */
+
+
+/* ===== SERVICES COMPACT CTA LINK START ===== */
+
+.sg-services-problem-card:last-child {
+  min-height: 96px !important;
+  border-radius: 24px !important;
+  padding: 22px 26px !important;
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr) auto !important;
+  gap: 24px !important;
+  align-items: center !important;
+}
+
+.sg-services-problem-card:last-child .sg-services-problem-top {
+  align-self: center !important;
+}
+
+.sg-services-problem-card:last-child .sg-services-problem-top svg {
+  display: none !important;
+}
+
+.sg-services-problem-card:last-child h3 {
+  max-width: none !important;
+  margin: 0 !important;
+  font-size: clamp(1.4rem, 2vw, 2rem) !important;
+  line-height: 1.1 !important;
+}
+
+.sg-services-problem-card:last-child p {
+  max-width: 720px !important;
+  margin-top: 8px !important;
+  font-size: 14px !important;
+  line-height: 1.45 !important;
+}
+
+.sg-services-problem-card:last-child .sg-services-problem-arrow {
+  width: 42px !important;
+  height: 42px !important;
+  justify-self: end !important;
+  align-self: center !important;
+}
+
+@media (max-width: 900px) {
+  .sg-services-problem-card:last-child {
+    min-height: auto !important;
+    grid-template-columns: 1fr auto !important;
+    gap: 18px !important;
+    padding: 22px !important;
+  }
+
+  .sg-services-problem-card:last-child .sg-services-problem-top {
+    grid-column: 1 / -1 !important;
+  }
+
+  .sg-services-problem-card:last-child .sg-services-problem-arrow {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+  }
+}
+
+/* ===== SERVICES COMPACT CTA LINK END ===== */
