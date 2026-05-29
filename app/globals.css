@@ -13000,3 +13000,87 @@ footer a::after,
 }
 
 /* ===== SERVICES CTA MATCH CARD STRUCTURE END ===== */
+
+
+/* ===== SERVICES CTA THIN HORIZONTAL START ===== */
+
+.sg-services-problem-card:last-child {
+  grid-column: 1 / -1 !important;
+  min-height: 112px !important;
+  border-radius: 24px !important;
+  padding: 22px 28px !important;
+  display: grid !important;
+  grid-template-columns: auto minmax(260px, 0.45fr) minmax(0, 1fr) auto !important;
+  grid-template-rows: 1fr !important;
+  gap: 24px !important;
+  align-items: center !important;
+}
+
+.sg-services-problem-card:last-child .sg-services-problem-top {
+  align-self: center !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 12px !important;
+  padding: 0 !important;
+}
+
+.sg-services-problem-card:last-child .sg-services-problem-top svg {
+  display: block !important;
+  color: var(--lime) !important;
+}
+
+.sg-services-problem-card:last-child > div:nth-of-type(2) {
+  display: contents !important;
+}
+
+.sg-services-problem-card:last-child h3 {
+  max-width: none !important;
+  margin: 0 !important;
+  font-size: clamp(1.35rem, 1.8vw, 1.9rem) !important;
+  line-height: 1.1 !important;
+}
+
+.sg-services-problem-card:last-child p {
+  max-width: none !important;
+  margin: 0 !important;
+  font-size: 14px !important;
+  line-height: 1.45 !important;
+}
+
+.sg-services-problem-card:last-child .sg-services-problem-arrow {
+  justify-self: end !important;
+  align-self: center !important;
+  width: 42px !important;
+  height: 42px !important;
+}
+
+@media (max-width: 900px) {
+  .sg-services-problem-card:last-child {
+    min-height: auto !important;
+    padding: 22px !important;
+    grid-template-columns: 1fr auto !important;
+    grid-template-rows: auto auto auto !important;
+    gap: 18px !important;
+  }
+
+  .sg-services-problem-card:last-child .sg-services-problem-top {
+    grid-column: 1 / -1 !important;
+  }
+
+  .sg-services-problem-card:last-child > div:nth-of-type(2) {
+    display: block !important;
+    grid-column: 1 / -1 !important;
+  }
+
+  .sg-services-problem-card:last-child p {
+    margin-top: 10px !important;
+  }
+
+  .sg-services-problem-card:last-child .sg-services-problem-arrow {
+    grid-column: 2 !important;
+    grid-row: 3 !important;
+  }
+}
+
+/* ===== SERVICES CTA THIN HORIZONTAL END ===== */
