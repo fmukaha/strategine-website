@@ -12751,3 +12751,81 @@ footer a::after,
 }
 
 /* ===== SERVICES SELECTOR BREATHING ROOM END ===== */
+
+
+/* ===== SERVICES SELECTOR 2X2 CTA LAYOUT START ===== */
+
+.sg-services-problem-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+}
+
+.sg-services-problem-card {
+  min-height: 280px !important;
+  padding: 28px !important;
+}
+
+/* Last card becomes standalone CTA below the 4 options */
+.sg-services-problem-card:last-child {
+  grid-column: 1 / -1 !important;
+  min-height: 220px !important;
+  border-radius: 28px !important;
+  display: grid !important;
+  grid-template-columns: 0.7fr 1fr auto !important;
+  gap: clamp(24px, 5vw, 72px) !important;
+  align-items: center !important;
+  padding: clamp(28px, 4vw, 44px) !important;
+}
+
+.sg-services-problem-card:last-child .sg-services-problem-top {
+  align-self: start !important;
+}
+
+.sg-services-problem-card:last-child h3 {
+  max-width: 420px !important;
+  margin: 0 !important;
+}
+
+.sg-services-problem-card:last-child p {
+  max-width: 560px !important;
+  margin-top: 0 !important;
+}
+
+.sg-services-problem-card:last-child .sg-services-problem-arrow {
+  justify-self: end !important;
+  align-self: center !important;
+  width: 44px !important;
+  height: 44px !important;
+}
+
+/* Keep normal cards balanced */
+.sg-services-problem-card:not(:last-child) h3 {
+  max-width: 15ch !important;
+}
+
+.sg-services-problem-card:not(:last-child) p {
+  max-width: 520px !important;
+}
+
+@media (max-width: 900px) {
+  .sg-services-problem-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .sg-services-problem-card,
+  .sg-services-problem-card:last-child {
+    grid-column: auto !important;
+    min-height: 250px !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding: 24px !important;
+  }
+
+  .sg-services-problem-card:last-child .sg-services-problem-arrow {
+    justify-self: end !important;
+  }
+}
+
+/* ===== SERVICES SELECTOR 2X2 CTA LAYOUT END ===== */
