@@ -20,7 +20,7 @@ const problemCards = [
   {
     title: "I need risk visibility",
     text: "Bring scattered signals from grievances, audits, field activity, incidents, supplier records, and worker feedback into one clearer management view.",
-    href: "#risk-visibility",
+    href: "/services/risk-visibility",
     icon: Radar,
     tag: "Risk signals",
   },
@@ -84,7 +84,7 @@ const servicePathways = [
     title: "Risk visibility architecture",
     text: "Map risk signals across grievances, audits, incidents, field activity, supplier records, and worker feedback.",
     outcome: "A clearer view of what needs attention.",
-    href: "#risk-visibility",
+    href: "/services/risk-visibility",
   },
   {
     title: "Evidence and data structure",

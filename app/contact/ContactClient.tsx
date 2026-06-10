@@ -132,7 +132,7 @@ const departmentBands = [
   "Not sure",
 ];
 
-const steps = ["Contact", "Organisation", "Support", "Review"];
+const steps = ["Contact", "Details", "Support", "Review"];
 
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.trim());
@@ -244,7 +244,7 @@ export default function ContactClient() {
 
   const stepErrors = useMemo(() => {
     if (step === 0) return ["name", "email", "phone"] as (keyof FormState)[];
-    if (step === 1) return ["organisation", "role", "otherRole", "departments"] as (keyof FormState)[];
+    if (step === 1) return ["Details", "role", "otherRole", "departments"] as (keyof FormState)[];
     if (step === 2) return ["supportArea", "urgency", "challenge"] as (keyof FormState)[];
     return [] as (keyof FormState)[];
   }, [step]);
@@ -452,7 +452,7 @@ export default function ContactClient() {
             {step === 1 && (
               <div className="sg-intake-step">
                 <label className={submitted && errors.organisation ? "has-error" : ""}>
-                  <span>Organisation</span>
+                  <span>Details</span>
                   <div className="sg-input-shell">
                     <ShieldCheck size={18} strokeWidth={1.7} />
                     <input value={form.organisation} onChange={(event) => updateField("organisation", event.target.value)} placeholder="e.g. Export Producer Ltd" autoComplete="organization" />
