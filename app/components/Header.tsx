@@ -20,7 +20,7 @@ export default function Header() {
 
   function isActive(href: string) {
     if (href === "/") return pathname === "/";
-    return pathname.startsWith(href);
+    return pathname === href || pathname.startsWith(`${href}/`);
   }
 
   return (
@@ -42,9 +42,10 @@ export default function Header() {
             onClick={() => setIsOpen(true)}
             className="sg-dmkl-menu-pill"
             aria-label="Open menu"
+            aria-expanded={isOpen}
           >
             <span>Menu</span>
-            <Menu size={23} strokeWidth={1.9} />
+            <Menu size={23} strokeWidth={1.9} aria-hidden="true" />
           </button>
         </div>
       </header>
@@ -53,7 +54,7 @@ export default function Header() {
         <div className="sg-dmkl-menu-overlay">
           <button
             type="button"
-            aria-label="Close menu overlay"
+            aria-label="Close menu"
             onClick={() => setIsOpen(false)}
             className="sg-dmkl-menu-backdrop"
           />
@@ -66,8 +67,7 @@ export default function Header() {
                 className="sg-dmkl-menu-close"
                 aria-label="Close menu"
               >
-                <X size={18} strokeWidth={1.9} />
-                <span>Menu</span>
+                <X size={20} strokeWidth={1.9} aria-hidden="true" />
               </button>
             </div>
 
@@ -83,11 +83,6 @@ export default function Header() {
                 </Link>
               ))}
             </nav>
-
-            <div className="sg-dmkl-menu-footer">
-              <p>© Strategine</p>
-              <strong>Responsible business intelligence systems.</strong>
-            </div>
           </aside>
         </div>
       )}

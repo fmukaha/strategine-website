@@ -4,7 +4,7 @@ import Footer from "../../components/Footer";
 import ServiceDetailPage from "../../components/ServiceDetailPage";
 import { services } from "../serviceContent";
 
-const service = services.riskVisibility;
+const service = services.responseTracking;
 
 export const metadata: Metadata = {
   title: service.eyebrow + " | Strategine Services",
