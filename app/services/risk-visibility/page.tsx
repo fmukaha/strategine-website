@@ -1,8 +1,7 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
+import ServicePageShell from "../../components/ServicePageShell";
 
 export const metadata: Metadata = {
   title: "Risk Visibility | Strategine Services",
@@ -44,10 +43,7 @@ const outputs = [
 
 export default function RiskVisibilityPage() {
   return (
-    <>
-      <Header />
-
-      <main className="sg-service-detail-page">
+    <ServicePageShell>
         <section className="sg-standard-hero sg-about-hero sg-service-detail-hero">
           <span className="sg-page-kicker">Risk Visibility</span>
           <h1>See risk earlier, before it becomes expensive.</h1>
@@ -147,9 +143,6 @@ export default function RiskVisibilityPage() {
             </Link>
           </div>
         </section>
-      </main>
-
-      <Footer />
-    </>
+      </ServicePageShell>
   );
 }
